@@ -1,0 +1,1363 @@
+<routeCoordinates>
+    
+<!--    Route 1-->
+    <route>
+        <coord>
+            <lat> 42.782772 </lat>
+            <lon> -87.808052 </lon>
+        </coord>
+        <coord>
+            <lat> 42.786499 </lat>
+            <lon> -87.807648 </lon>
+        </coord>
+        <coord>
+            <lat> 42.784290 </lat>
+            <lon> -87.808800 </lon>
+        </coord>
+        <coord>
+            <lat> 42.782772 </lat>
+            <lon> -87.808052 </lon>
+        </coord>
+        <coord>
+            <lat> 42.776009 </lat>
+            <lon> -87.805130 </lon>
+        </coord>
+        <coord>
+            <lat> 42.773865 </lat>
+            <lon> -87.804184 </lon>
+        </coord>
+        <coord>
+            <lat> 42.767109 </lat>
+            <lon> -87.802460 </lon>
+        </coord>
+        <coord>
+            <lat> 42.765633 </lat>
+            <lon> -87.802361 </lon>
+        </coord>
+        <coord>
+            <lat> 42.766247 </lat>
+            <lon> -87.796837 </lon>
+        </coord>
+        <coord>
+            <lat> 42.759357 </lat>
+            <lon> -87.796951 </lon>
+        </coord>
+        <coord>
+            <lat> 42.759102 </lat>
+            <lon> -87.800636 </lon>
+        </coord>
+        <coord>
+            <lat> 42.765781 </lat>
+            <lon> -87.802208 </lon>
+        </coord>
+        <coord>
+            <lat> 42.759102 </lat>
+            <lon> -87.800636 </lon>
+        </coord>
+        <coord>
+            <lat> 42.755692 </lat>
+            <lon> -87.799423 </lon>
+        </coord>
+        <coord>
+            <lat> 42.753155 </lat>
+            <lon> -87.798401 </lon>
+        </coord>
+        <coord>
+            <lat> 42.749935 </lat>
+            <lon> -87.798264 </lon>
+        </coord>
+        <coord>
+            <lat> 42.748287 </lat>
+            <lon> -87.798363 </lon>
+        </coord>
+        <coord>
+            <lat> 42.745178 </lat>
+            <lon> -87.797203 </lon>
+        </coord>
+        <coord>
+            <lat> 42.743549 </lat>
+            <lon> -87.795906 </lon>
+        </coord>
+        <coord>
+            <lat> 42.742470 </lat>
+            <lon> -87.794922 </lon>
+        </coord>
+        <coord>
+            <lat> 42.740665 </lat>
+            <lon> -87.793030 </lon>
+        </coord>
+        <coord>
+            <lat> 42.738018 </lat>
+            <lon> -87.792877 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735638 </lat>
+            <lon> -87.792847 </lon>
+        </coord>
+        <coord>
+            <lat> 42.733364 </lat>
+            <lon> -87.792999 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731625 </lat>
+            <lon> -87.793526 </lon>
+        </coord>
+        <coord>
+            <lat> 42.733414 </lat>
+            <lon> -87.795235 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735203 </lat>
+            <lon> -87.795982 </lon>
+        </coord>
+        <coord>
+            <lat> 42.737656 </lat>
+            <lon> -87.795860 </lon>
+        </coord>
+        <coord>
+            <lat> 42.740646 </lat>
+            <lon> -87.795509 </lon>
+        </coord>
+        <coord>
+            <lat> 42.742470 </lat>
+            <lon> -87.794922 </lon>
+        </coord>
+        <coord>
+            <lat> 42.740646 </lat>
+            <lon> -87.795509 </lon>
+        </coord>
+        <coord>
+            <lat> 42.737656 </lat>
+            <lon> -87.795860 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735203 </lat>
+            <lon> -87.795982 </lon>
+        </coord>
+        <coord>
+            <lat> 42.733414 </lat>
+            <lon> -87.795235 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731625 </lat>
+            <lon> -87.793526 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731541 </lat>
+            <lon> -87.795410 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731625 </lat>
+            <lon> -87.793526 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731556 </lat>
+            <lon> -87.790131 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731609 </lat>
+            <lon> -87.784248 </lon>
+        </coord>
+        <coord>
+            <lat> 42.728336 </lat>
+            <lon> -87.782990 </lon>
+        </coord>
+        <coord>
+            <lat> 42.726330 </lat>
+            <lon> -87.782570 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712357 </lat>
+            <lon> -87.783707 </lon>
+        </coord>
+        <coord>
+            <lat> 42.708103 </lat>
+            <lon> -87.783646 </lon>
+        </coord>
+        <coord>
+            <lat> 42.707592 </lat>
+            <lon> -87.784218 </lon>
+        </coord>
+        <coord>
+            <lat> 42.707462 </lat>
+            <lon> -87.802055 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704411 </lat>
+            <lon> -87.801956 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704212 </lat>
+            <lon> -87.828651 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704197 </lat>
+            <lon> -87.833267 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704277 </lat>
+            <lon> -87.844528 </lon>
+        </coord>
+        <coord>
+            <lat> 42.697067 </lat>
+            <lon> -87.845215 </lon>
+        </coord>
+        <coord>
+            <lat> 42.696991 </lat>
+            <lon> -87.836227 </lon>
+        </coord>
+        <coord>
+            <lat> 42.691216 </lat>
+            <lon> -87.835838 </lon>
+        </coord>
+        <coord>
+            <lat> 42.688175 </lat>
+            <lon> -87.835846 </lon>
+        </coord>
+        <coord>
+            <lat> 42.687920 </lat>
+            <lon> -87.837311 </lon>
+        </coord>
+        <coord>
+            <lat> 42.686813 </lat>
+            <lon> -87.839874 </lon>
+        </coord>
+        <coord>
+            <lat> 42.686123 </lat>
+            <lon> -87.841507 </lon>
+        </coord>
+        <coord>
+            <lat> 42.687325 </lat>
+            <lon> -87.842194 </lon>
+        </coord>
+        <coord>
+            <lat> 42.689156 </lat>
+            <lon> -87.842247 </lon>
+        </coord>
+        <coord>
+            <lat> 42.690201 </lat>
+            <lon> -87.841980 </lon>
+        </coord>
+        <coord>
+            <lat> 42.690769 </lat>
+            <lon> -87.839371 </lon>
+        </coord>
+        <coord>
+            <lat> 42.691216 </lat>
+            <lon> -87.835838 </lon>
+        </coord>
+    </route>
+    
+<!--    Route 3-->
+    <route>
+        <coord>
+            <lat> 42.769024 </lat>
+            <lon> -87.788231 </lon>
+        </coord>
+        <coord>
+            <lat> 42.769974 </lat>
+            <lon> -87.786514 </lon>
+        </coord>
+        <coord>
+            <lat> 42.770061 </lat>
+            <lon> -87.782700 </lon>
+        </coord>
+        <coord>
+            <lat> 42.768326 </lat>
+            <lon> -87.781807 </lon>
+        </coord>
+        <coord>
+            <lat> 42.763618 </lat>
+            <lon> -87.782333 </lon>
+        </coord>
+        <coord>
+            <lat> 42.760765 </lat>
+            <lon> -87.782654 </lon>
+        </coord>
+        <coord>
+            <lat> 42.757622 </lat>
+            <lon> -87.782997 </lon>
+        </coord>
+        <coord>
+            <lat> 42.755360 </lat>
+            <lon> -87.783447 </lon>
+        </coord>
+        <coord>
+            <lat> 42.753998 </lat>
+            <lon> -87.783615 </lon>
+        </coord>
+        <coord>
+            <lat> 42.749119 </lat>
+            <lon> -87.784805 </lon>
+        </coord>
+        <coord>
+            <lat> 42.747551 </lat>
+            <lon> -87.784988 </lon>
+        </coord>
+        <coord>
+            <lat> 42.738285 </lat>
+            <lon> -87.784691 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735374 </lat>
+            <lon> -87.784882 </lon>
+        </coord>
+        <coord>
+            <lat> 42.733299 </lat>
+            <lon> -87.784439 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731609 </lat>
+            <lon> -87.784248 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731567 </lat>
+            <lon> -87.790398 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731667 </lat>
+            <lon> -87.794289 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731476 </lat>
+            <lon> -87.800064 </lon>
+        </coord>
+        <coord>
+        <lat> 42.729774 </lat>
+        <lon> -87.799057 </lon>
+        </coord>
+        <coord>
+            <lat> 42.720650 </lat>
+            <lon> -87.798981 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718796 </lat>
+            <lon> -87.798721 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718796 </lat>
+            <lon> -87.798721 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718319 </lat>
+            <lon> -87.802895 </lon>
+        </coord>
+        <coord>
+            <lat> 42.716652 </lat>
+            <lon> -87.803200 </lon>
+        </coord>
+        <coord>
+            <lat> 42.714211 </lat>
+            <lon> -87.802124 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712524 </lat>
+            <lon> -87.802315 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712482 </lat>
+            <lon> -87.805954 </lon>
+        </coord>
+        <coord>
+            <lat> 42.710602 </lat>
+            <lon> -87.806488 </lon>
+        </coord>
+        <coord>
+            <lat> 42.709190 </lat>
+            <lon> -87.807137 </lon>
+        </coord>
+        <coord>
+            <lat> 42.709324 </lat>
+            <lon> -87.804817 </lon>
+        </coord>
+        <coord>
+            <lat> 42.709190 </lat>
+            <lon> -87.807137 </lon>
+        </coord>
+        <coord>
+            <lat> 42.707249 </lat>
+            <lon> -87.808563 </lon>
+        </coord>
+        <coord>
+            <lat> 42.705620 </lat>
+            <lon> -87.810097 </lon>
+        </coord>
+        <coord>
+            <lat> 42.702473 </lat>
+            <lon> -87.813156 </lon>
+        </coord>
+        <coord>
+            <lat> 42.700905 </lat>
+            <lon> -87.814697 </lon>
+        </coord>
+        <coord>
+            <lat> 42.698586 </lat>
+            <lon> -87.815826 </lon>
+        </coord>
+        <coord>
+            <lat> 42.698627 </lat>
+            <lon> -87.812897 </lon>
+        </coord>
+        <coord>
+            <lat> 42.696651 </lat>
+            <lon> -87.812798 </lon>
+        </coord>
+        <coord>
+            <lat> 42.695068 </lat>
+            <lon> -87.812729 </lon>
+        </coord>
+        <coord>
+            <lat> 42.692535 </lat>
+            <lon> -87.811760 </lon>
+        </coord>
+        <coord>
+            <lat> 42.691383 </lat>
+            <lon> -87.810974 </lon>
+        </coord>
+        <coord>
+            <lat> 42.689499 </lat>
+            <lon> -87.811195 </lon>
+        </coord>
+        <coord>
+            <lat> 42.682579 </lat>
+            <lon> -87.811218 </lon>
+        </coord>
+        <coord>
+            <lat> 42.682758 </lat>
+            <lon> -87.807846 </lon>
+        </coord>
+        <coord>
+            <lat> 42.684685 </lat>
+            <lon> -87.807838 </lon>
+        </coord>
+        <coord>
+            <lat> 42.686798 </lat>
+            <lon> -87.809563 </lon>
+        </coord>
+    </route>
+    
+<!--    Route 3-->
+    <route>
+        <coord>
+            <lat> 42.739445 </lat>
+            <lon> -87.809380 </lon>
+        </coord>
+        <coord>
+            <lat> 42.742359 </lat>
+            <lon> -87.806847 </lon>
+        </coord>
+        <coord>
+            <lat> 42.746021 </lat>
+            <lon> -87.806793 </lon>
+        </coord>
+        <coord>
+            <lat> 42.747295 </lat>
+            <lon> -87.807487 </lon>
+        </coord>
+        <coord>
+            <lat> 42.748669 </lat>
+            <lon> -87.811188 </lon>
+        </coord>
+        <coord>
+            <lat> 42.749832 </lat>
+            <lon> -87.814369 </lon>
+        </coord>
+        <coord>
+            <lat> 42.750221 </lat>
+            <lon> -87.816536 </lon>
+        </coord>
+        <coord>
+            <lat> 42.747597 </lat>
+            <lon> -87.816513 </lon>
+        </coord>
+        <coord>
+            <lat> 42.746075 </lat>
+            <lon> -87.816490 </lon>
+        </coord>
+        <coord>
+            <lat> 42.741524 </lat>
+            <lon> -87.811562 </lon>
+        </coord>
+        <coord>
+            <lat> 42.739445 </lat>
+            <lon> -87.809380 </lon>
+        </coord>
+        <coord>
+            <lat> 42.737617 </lat>
+            <lon> -87.807449 </lon>
+        </coord>
+        <coord>
+            <lat> 42.734913 </lat>
+            <lon> -87.804253 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735226 </lat>
+            <lon> -87.812820 </lon>
+        </coord>
+        <coord>
+            <lat> 42.736835 </lat>
+            <lon> -87.812935 </lon>
+        </coord>
+        <coord>
+            <lat> 42.737427 </lat>
+            <lon> -87.807449 </lon>
+        </coord>
+        <coord>
+            <lat> 42.734913 </lat>
+            <lon> -87.804253 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735466 </lat>
+            <lon> -87.804375 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735535 </lat>
+            <lon> -87.796204 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735558 </lat>
+            <lon> -87.793129 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730415 </lat>
+            <lon> -87.793594 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735535 </lat>
+            <lon> -87.796204 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730415 </lat>
+            <lon> -87.793594 </lon>
+        </coord>
+        <coord>
+            <lat> 42.726009 </lat>
+            <lon> -87.792442 </lon>
+        </coord>
+        <coord>
+            <lat> 42.726646 </lat>
+            <lon> -87.785255 </lon>
+        </coord>
+        <coord>
+            <lat> 42.725967 </lat>
+            <lon> -87.784645 </lon>
+        </coord>
+        <coord>
+            <lat> 42.724354 </lat>
+            <lon> -87.782646 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712856 </lat>
+            <lon> -87.782501 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712597 </lat>
+            <lon> -87.783974 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719822 </lat>
+            <lon> -87.783737 </lon>
+        </coord>
+        <coord>
+            <lat> 42.721382 </lat>
+            <lon> -87.782631 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712856 </lat>
+            <lon> -87.782501 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712444 </lat>
+            <lon> -87.816299 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712475 </lat>
+            <lon> -87.839073 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712109 </lat>
+            <lon> -87.841911 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712208 </lat>
+            <lon> -87.845367 </lon>
+        </coord>
+        <coord>
+            <lat> 42.712234 </lat>
+            <lon> -87.848457 </lon>
+        </coord>
+        <coord>
+            <lat> 42.716492 </lat>
+            <lon> -87.846931 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719086 </lat>
+            <lon> -87.847366 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719330 </lat>
+            <lon> -87.855850 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719475 </lat>
+            <lon> -87.863266 </lon>
+        </coord>
+    </route>
+    
+<!--    Route 4-->
+    <route>
+        <coord>
+            <lat> 42.769005 </lat>
+            <lon> -87.786880 </lon>
+        </coord>
+        <coord>
+            <lat> 42.769932 </lat>
+            <lon> -87.789200 </lon>
+        </coord>
+        <coord>
+            <lat> 42.769920 </lat>
+            <lon> -87.791634 </lon>
+        </coord>
+        <coord>
+            <lat> 42.768124 </lat>
+            <lon> -87.791878 </lon>
+        </coord>
+        <coord>
+            <lat> 42.765259 </lat>
+            <lon> -87.791954 </lon>
+        </coord>
+        <coord>
+            <lat> 42.762592 </lat>
+            <lon> -87.791412 </lon>
+        </coord>
+        <coord>
+            <lat> 42.758598 </lat>
+            <lon> -87.791420 </lon>
+        </coord>
+        <coord>
+            <lat> 42.756413 </lat>
+            <lon> -87.791954 </lon>
+        </coord>
+        <coord>
+            <lat> 42.753963 </lat>
+            <lon> -87.792023 </lon>
+        </coord>
+        <coord>
+            <lat> 42.749393 </lat>
+            <lon> -87.792068 </lon>
+        </coord>
+        <coord>
+            <lat> 42.747555 </lat>
+            <lon> -87.791847 </lon>
+        </coord>
+        <coord>
+            <lat> 42.742138 </lat>
+            <lon> -87.791809 </lon>
+        </coord>
+        <coord>
+            <lat> 42.739510 </lat>
+            <lon> -87.791679 </lon>
+        </coord>
+        <coord>
+            <lat> 42.738754 </lat>
+            <lon> -87.791451 </lon>
+        </coord>
+        <coord>
+            <lat> 42.735416 </lat>
+            <lon> -87.788605 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731846 </lat>
+            <lon> -87.788048 </lon>
+        </coord>
+        <coord>
+            <lat> 42.732048 </lat>
+            <lon> -87.792999 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718327 </lat>
+            <lon> -87.795006 </lon>
+        </coord>
+        <coord>
+            <lat> 42.716785 </lat>
+            <lon> -87.796066 </lon>
+        </coord>
+        <coord>
+            <lat> 42.715233 </lat>
+            <lon> -87.797729 </lon>
+        </coord>
+        <coord>
+            <lat> 42.714924 </lat>
+            <lon> -87.798904 </lon>
+        </coord>
+        <coord>
+            <lat> 42.714474 </lat>
+            <lon> -87.801682 </lon>
+        </coord>
+        <coord>
+            <lat> 42.714321 </lat>
+            <lon> -87.805206 </lon>
+        </coord>
+        <coord>
+            <lat> 42.714161 </lat>
+            <lon> -87.807503 </lon>
+        </coord>
+        <coord>
+            <lat> 42.715034 </lat>
+            <lon> -87.810577 </lon>
+        </coord>
+        <coord>
+            <lat> 42.717049 </lat>
+            <lon> -87.813736 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718811 </lat>
+            <lon> -87.816612 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718700 </lat> 
+            <lon> -87.833855 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.718227 </lat> 
+            <lon> -87.836174 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.709286 </lat> 
+            <lon> -87.836082 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.704254 </lat> 
+            <lon> -87.836342 </lon> 
+        </coord>
+        <coord>
+            <lat> 42.698738 </lat>
+            <lon> -87.843140 </lon>
+        </coord>
+        <coord>
+            <lat> 42.698074 </lat>
+            <lon> -87.850838 </lon>
+        </coord>
+        <coord>
+            <lat> 42.703365 </lat>
+            <lon> -87.858765 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704926 </lat>
+            <lon> -87.847778 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.703804 </lat> 
+            <lon> -87.841141 </lon> 
+        </coord>
+        <coord>
+            <lat> 42.704254 </lat>
+            <lon> -87.836342 </lon>
+        </coord>
+    </route>
+
+<!--    Route 5-->
+	<route>
+        <coord>
+            <lat> 42.782772 </lat>
+            <lon> -87.808052 </lon>
+        </coord>
+        <coord>
+            <lat> 42.786499 </lat>
+            <lon> -87.807648 </lon>
+        </coord> 
+        <coord>
+            <lat> 42.784290 </lat>
+            <lon> -87.808800 </lon>
+        </coord>
+        <coord>
+            <lat> 42.782772 </lat>
+            <lon> -87.808052 </lon>
+        </coord>
+        <coord>
+            <lat> 42.779907 </lat>
+            <lon> -87.806671 </lon>
+        </coord>
+        <coord>
+            <lat> 42.776154 </lat>
+            <lon> -87.805244 </lon>
+        </coord>
+        <coord>
+            <lat> 42.773865 </lat>
+            <lon> -87.804184 </lon>
+        </coord>
+        <coord>
+            <lat> 42.768040 </lat>
+            <lon> -87.802498 </lon>
+        </coord>
+        <coord>
+            <lat> 42.766548 </lat>
+            <lon> -87.802429 </lon>
+        </coord>
+        <coord>
+            <lat> 42.765781 </lat>
+            <lon> -87.802208 </lon>
+        </coord>
+        <coord>
+            <lat> 42.763706 </lat>
+            <lon> -87.801910 </lon>
+        </coord>
+        <coord>
+            <lat> 42.761662 </lat>
+            <lon> -87.801643 </lon>
+        </coord>
+        <coord>
+            <lat> 42.759254 </lat>
+            <lon> -87.801025 </lon>
+        </coord>
+        <coord>
+            <lat> 42.765633 </lat>
+            <lon> -87.802361 </lon>
+        </coord>
+        <coord>
+            <lat> 42.759071 </lat>
+            <lon> -87.803276 </lon>
+        </coord>
+        <coord>
+            <lat> 42.758617 </lat>
+            <lon> -87.806328 </lon>
+        </coord>
+        <coord>
+            <lat> 42.759441 </lat>
+            <lon> -87.807373 </lon>
+        </coord>
+        <coord>
+            <lat> 42.758617 </lat>
+            <lon> -87.806328 </lon>
+        </coord>
+        <coord>
+            <lat> 42.755859 </lat>
+            <lon> -87.806747 </lon>
+        </coord>
+        <coord>
+            <lat> 42.751705 </lat>
+            <lon> -87.806717 </lon>
+        </coord>
+        <coord>
+            <lat> 42.749905 </lat>
+            <lon> -87.806885 </lon>
+        </coord>
+        <coord>
+            <lat> 42.749947 </lat>
+            <lon> -87.811630 </lon>
+        </coord>
+        <coord>
+            <lat> 42.753128 </lat>
+            <lon> -87.811676 </lon>
+        </coord>
+        <coord>
+            <lat> 42.754013 </lat>
+            <lon> -87.806740 </lon>
+        </coord>
+        <coord>
+            <lat> 42.749905 </lat>
+            <lon> -87.806885 </lon>
+        </coord>
+        <coord>
+            <lat> 42.747810 </lat>
+            <lon> -87.806541 </lon>
+        </coord>
+        <coord>
+            <lat> 42.747822 </lat>
+            <lon> -87.782753 </lon>
+        </coord>
+        <coord>
+            <lat> 42.742554 </lat>
+            <lon> -87.782738 </lon>
+        </coord>
+        <coord>
+            <lat> 42.742107 </lat>
+            <lon> -87.800278 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731476 </lat>
+            <lon> -87.800064 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731606 </lat>
+            <lon> -87.792915 </lon>
+        </coord>
+        <coord>
+            <lat> 42.725712 </lat>
+            <lon> -87.792648 </lon>
+        </coord>
+        <coord>
+            <lat> 42.721329 </lat>
+            <lon> -87.793282 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718582 </lat>
+            <lon> -87.793739 </lon>
+        </coord>
+        <coord>
+            <lat> 42.702698 </lat>
+            <lon> -87.793694 </lon>
+        </coord>
+        <coord>
+            <lat> 42.699955 </lat>
+            <lon> -87.793663 </lon>
+        </coord>
+        <coord>
+            <lat> 42.693924 </lat>
+            <lon> -87.797218 </lon>
+        </coord>
+        <coord>
+            <lat> 42.692921 </lat>
+            <lon> -87.796371 </lon>
+        </coord>
+        <coord>
+            <lat> 42.691429 </lat>
+            <lon> -87.796364 </lon>
+        </coord>
+        <coord>
+            <lat> 42.689888 </lat>
+            <lon> -87.796356 </lon>
+        </coord>
+        <coord>
+            <lat> 42.688007 </lat>
+            <lon> -87.796715 </lon>
+        </coord>
+        <coord>
+            <lat> 42.687054 </lat>
+            <lon> -87.796913 </lon>
+        </coord>
+        <coord>
+            <lat> 42.685349 </lat>
+            <lon> -87.797684 </lon>
+        </coord>
+        <coord>
+            <lat> 42.684025 </lat>
+            <lon> -87.798790 </lon>
+        </coord>
+        <coord>
+            <lat> 42.681847 </lat>
+            <lon> -87.801521 </lon>
+        </coord>
+        <coord>
+            <lat> 42.693924 </lat>
+            <lon> -87.797218 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704254 </lat>
+            <lon> -87.836342 </lon>
+        </coord>
+    </route>
+
+<!--    Route 7-->
+    <route>
+        <coord>
+            <lat> 42.731606 </lat>
+            <lon> -87.792915 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731609 </lat>
+            <lon> -87.784248 </lon>
+        </coord>
+        <coord>
+            <lat> 42.726654 </lat>
+            <lon> -87.785240 </lon>
+        </coord>
+        <coord>
+            <lat> 42.725750 </lat>
+            <lon> -87.788322 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731720 </lat>
+            <lon> -87.788452 </lon>
+        </coord>
+        <coord>
+            <lat> 42.725750 </lat>
+            <lon> -87.788322 </lon>
+        </coord>
+        <coord>
+            <lat> 42.724335 </lat>
+            <lon> -87.788315 </lon>
+        </coord>
+        <coord>
+            <lat> 42.706181 </lat>
+            <lon> -87.788132 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704620 </lat>
+            <lon> -87.787979 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704391 </lat>
+            <lon> -87.788383 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704296 </lat>
+            <lon> -87.792999 </lon>
+        </coord>
+        <coord> 
+            <lat> 42.704296 </lat> 
+            <lon> -87.792999 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.700439 </lat> 
+            <lon> -87.793526 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.698265 </lat> 
+            <lon> -87.794846 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.697098 </lat> 
+            <lon> -87.798141 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.696983 </lat> 
+            <lon> -87.800812 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.696991 </lat> 
+            <lon> -87.836227 </lon> 
+        </coord>
+        <coord>
+            <lat> 42.697128 </lat>
+            <lon> -87.841537 </lon>
+        </coord>
+        <coord>
+            <lat> 42.696678 </lat>
+            <lon> -87.845451 </lon>
+        </coord>
+        <coord>
+            <lat> 42.697289 </lat>
+            <lon> -87.851433 </lon>
+        </coord>
+        <coord>
+            <lat> 42.697372 </lat>
+            <lon> -87.856117 </lon>
+        </coord>
+        <coord>
+            <lat> 42.697464 </lat>
+            <lon> -87.862579 </lon>
+        </coord>
+        <coord>
+            <lat> 42.696426 </lat>
+            <lon> -87.867378 </lon>
+        </coord>
+        <coord>
+            <lat> 42.694145 </lat>
+            <lon> -87.844757 </lon>
+        </coord>
+        <coord>
+            <lat> 42.696678 </lat>
+            <lon> -87.845451 </lon>
+        </coord> 
+        <coord> 
+            <lat> 42.699013 </lat> 
+            <lon> -87.844093 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.697372 </lat> 
+            <lon> -87.856117 </lon> 
+        </coord>
+    </route>
+    
+<!--    Route 20-->
+    <route>
+        <coord>
+            <lat> 42.730415 </lat>
+            <lon> -87.793594 </lon>
+        </coord>
+        <coord>
+            <lat> 42.715233 </lat>
+            <lon> -87.797729 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718777 </lat>
+            <lon> -87.821358 </lon>
+        </coord>
+        <coord>
+            <lat> 42.717381 </lat>
+            <lon> -87.872536 </lon>
+        </coord>
+        <coord>
+            <lat> 42.724316 </lat>
+            <lon> -87.950180 </lon>
+        </coord> 
+        <coord> 
+            <lat> 42.716068 </lat> 
+            <lon> -87.959564 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.724316 </lat> 
+            <lon> -87.950180 </lon> 
+        </coord>
+    </route>
+    
+<!--    Route 27-->
+    <route>
+        <coord>
+            <lat> 42.698074 </lat>
+            <lon> -87.850838 </lon>
+        </coord>
+        <coord>
+            <lat> 42.697289 </lat>
+            <lon> -87.851433 </lon>
+        </coord>
+        <coord>
+            <lat> 42.697330 </lat>
+            <lon> -87.853447 </lon>
+        </coord>
+        <coord>
+            <lat> 42.709755 </lat>
+            <lon> -87.849609 </lon>
+        </coord>
+        <coord>
+            <lat> 42.713753 </lat>
+            <lon> -87.848099 </lon>
+        </coord>
+        <coord>
+            <lat> 42.714016 </lat>
+            <lon> -87.848351 </lon>
+        </coord>
+        <coord> 
+            <lat> 42.716583 </lat> 
+            <lon> -87.847275 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.717804 </lat> 
+            <lon> -87.846748 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.719086 </lat> 
+            <lon> -87.847366 </lon> 
+        </coord>
+        <coord>
+            <lat> 42.719212 </lat>
+            <lon> -87.851494 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719067 </lat>
+            <lon> -87.855286 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719128 </lat>
+            <lon> -87.859856 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719265 </lat>
+            <lon> -87.864258 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719349 </lat>
+            <lon> -87.866325 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719337 </lat>
+            <lon> -87.869637 </lon>
+        </coord>
+        <coord>
+            <lat> 42.717381 </lat>
+            <lon> -87.872536 </lon>
+        </coord>
+        <coord>
+            <lat> 42.719337 </lat>
+            <lon> -87.869637 </lon>
+        </coord>
+        <coord>
+            <lat> 42.718063 </lat>
+            <lon> -87.906158 </lon>
+        </coord>
+        <coord>
+            <lat> 42.721512 </lat>
+            <lon> -87.911263 </lon>
+        </coord> 
+        <coord> 
+            <lat> 42.724316 </lat> 
+            <lon> -87.950180 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.716068 </lat> 
+            <lon> -87.959564 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.708172 </lat> 
+            <lon> -87.913361 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.713406 </lat> 
+            <lon> -87.908165 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.718063 </lat> 
+            <lon> -87.906158 </lon> 
+        </coord>
+    </route>
+    
+<!--    Route 86-->
+    <route>
+        <coord>
+            <lat> 42.728329 </lat>
+            <lon> -87.795311 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730961 </lat>
+            <lon> -87.797241 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731506 </lat>
+            <lon> -87.799149 </lon>
+        </coord>
+        <coord>
+            <lat> 42.732674 </lat>
+            <lon> -87.801704 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731598 </lat>
+            <lon> -87.806313 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730667 </lat>
+            <lon> -87.809509 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730667 </lat>
+            <lon> -87.809509 </lon>
+        </coord>
+        <coord>
+            <lat> 42.729935 </lat>
+            <lon> -87.813797 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730804 </lat>
+            <lon> -87.817825 </lon>
+        </coord>
+        <coord>
+            <lat> 42.731419 </lat>
+            <lon> -87.820396 </lon>
+        </coord>
+        <coord>
+            <lat> 42.723885 </lat>
+            <lon> -87.818375 </lon>
+        </coord>
+        <coord>
+            <lat> 42.725197 </lat>
+            <lon> -87.820198 </lon>
+        </coord>
+        <coord>
+            <lat> 42.726791 </lat>
+            <lon> -87.822105 </lon>
+        </coord>
+        <coord>
+            <lat> 42.729366 </lat>
+            <lon> -87.824402 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730656 </lat>
+            <lon> -87.825592 </lon>
+        </coord>
+        <coord>
+            <lat> 42.730667 </lat>
+            <lon> -87.827789 </lon>
+        </coord>
+        <coord>
+            <lat> 42.734123 </lat>
+            <lon> -87.826782 </lon>
+        </coord>
+        <coord> 
+            <lat> 42.731419 </lat> 
+            <lon> -87.820396 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.734123 </lat> 
+            <lon> -87.826782 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.735905 </lat> 
+            <lon> -87.831154 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.736263 </lat> 
+            <lon> -87.833374 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.736637 </lat> 
+            <lon> -87.835915 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.718880 </lat> 
+            <lon> -87.835876 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.718693 </lat> 
+            <lon> -87.844833 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.709755 </lat> 
+            <lon> -87.849609 </lon> 
+        </coord>
+        <coord>
+            <lat> 42.709549 </lat>
+            <lon> -87.837273 </lon>
+        </coord>
+        <coord>
+            <lat> 42.706577 </lat>
+            <lon> -87.835770 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704308 </lat>
+            <lon> -87.835754 </lon>
+        </coord>
+        <coord>
+            <lat> 42.704151 </lat>
+            <lon> -87.840637 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.697327 </lat> 
+            <lon> -87.845268 </lon> 
+        </coord>
+        <coord>
+            <lat> 42.696987 </lat>
+            <lon> -87.826324 </lon>
+        </coord>
+        <coord>
+            <lat> 42.722431 </lat>
+            <lon> -87.826187 </lon>
+        </coord>
+        <coord>
+            <lat> 42.722649 </lat>
+            <lon> -87.817047 </lon>
+        </coord>
+        <coord>
+            <lat> 42.723885 </lat>
+            <lon> -87.818375 </lon>
+        </coord>
+        <coord>
+            <lat> 42.722649 </lat>
+            <lon> -87.817047 </lon>
+        </coord>
+        <coord>
+            <lat> 42.722649 </lat>
+            <lon> -87.810005 </lon>
+        </coord>
+        <coord>
+            <lat> 42.724888 </lat>
+            <lon> -87.806885 </lon>
+        </coord>
+        <coord>
+            <lat> 42.725899 </lat> 
+            <lon> -87.806007 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.726048 </lat> 
+            <lon> -87.804451 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.726067 </lat> 
+            <lon> -87.798012 </lon> 
+        </coord> 
+        <coord> 
+            <lat> 42.728329 </lat> 
+            <lon> -87.795311 </lon> 
+        </coord>
+    </route>
+
+</routeCoordinates>
