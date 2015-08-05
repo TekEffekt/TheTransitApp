@@ -7,7 +7,7 @@
 //  HowToViewController, which is a webview.
 //
 //  Created by Valerie Berglind on 4/8/14.
-//  Copyright (c) 2014 Richard Arthur Lebbin III. All rights reserved.
+//  Copyright (c) 2014 Richard Arthur Lebbin III. All rights reserved.k
 //
 
 #import "HelpViewController.h"
