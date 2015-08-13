@@ -89,7 +89,6 @@
     CLLocation *currentLoc= [[CLLocation alloc] initWithLatitude:myLat longitude:myLon];
     CLLocation *stopLoc = [[CLLocation alloc] initWithLatitude:[route[1] doubleValue] longitude:[route[2] doubleValue]];
     CLLocationDistance meters = [currentLoc distanceFromLocation:stopLoc];
-    NSLog(@"Meters: %f", meters);
     int milesAway = (int)((meters/1000) * .62137f);
     
     tableCell.dir.text = [NSString stringWithFormat:@"%@", route[0]];

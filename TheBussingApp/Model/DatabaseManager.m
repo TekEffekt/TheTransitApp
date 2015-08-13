@@ -339,14 +339,14 @@ NSDictionary *resultDict = nil;
     
     [conman update_gps];
     
-    //    double myLat = [[conman get_latitude] doubleValue];
-    //    double myLon = [[conman get_longitude] doubleValue];
+    double myLat = [[conman get_latitude] doubleValue];
+    double myLon = [[conman get_longitude] doubleValue];
     
-    double myLat = 42.782772;
-    double myLon = -87.808052;
+//    double myLat = 42.782772;
+//    double myLon = -87.808052;
     
-    static double LATITUED_PER_5_MILES =  1.007236;
-    static double LONGITUDE_PER_5_MILES = 1.0092595;
+    static double LATITUED_PER_5_MILES =  .033;
+    static double LONGITUDE_PER_5_MILES = .033;
     
     //Working code
     NSDate *now = [[NSDate alloc] init];
@@ -357,10 +357,7 @@ NSDictionary *resultDict = nil;
     [formatter setDateFormat:@"HH:mm:ss"];
     
     NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
-    currentTimeString = @"12:00:00";
-    
-    //    double myLat = 42.782772;
-    //    double myLon = -87.808052;
+//    currentTimeString = @"14:00:00";
     
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     

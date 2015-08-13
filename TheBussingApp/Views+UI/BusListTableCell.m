@@ -100,8 +100,8 @@
     num.layer.shadowRadius=1.5f;
     num.layer.shadowOpacity = .7f;
     
-    num.backgroundColor = [Constants getRouteColorForRouteNumber:self.routeNumber];
-    self.routeLabel.textColor = [Constants getRouteColorForRouteNumber:self.routeNumber];
+    num.backgroundColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
+    self.routeLabel.textColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

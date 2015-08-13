@@ -29,8 +29,8 @@
     self.routeBanner.layer.shadowRadius=1.5f;
     self.routeBanner.layer.shadowOpacity = .7f;
     
-    self.routeBanner.backgroundColor = [Constants getRouteColorForRouteNumber:self.routeNumber];
-    self.routeLabel.textColor = [Constants getRouteColorForRouteNumber:self.routeNumber];
+    self.routeBanner.backgroundColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
+    self.routeLabel.textColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
 }
 
 @end

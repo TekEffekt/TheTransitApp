@@ -30,6 +30,7 @@
 @property(strong, nonatomic) NSMutableArray *polylineArray;
 @property(strong, nonatomic) RouteLineMenuViewController *routeLineMenu;
 @property(strong, nonatomic) NSMutableArray *polylinesShowing;
+@property (weak, nonatomic) IBOutlet UIButton *routeLineButton;
 
 @property(strong, nonatomic) NSString *string;
 
@@ -41,11 +42,18 @@
 {
     self.view.tintColor = [Constants getAppTintColor];
     self.view.backgroundColor = [Constants getBackgroundColor];
+    
+    #ifdef Kenosha
+        self.routeLineButton.alpha = 0.0;
+    #endif
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self styleViews];
+    
     self.navigationController.navigationBarHidden = NO;
     
     self.string = @"";
@@ -152,7 +160,6 @@
 
 - (void)changePolyine
 {
-    NSLog(@"Being called!");
     GMSPolyline *line = (GMSPolyline*)self.polylineArray[self.routeLineMenu.index];
 
     if(self.routeLineMenu.enable)

@@ -36,35 +36,36 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     switch (number) {
         case 1:
             //Route 1 is orange
-            routeColor = [UIColor orangeColor];
+            routeColor = [UIColor colorWithRed:0.969 green:0.576 blue:0.114 alpha:1]; /*#f7931d*/
             break;
         case 2:
             //route 2 is blue
-            routeColor = [UIColor colorWithRed:0.306 green:0.369 blue:0.949 alpha:1];
+            routeColor = [UIColor colorWithRed:0 green:0.584 blue:0.851 alpha:1]; /*#0095d9*/
             break;
         case 3:
             //route 3 is gray
-            routeColor = [UIColor grayColor];
+            routeColor = [UIColor colorWithRed:0.761 green:0.671 blue:0.529 alpha:1]; /*#c2ab87*/
             break;
         case 4:
             //route 4 is green
-            routeColor = [UIColor colorWithRed:0.169 green:0.859 blue:0.145 alpha:1];
+            routeColor = [UIColor colorWithRed:0 green:0.647 blue:0.314 alpha:1]; /*#00a550*/
             break;
         case 5:
             //route 5 is red
-            routeColor = [UIColor colorWithRed:0.961 green:0.2 blue:0.2 alpha:1];
+            routeColor = [UIColor colorWithRed:0.843 green:0.086 blue:0.204 alpha:1]; /*#d71634*/
             break;
         case 6:
             //route 6 is purple
-            routeColor = [UIColor colorWithRed:0.812 green:0.318 blue:0.753 alpha:1];
+            routeColor = [UIColor colorWithRed:0.635 green:0.137 blue:0.557 alpha:1]; /*#a2238e*/
             break;
         case 31:
             //route 31 is navy blue
-            routeColor = [UIColor colorWithRed:0.22 green:0.22 blue:0.51 alpha:1.0];
+            routeColor = [UIColor colorWithRed:0 green:0.247 blue:0.439 alpha:1]; /*#003f70*/
             break;
         default:
             //default background is black
             routeColor = [UIColor blackColor];
+            NSLog(@"NUMBER : %d", number);
             break;
     }
     
