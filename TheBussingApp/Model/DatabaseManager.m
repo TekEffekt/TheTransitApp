@@ -342,8 +342,13 @@ NSDictionary *resultDict = nil;
     double myLat = [[conman get_latitude] doubleValue];
     double myLon = [[conman get_longitude] doubleValue];
     
+    // Racine
 //    double myLat = 42.782772;
 //    double myLon = -87.808052;
+    
+    // Parkside
+//    double myLat = 42.6432133;
+//    double myLon = -87.8479223;
     
     static double LATITUED_PER_5_MILES =  .033;
     static double LONGITUDE_PER_5_MILES = .033;
