@@ -32,6 +32,8 @@
 @property(strong, nonatomic) NSMutableArray *polylinesShowing;
 @property (weak, nonatomic) IBOutlet UIButton *routeLineButton;
 
+@property(strong, nonatomic) NSMutableArray *line;
+
 @property(strong, nonatomic) NSString *string;
 
 @end
@@ -50,6 +52,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.line = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view.
     
     [self styleViews];
@@ -74,6 +77,19 @@
     
     [self.view insertSubview:self.map atIndex:0];
     self.map.delegate = self;
+    
+    if(self.routes.count == 0)
+    {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sorry!" message:@"There are no buses coming for a little while. Come back later!" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alert addAction:okAction];
+        
+        alert.view.tintColor = [UIColor blueColor];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -93,19 +109,8 @@
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
     
-    
-    if(self.routes.count == 0)
-    {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sorry!" message:@"There are no buses coming for a little while. Come back later!" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-        
-        [alert addAction:okAction];
-        
-        alert.view.tintColor = [UIColor blueColor];
-        
-        [self presentViewController:alert animated:YES completion:nil];
-    }
+    UIButton *xmlButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 30)];
+    [xmlButton addTarget:self action:@selector(publishLineToXML) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)displayMarkersOnMap
@@ -173,84 +178,113 @@
     self.polylinesShowing[self.routeLineMenu.index] = self.routeLineMenu.enable ? @"Yes": @"No";
 }
 
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    NSNumber *lat = [NSNumber numberWithDouble:coordinate.latitude];
+    NSNumber *lon = [NSNumber numberWithDouble:coordinate.longitude];
+    
+    NSArray *coord = @[lat, lon];
+    
+    [self.line addObject:coord];
+    
+    GMSMutablePath *path = [[GMSMutablePath alloc] init];
+    
+    for (NSArray *point in self.line)
+    {
+        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
+    }
+    
+    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+    polyline.strokeWidth = 5;
+    polyline.map = self.map;
+}
+
+- (void)publishLineToXML
+{
+    NSString *xml = @"<route>";
+    
+    
+}
+
 - (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
 {
-    NSArray *route = self.routes[[marker.userData intValue]];
-    
-    NSString *lat = [NSString stringWithFormat:@"%f", [route[1] floatValue]];
-    NSString *lon = [NSString stringWithFormat:@"%f", [route[2] floatValue]];
-    
-    NSString *coordinatesXML = @"";
-    
-    coordinatesXML = [coordinatesXML stringByAppendingString:@"<coord> \n"];
-    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lat> %@ </lat> \n", lat]];
-    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lon> %@ </lon> \n", lon]];
-    coordinatesXML = [coordinatesXML stringByAppendingString:@"</coord> \n"];
-    
-    self.string = [self.string stringByAppendingString:coordinatesXML];
-
-    NSString *stopId = route[4];
-    NSDate *now = [[NSDate alloc] init];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"cccc"];
-    NSString *weekday = [[dateFormatter stringFromDate:now] lowercaseString];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"HH:mm:ss"];
-    
-    NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
-    
-    self.selectedStopName = route[0];
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@", self.selectedStopName] message:@"Would you like directions to this stop or incoming buses for it?" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *busAction = [UIAlertAction actionWithTitle:@"Buses" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        dispatch_queue_t queue = dispatch_queue_create("Get Incoming Buses", NULL);
-        dispatch_async(queue, ^{
-            DatabaseManager *db;
-            db = [DatabaseManager getSharedInstance];
-            self.incomingBuses = [db getIncomingBusesForStop:stopId AtTime:currentTimeString AndDay:weekday];
-            NSLog(@"INCOMING BUSES *****************************************************: %@", self.incomingBuses);
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self performSegueWithIdentifier:@"OpenIncomingBuses" sender:self];
-            });
-        });
-    }];
-    
-    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        if ([[UIApplication sharedApplication] canOpenURL:
-             [NSURL URLWithString:@"comgooglemaps://"]]) {
-             [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps-x-callback://?daddr=%@,%@&directionsmode=walking&x-success=App://?resume=true&x-source=App", route[1], route[2] ]]];
-        } else
-        {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"You need to install the Google Maps app to use this feature!" preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                [alert dismissViewControllerAnimated:YES completion:nil];
-            }];
-            
-            UIAlertAction *openStoreAction = [UIAlertAction actionWithTitle:@"Open Store" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                NSString *iTunesLink = @"https://itunes.apple.com/us/app/google-maps/id585027354?mt=8";
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
-            }];
-            
-            [alert addAction:okAction];
-            [alert addAction:openStoreAction];
-            
-            alert.view.tintColor = [UIColor blueColor];
-            
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-    }];
-    
-    alert.view.tintColor = [UIColor blueColor];
-    
-    [alert addAction:routeAction];
-    [alert addAction:busAction];
-    
-    [self presentViewController:alert animated:YES completion:nil];
-    
-    return YES;
+//    NSArray *route = self.routes[[marker.userData intValue]];
+//    
+//    NSString *lat = [NSString stringWithFormat:@"%f", [route[1] floatValue]];
+//    NSString *lon = [NSString stringWithFormat:@"%f", [route[2] floatValue]];
+//    
+//    NSString *coordinatesXML = @"";
+//    
+//    coordinatesXML = [coordinatesXML stringByAppendingString:@"<coord> \n"];
+//    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lat> %@ </lat> \n", lat]];
+//    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lon> %@ </lon> \n", lon]];
+//    coordinatesXML = [coordinatesXML stringByAppendingString:@"</coord> \n"];
+//    
+//    self.string = [self.string stringByAppendingString:coordinatesXML];
+//
+//    NSString *stopId = route[4];
+//    NSDate *now = [[NSDate alloc] init];
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"cccc"];
+//    NSString *weekday = [[dateFormatter stringFromDate:now] lowercaseString];
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"HH:mm:ss"];
+//    
+//    NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
+//    
+//    self.selectedStopName = route[0];
+//    
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@", self.selectedStopName] message:@"Would you like directions to this stop or incoming buses for it?" preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *busAction = [UIAlertAction actionWithTitle:@"Buses" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        dispatch_queue_t queue = dispatch_queue_create("Get Incoming Buses", NULL);
+//        dispatch_async(queue, ^{
+//            DatabaseManager *db;
+//            db = [DatabaseManager getSharedInstance];
+//            self.incomingBuses = [db getIncomingBusesForStop:stopId AtTime:currentTimeString AndDay:weekday];
+//            NSLog(@"INCOMING BUSES *****************************************************: %@", self.incomingBuses);
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self performSegueWithIdentifier:@"OpenIncomingBuses" sender:self];
+//            });
+//        });
+//    }];
+//    
+//    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        if ([[UIApplication sharedApplication] canOpenURL:
+//             [NSURL URLWithString:@"comgooglemaps://"]]) {
+//             [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps-x-callback://?daddr=%@,%@&directionsmode=walking&x-success=App://?resume=true&x-source=App", route[1], route[2] ]]];
+//        } else
+//        {
+//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"You need to install the Google Maps app to use this feature!" preferredStyle:UIAlertControllerStyleAlert];
+//            
+//            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                [alert dismissViewControllerAnimated:YES completion:nil];
+//            }];
+//            
+//            UIAlertAction *openStoreAction = [UIAlertAction actionWithTitle:@"Open Store" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//                NSString *iTunesLink = @"https://itunes.apple.com/us/app/google-maps/id585027354?mt=8";
+//                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+//            }];
+//            
+//            [alert addAction:okAction];
+//            [alert addAction:openStoreAction];
+//            
+//            alert.view.tintColor = [UIColor blueColor];
+//            
+//            [self presentViewController:alert animated:YES completion:nil];
+//        }
+//    }];
+//    
+//    alert.view.tintColor = [UIColor blueColor];
+//    
+//    [alert addAction:routeAction];
+//    [alert addAction:busAction];
+//    
+//    [self presentViewController:alert animated:YES completion:nil];
+//    
+//    return YES;
+    return NO;
 }
 
 - (IBAction)listButtonPressed:(UIBarButtonItem *)sender

@@ -379,7 +379,7 @@ _Bool isSpanish;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-   }
+}
 
 - (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize {
 	UIGraphicsBeginImageContext(newSize);
