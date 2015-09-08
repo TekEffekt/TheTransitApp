@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *routeLineButton;
 
 @property(strong, nonatomic) NSMutableArray *line;
+@property(strong, nonatomic) GMSPolyline *poly;
 
 @property(strong, nonatomic) NSString *string;
 
@@ -66,10 +67,11 @@
     ConnectionManager *conman = [ConnectionManager new];
     [conman update_gps];
     
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[conman get_latitude] doubleValue] longitude:[[conman get_longitude] doubleValue] zoom:12.5];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[conman get_latitude] doubleValue] longitude:[[conman get_longitude] doubleValue] zoom:14];
     
     self.map = [GMSMapView mapWithFrame:self.view.frame camera:camera];
     self.map.center = self.view.center;
+    [self.map setMinZoom:11 maxZoom:15];
     
     self.map.myLocationEnabled = YES;
     
@@ -110,7 +112,14 @@
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
     
     UIButton *xmlButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 30)];
+    xmlButton.backgroundColor = [UIColor blackColor];
     [xmlButton addTarget:self action:@selector(publishLineToXML) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:xmlButton];
+    
+    UIButton *deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(300, 100, 50, 30)];
+    deleteButton.backgroundColor = [UIColor redColor];
+    [deleteButton addTarget:self action:@selector(deleteCoord) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:deleteButton];
 }
 
 -(void)displayMarkersOnMap
@@ -194,16 +203,48 @@
         [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
     }
     
-    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
-    polyline.strokeWidth = 5;
-    polyline.map = self.map;
+    self.poly.map = nil;
+    self.poly = nil;
+    
+    self.poly = [GMSPolyline polylineWithPath:path];
+    self.poly.strokeWidth = 5;
+    self.poly.map = self.map;
 }
 
 - (void)publishLineToXML
 {
     NSString *xml = @"<route>";
     
+    for (NSArray *coord in self.line)
+    {
+        NSNumber *lat = coord[0];
+        NSNumber *lon = coord[1];
+        
+        xml = [xml stringByAppendingString:[NSString stringWithFormat:@"\n<coord>\n<lat>%@</lat>\n<lon>%@</lon>\n</coord>", lat, lon]];
+    }
     
+    xml = [xml stringByAppendingString:@"\n</route>"];
+    
+    NSLog(@"%@", xml);
+}
+
+- (void)deleteCoord
+{
+    [self.line removeLastObject];
+    
+    self.poly.map = nil;
+    self.poly = nil;
+
+    GMSMutablePath *path = [[GMSMutablePath alloc] init];
+    
+    for (NSArray *point in self.line)
+    {
+        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
+    }
+    
+    self.poly = [GMSPolyline polylineWithPath:path];
+    self.poly.strokeWidth = 5.0;
+    self.poly.map = self.map;
 }
 
 - (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
