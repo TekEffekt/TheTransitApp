@@ -16,6 +16,7 @@
 #import "XMLDictionary.h"
 #import "RouteLineMenuViewController.h"
 #import "Styleable.h"
+#import "NearMeErrorHandler.h"
 
 @interface NearMeMapViewController () <GMSMapViewDelegate, RouteLineChanger, StylesItself>
 
@@ -45,10 +46,6 @@
 {
     self.view.tintColor = [Constants getAppTintColor];
     self.view.backgroundColor = [Constants getBackgroundColor];
-    
-    #ifdef Kenosha
-        self.routeLineButton.alpha = 0.0;
-    #endif
 }
 
 - (void)viewDidLoad {
@@ -67,11 +64,14 @@
     ConnectionManager *conman = [ConnectionManager new];
     [conman update_gps];
     
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[[conman get_latitude] doubleValue] longitude:[[conman get_longitude] doubleValue] zoom:14];
+    double myLat = [[conman get_latitude] doubleValue];
+    double myLon = [[conman get_longitude] doubleValue];
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:myLat longitude:myLon zoom:14];
     
     self.map = [GMSMapView mapWithFrame:self.view.frame camera:camera];
     self.map.center = self.view.center;
-    [self.map setMinZoom:11 maxZoom:15];
+    [self.map setMinZoom:11 maxZoom:20];
     
     self.map.myLocationEnabled = YES;
     
@@ -82,16 +82,10 @@
     
     if(self.routes.count == 0)
     {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sorry!" message:@"There are no buses coming for a little while. Come back later!" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-        
-        [alert addAction:okAction];
-        
-        alert.view.tintColor = [UIColor blueColor];
-        
-        [self presentViewController:alert animated:YES completion:nil];
+        [self displayErrorMessage];
     }
+    
+    [self setupRouteBuilder];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -110,16 +104,19 @@
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
+- (void)displayErrorMessage
+{
+    NSString *errorText = [NearMeErrorHandler getErrorMessageForEmptyStopArray];
     
-    UIButton *xmlButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 30)];
-    xmlButton.backgroundColor = [UIColor blackColor];
-    [xmlButton addTarget:self action:@selector(publishLineToXML) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:xmlButton];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Sorry!" message:errorText preferredStyle:UIAlertControllerStyleAlert];
     
-    UIButton *deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(300, 100, 50, 30)];
-    deleteButton.backgroundColor = [UIColor redColor];
-    [deleteButton addTarget:self action:@selector(deleteCoord) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:deleteButton];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alert addAction:okAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 -(void)displayMarkersOnMap
@@ -143,7 +140,8 @@
 {
     if(!self.routeCoordinatesDictionary)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"routeCoordinates" ofType:@"xml"];
+        NSString *fileName = [Constants getRouteCoordinatesFileName];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
         self.routeCoordinatesDictionary = [NSDictionary dictionaryWithXMLFile:filePath];
     }
 
@@ -151,7 +149,7 @@
     {
         self.routeCoordinatesArray = self.routeCoordinatesDictionary[@"route"];
     }
-    for(int k = 0; k < self.routeCoordinatesArray.count; k++)
+    for(int k = 0; k < [Constants getListOfRouteNumbers].count; k++)
     {
         NSArray *routeCoords = self.routeCoordinatesArray[k][@"coord"];
         
@@ -163,7 +161,7 @@
         }
         
         GMSPolyline *line = [GMSPolyline polylineWithPath:path];
-        int newRouteNumber = [self getRouteNumbering:k withNumberingSet:YES];
+        int newRouteNumber = [Constants getRouteNumberFromArrayIndex:k];
         line.strokeColor = [Constants getRouteColorForRouteNumber:newRouteNumber];
         line.strokeWidth = 7;
 //        line.map = _map;
@@ -174,6 +172,8 @@
 
 - (void)changePolyine
 {
+    
+    
     GMSPolyline *line = (GMSPolyline*)self.polylineArray[self.routeLineMenu.index];
 
     if(self.routeLineMenu.enable)
@@ -187,145 +187,84 @@
     self.polylinesShowing[self.routeLineMenu.index] = self.routeLineMenu.enable ? @"Yes": @"No";
 }
 
-- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
-{
-    NSNumber *lat = [NSNumber numberWithDouble:coordinate.latitude];
-    NSNumber *lon = [NSNumber numberWithDouble:coordinate.longitude];
-    
-    NSArray *coord = @[lat, lon];
-    
-    [self.line addObject:coord];
-    
-    GMSMutablePath *path = [[GMSMutablePath alloc] init];
-    
-    for (NSArray *point in self.line)
-    {
-        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
-    }
-    
-    self.poly.map = nil;
-    self.poly = nil;
-    
-    self.poly = [GMSPolyline polylineWithPath:path];
-    self.poly.strokeWidth = 5;
-    self.poly.map = self.map;
-}
-
-- (void)publishLineToXML
-{
-    NSString *xml = @"<route>";
-    
-    for (NSArray *coord in self.line)
-    {
-        NSNumber *lat = coord[0];
-        NSNumber *lon = coord[1];
-        
-        xml = [xml stringByAppendingString:[NSString stringWithFormat:@"\n<coord>\n<lat>%@</lat>\n<lon>%@</lon>\n</coord>", lat, lon]];
-    }
-    
-    xml = [xml stringByAppendingString:@"\n</route>"];
-    
-    NSLog(@"%@", xml);
-}
-
-- (void)deleteCoord
-{
-    [self.line removeLastObject];
-    
-    self.poly.map = nil;
-    self.poly = nil;
-
-    GMSMutablePath *path = [[GMSMutablePath alloc] init];
-    
-    for (NSArray *point in self.line)
-    {
-        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
-    }
-    
-    self.poly = [GMSPolyline polylineWithPath:path];
-    self.poly.strokeWidth = 5.0;
-    self.poly.map = self.map;
-}
-
 - (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
 {
-//    NSArray *route = self.routes[[marker.userData intValue]];
-//    
-//    NSString *lat = [NSString stringWithFormat:@"%f", [route[1] floatValue]];
-//    NSString *lon = [NSString stringWithFormat:@"%f", [route[2] floatValue]];
-//    
-//    NSString *coordinatesXML = @"";
-//    
-//    coordinatesXML = [coordinatesXML stringByAppendingString:@"<coord> \n"];
-//    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lat> %@ </lat> \n", lat]];
-//    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lon> %@ </lon> \n", lon]];
-//    coordinatesXML = [coordinatesXML stringByAppendingString:@"</coord> \n"];
-//    
-//    self.string = [self.string stringByAppendingString:coordinatesXML];
-//
-//    NSString *stopId = route[4];
-//    NSDate *now = [[NSDate alloc] init];
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    [dateFormatter setDateFormat:@"cccc"];
-//    NSString *weekday = [[dateFormatter stringFromDate:now] lowercaseString];
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"HH:mm:ss"];
-//    
-//    NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
-//    
-//    self.selectedStopName = route[0];
-//    
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@", self.selectedStopName] message:@"Would you like directions to this stop or incoming buses for it?" preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    UIAlertAction *busAction = [UIAlertAction actionWithTitle:@"Buses" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//        dispatch_queue_t queue = dispatch_queue_create("Get Incoming Buses", NULL);
-//        dispatch_async(queue, ^{
-//            DatabaseManager *db;
-//            db = [DatabaseManager getSharedInstance];
-//            self.incomingBuses = [db getIncomingBusesForStop:stopId AtTime:currentTimeString AndDay:weekday];
-//            NSLog(@"INCOMING BUSES *****************************************************: %@", self.incomingBuses);
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self performSegueWithIdentifier:@"OpenIncomingBuses" sender:self];
-//            });
-//        });
-//    }];
-//    
-//    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//        if ([[UIApplication sharedApplication] canOpenURL:
-//             [NSURL URLWithString:@"comgooglemaps://"]]) {
-//             [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps-x-callback://?daddr=%@,%@&directionsmode=walking&x-success=App://?resume=true&x-source=App", route[1], route[2] ]]];
-//        } else
-//        {
-//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"You need to install the Google Maps app to use this feature!" preferredStyle:UIAlertControllerStyleAlert];
-//            
-//            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//                [alert dismissViewControllerAnimated:YES completion:nil];
-//            }];
-//            
-//            UIAlertAction *openStoreAction = [UIAlertAction actionWithTitle:@"Open Store" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//                NSString *iTunesLink = @"https://itunes.apple.com/us/app/google-maps/id585027354?mt=8";
-//                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
-//            }];
-//            
-//            [alert addAction:okAction];
-//            [alert addAction:openStoreAction];
-//            
-//            alert.view.tintColor = [UIColor blueColor];
-//            
-//            [self presentViewController:alert animated:YES completion:nil];
-//        }
-//    }];
-//    
-//    alert.view.tintColor = [UIColor blueColor];
-//    
-//    [alert addAction:routeAction];
-//    [alert addAction:busAction];
-//    
-//    [self presentViewController:alert animated:YES completion:nil];
-//    
-//    return YES;
-    return NO;
+    NSArray *route = self.routes[[marker.userData intValue]];
+    
+    NSString *lat = [NSString stringWithFormat:@"%f", [route[1] floatValue]];
+    NSString *lon = [NSString stringWithFormat:@"%f", [route[2] floatValue]];
+    
+    NSString *coordinatesXML = @"";
+    
+    coordinatesXML = [coordinatesXML stringByAppendingString:@"<coord> \n"];
+    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lat> %@ </lat> \n", lat]];
+    coordinatesXML = [coordinatesXML stringByAppendingString:[NSString stringWithFormat:@"<lon> %@ </lon> \n", lon]];
+    coordinatesXML = [coordinatesXML stringByAppendingString:@"</coord> \n"];
+    
+    self.string = [self.string stringByAppendingString:coordinatesXML];
+
+    NSString *stopId = route[4];
+    NSDate *now = [[NSDate alloc] init];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"cccc"];
+    NSString *weekday = [[dateFormatter stringFromDate:now] lowercaseString];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm:ss"];
+    
+    NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
+    
+    self.selectedStopName = route[0];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"%@", self.selectedStopName] message:@"Would you like directions to this stop or incoming buses for it?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *busAction = [UIAlertAction actionWithTitle:@"Buses" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        dispatch_queue_t queue = dispatch_queue_create("Get Incoming Buses", NULL);
+        dispatch_async(queue, ^{
+            DatabaseManager *db;
+            db = [DatabaseManager getSharedInstance];
+            self.incomingBuses = [db getIncomingBusesForStop:stopId AtTime:currentTimeString AndDay:weekday];
+            NSLog(@"INCOMING BUSES *****************************************************: %@", self.incomingBuses);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"OpenIncomingBuses" sender:self];
+            });
+        });
+    }];
+    
+    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        if ([[UIApplication sharedApplication] canOpenURL:
+             [NSURL URLWithString:@"comgooglemaps://"]]) {
+             [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps-x-callback://?daddr=%@,%@&directionsmode=walking&x-success=App://?resume=true&x-source=App", route[1], route[2] ]]];
+        } else
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"You need to install the Google Maps app to use this feature!" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            
+            UIAlertAction *openStoreAction = [UIAlertAction actionWithTitle:@"Open Store" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                NSString *iTunesLink = @"https://itunes.apple.com/us/app/google-maps/id585027354?mt=8";
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+            }];
+            
+            [alert addAction:okAction];
+            [alert addAction:openStoreAction];
+            
+            alert.view.tintColor = [UIColor blueColor];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }];
+    
+    alert.view.tintColor = [UIColor blueColor];
+    
+    [alert addAction:routeAction];
+    [alert addAction:busAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    return YES;
 }
 
 - (IBAction)listButtonPressed:(UIBarButtonItem *)sender
@@ -358,52 +297,101 @@
     }
 }
 
-- (int)getRouteNumbering:(int)routeNumber withNumberingSet:(BOOL)set
-{
-    if(!set)
-    {
-        if(routeNumber == 7)
-        {
-            routeNumber = 6;
-        } else if(routeNumber == 20)
-        {
-            routeNumber = 7;
-        } else if(routeNumber == 27)
-        {
-            routeNumber = 8;
-        } else if(routeNumber == 86)
-        {
-            routeNumber = 9;
-        }
-        
-        routeNumber -= 1;
-    } else
-    {
-        routeNumber += 1;
-        if(routeNumber == 6)
-        {
-            routeNumber = 7;
-        } else if(routeNumber == 7)
-        {
-            routeNumber = 20;
-        } else if(routeNumber == 8)
-        {
-            routeNumber = 27;
-        } else if(routeNumber == 9)
-        {
-            routeNumber = 86;
-        }
-    }
-    
-    return routeNumber;
-}
-
 - (IBAction)displayRouteMenu:(UIButton *)sender
 {
     self.routeLineMenu = [self.storyboard instantiateViewControllerWithIdentifier:@"RouteLineMenu"];
     self.routeLineMenu.delegate = self;
     self.routeLineMenu.polylinesShowing = self.polylinesShowing;
+    self.routeLineMenu.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self presentViewController:self.routeLineMenu animated:YES completion:nil];
+}
+
+#pragma mark - Route Line Gathering
+- (void)setupRouteBuilder
+{
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    [button addTarget:self action:@selector(publishLineToXML) forControlEvents:UIControlEventTouchDown];
+    button.backgroundColor = [UIColor blackColor];
+    
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(200, 100, 50, 50)];
+    [button2 addTarget:self action:@selector(deleteCoord) forControlEvents:UIControlEventTouchDown];
+    button2.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:button];
+    [self.view addSubview:button2];
+}
+
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    NSNumber *lat = [NSNumber numberWithDouble:coordinate.latitude];
+    NSNumber *lon = [NSNumber numberWithDouble:coordinate.longitude];
+
+    NSArray *coord = @[lat, lon];
+
+    [self.line addObject:coord];
+
+    GMSMutablePath *path = [[GMSMutablePath alloc] init];
+
+    for (NSArray *point in self.line)
+    {
+        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
+    }
+
+    self.poly.map = nil;
+    self.poly = nil;
+
+    self.poly = [GMSPolyline polylineWithPath:path];
+    self.poly.strokeWidth = 5;
+    self.poly.map = self.map;
+}
+
+- (void)publishLineToXML
+{
+    NSString *xml = @"<route>";
+
+    for (NSArray *coord in self.line)
+    {
+        NSNumber *lat = coord[0];
+        NSNumber *lon = coord[1];
+
+        xml = [xml stringByAppendingString:[NSString stringWithFormat:@"\n<coord>\n<lat>%@</lat>\n<lon>%@</lon>\n</coord>", lat, lon]];
+    }
+
+    xml = [xml stringByAppendingString:@"\n</route>"];
+
+    NSLog(@"%@", xml);
+}
+
+- (void)deleteCoord
+{
+    [self.line removeLastObject];
+
+    self.poly.map = nil;
+    self.poly = nil;
+
+    GMSMutablePath *path = [[GMSMutablePath alloc] init];
+
+    for (NSArray *point in self.line)
+    {
+        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
+    }
+
+    self.poly = [GMSPolyline polylineWithPath:path];
+    self.poly.strokeWidth = 5.0;
+    self.poly.map = self.map;
+}
+
+- (void)displayRouteLineButtons
+{
+    UIButton *xmlButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 30)];
+    xmlButton.backgroundColor = [UIColor blackColor];
+    [xmlButton addTarget:self action:@selector(publishLineToXML) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:xmlButton];
+    
+    UIButton *deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(300, 100, 50, 30)];
+    deleteButton.backgroundColor = [UIColor redColor];
+    [deleteButton addTarget:self action:@selector(deleteCoord) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:deleteButton];
 }
 
 @end

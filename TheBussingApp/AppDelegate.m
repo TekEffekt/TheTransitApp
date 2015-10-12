@@ -19,6 +19,7 @@
 #import "GAIFields.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "GAI.h"
+#import "Constants.h"
 //#import <Pushbots/Pushbots.h>
 
 @implementation AppDelegate
@@ -35,7 +36,10 @@
     //    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     
     // Initialize tracker. Replace with your tracking ID.
-    [[GAI sharedInstance] trackerWithTrackingId:@"UA-64356940-1"];
+    
+#warning Enable when shipping
+    //[[GAI sharedInstance] trackerWithTrackingId:@"UA-64356940-1"];
+    
     
     // The Google Maps API Key
     [GMSServices provideAPIKey:@"AIzaSyC_5GHcShRWjTadni0vDLjU9DvMkwLsdYY"];
@@ -54,7 +58,6 @@
         localNotification.timeZone = [NSTimeZone defaultTimeZone];
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-        
         
         DatabaseManager *db;
         db = [DatabaseManager getSharedInstance];
@@ -78,7 +81,7 @@
         splitViewController.delegate = (id)navigationController.topViewController;
     }
     
-    self.window.tintColor = [UIColor colorWithRed:0.58 green:0.878 blue:0.157 alpha:1]; /*#94e028*/
+    self.window.tintColor = [Constants getAppTintColor];
     
 //    [Pushbots sharedInstanceWithAppId:@"558de155177959c4438b456e"];
 //    //Handle notification when the user click it, while app is closed.

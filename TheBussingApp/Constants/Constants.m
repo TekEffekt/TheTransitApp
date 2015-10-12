@@ -12,6 +12,28 @@
 
 @implementation Constants
 
++ (NSArray*)getListOfRouteNumbers
+{
+    #ifdef Racine
+        return [RacineConstants getListOfRouteNumbers];
+    #elif Kenosha
+        return [KenoshaConstants getListOfRouteNumbers];
+    #endif
+}
+
++ (NSString*)getRouteCoordinatesFileName
+{
+    NSString *fileName = nil;
+    
+    #ifdef Racine
+        fileName = [RacineConstants getRouteCoordinatesFileName];
+    #elif Kenosha
+        fileName = [KenoshaConstants getRouteCoordinatesFileName];
+    #endif
+    
+    return fileName;
+}
+
 + (NSString*)getTextForIndex:(int)index
 {
     NSString *description = nil;
@@ -38,12 +60,12 @@
     return routeColor;
 }
 
-+ (int)getRouteNumberInOrder:(int)routeNumber
++ (int)getRouteNumberFromArrayIndex:(int)index
 {
     #ifdef Racine
-        return [RacineConstants getRouteNumberInOrder:routeNumber];
+        return [RacineConstants getRouteNumberFromArrayIndex:index];
     #elif Kenosha
-        return [KenoshaConstants getRouteNumberInOrder:routeNumber];
+        return [KenoshaConstants getRouteNumberFromArrayIndex:index];
     #endif
 }
 
@@ -73,5 +95,24 @@
         return @"kenoshaDB";
     #endif
 }
+
++ (NSArray*)getScheduleBeginEndTimes
+{
+    #ifdef Racine
+    return [RacineConstants getScheduleBeginEndTimes];
+    #elif Kenosha
+    return [KenoshaConstants getScheduleBeginEndTimes];
+    #endif
+}
+
++ (NSArray*)getAvailableDays
+{
+#ifdef Racine
+    return [RacineConstants getAvailableDays];
+#elif Kenosha
+    return [KenoshaConstants getAvailableDays];
+#endif
+}
+
 
 @end

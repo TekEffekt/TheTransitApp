@@ -38,8 +38,6 @@
 		2798875E1B6EEC8C00562AF8 /* RouteLineMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887481B6EEC8C00562AF8 /* RouteLineMenuViewController.m */; };
 		2798875F1B6EEC8C00562AF8 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798874A1B6EEC8C00562AF8 /* TutorialViewController.m */; };
 		279887601B6EEC8C00562AF8 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798874A1B6EEC8C00562AF8 /* TutorialViewController.m */; };
-		279887781B6EECA000562AF8 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887621B6EECA000562AF8 /* BFPaperButton.m */; };
-		279887791B6EECA000562AF8 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887621B6EECA000562AF8 /* BFPaperButton.m */; };
 		2798877A1B6EECA000562AF8 /* BusListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887641B6EECA000562AF8 /* BusListTableCell.m */; };
 		2798877B1B6EECA000562AF8 /* BusListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887641B6EECA000562AF8 /* BusListTableCell.m */; };
 		2798877C1B6EECA000562AF8 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887661B6EECA000562AF8 /* EAIntroPage.m */; };
@@ -60,8 +58,8 @@
 		2798878B1B6EECA000562AF8 /* UIImage+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887751B6EECA000562AF8 /* UIImage+Screenshot.m */; };
 		2798878C1B6EECA000562AF8 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887771B6EECA000562AF8 /* WYPopoverController.m */; };
 		2798878D1B6EECA000562AF8 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887771B6EECA000562AF8 /* WYPopoverController.m */; };
-		2798878F1B6EECB000562AF8 /* routeCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2798878E1B6EECB000562AF8 /* routeCoordinates.xml */; };
-		279887901B6EECB000562AF8 /* routeCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2798878E1B6EECB000562AF8 /* routeCoordinates.xml */; };
+		2798878F1B6EECB000562AF8 /* RacineRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2798878E1B6EECB000562AF8 /* RacineRouteCoordinates.xml */; };
+		279887901B6EECB000562AF8 /* RacineRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2798878E1B6EECB000562AF8 /* RacineRouteCoordinates.xml */; };
 		2798879D1B6EEDEF00562AF8 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798879A1B6EEDEF00562AF8 /* SSKeychain.m */; };
 		2798879E1B6EEDEF00562AF8 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798879A1B6EEDEF00562AF8 /* SSKeychain.m */; };
 		2798879F1B6EEDEF00562AF8 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798879C1B6EEDEF00562AF8 /* SSKeychainQuery.m */; };
@@ -81,8 +79,6 @@
 		B60A72AF1B7076D500DBF696 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */; };
 		B60A72B11B70781E00DBF696 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72B01B70781E00DBF696 /* FontAwesome.otf */; };
 		B60A72B21B70781E00DBF696 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72B01B70781E00DBF696 /* FontAwesome.otf */; };
-		B60A72B91B707BB400DBF696 /* ExternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B41B707BB400DBF696 /* ExternalViewController.m */; };
-		B60A72BA1B707BB400DBF696 /* ExternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B41B707BB400DBF696 /* ExternalViewController.m */; };
 		B60A72BB1B707BB400DBF696 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B61B707BB400DBF696 /* HelpViewController.m */; };
 		B60A72BC1B707BB400DBF696 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B61B707BB400DBF696 /* HelpViewController.m */; };
 		B60A72BD1B707BB400DBF696 /* HowToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B81B707BB400DBF696 /* HowToViewController.m */; };
@@ -107,11 +103,12 @@
 		B60A72F61B70888000DBF696 /* spanishContact.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E51B70888000DBF696 /* spanishContact.html */; };
 		B60A72F71B70888000DBF696 /* spanishHowTo.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E61B70888000DBF696 /* spanishHowTo.html */; };
 		B60A72F81B70888000DBF696 /* spanishHowTo.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E61B70888000DBF696 /* spanishHowTo.html */; };
+		B61AEF1F1BBB351700D5F34E /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; settings = {ASSET_TAGS = (); }; };
+		B61AEF201BBBD0FD00D5F34E /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
+		B61AEF211BBBD11B00D5F34E /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
 		B639E6361B71827600593A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
 		B639E6371B71827600593A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
 		B639E6451B71873C00593A49 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
-		B639E6491B718D0D00593A49 /* Styleable.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6481B718D0D00593A49 /* Styleable.m */; };
-		B639E64A1B718D0D00593A49 /* Styleable.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6481B718D0D00593A49 /* Styleable.m */; };
 		B639E6561B7193FA00593A49 /* KenoshaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6531B7193FA00593A49 /* KenoshaConstants.m */; };
 		B639E6571B7193FA00593A49 /* KenoshaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6531B7193FA00593A49 /* KenoshaConstants.m */; };
 		B639E6581B7193FA00593A49 /* RacineConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6551B7193FA00593A49 /* RacineConstants.m */; };
@@ -119,6 +116,8 @@
 		B639E65A1B71A7B800593A49 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
 		B639E65C1B71D15C00593A49 /* racineDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E65B1B71D15C00593A49 /* racineDB.sql */; };
 		B639E6611B72053700593A49 /* kenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E6601B72053700593A49 /* kenoshaDB.sql */; };
+		B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; settings = {ASSET_TAGS = (); }; };
+		B6CFCB9A1BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,8 +155,6 @@
 		279887481B6EEC8C00562AF8 /* RouteLineMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RouteLineMenuViewController.m; path = "View Controllers/RouteLineMenuViewController.m"; sourceTree = "<group>"; };
 		279887491B6EEC8C00562AF8 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorialViewController.h; path = "View Controllers/TutorialViewController.h"; sourceTree = "<group>"; };
 		2798874A1B6EEC8C00562AF8 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialViewController.m; path = "View Controllers/TutorialViewController.m"; sourceTree = "<group>"; };
-		279887611B6EECA000562AF8 /* BFPaperButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFPaperButton.h; path = "Views+UI/BFPaperButton.h"; sourceTree = "<group>"; };
-		279887621B6EECA000562AF8 /* BFPaperButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFPaperButton.m; path = "Views+UI/BFPaperButton.m"; sourceTree = "<group>"; };
 		279887631B6EECA000562AF8 /* BusListTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BusListTableCell.h; path = "Views+UI/BusListTableCell.h"; sourceTree = "<group>"; };
 		279887641B6EECA000562AF8 /* BusListTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BusListTableCell.m; path = "Views+UI/BusListTableCell.m"; sourceTree = "<group>"; };
 		279887651B6EECA000562AF8 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAIntroPage.h; path = "Views+UI/EAIntroPage.h"; sourceTree = "<group>"; };
@@ -179,7 +176,7 @@
 		279887751B6EECA000562AF8 /* UIImage+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Screenshot.m"; path = "Views+UI/UIImage+Screenshot.m"; sourceTree = "<group>"; };
 		279887761B6EECA000562AF8 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYPopoverController.h; path = "Views+UI/WYPopoverController.h"; sourceTree = "<group>"; };
 		279887771B6EECA000562AF8 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = "Views+UI/WYPopoverController.m"; sourceTree = "<group>"; };
-		2798878E1B6EECB000562AF8 /* routeCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = routeCoordinates.xml; sourceTree = "<group>"; };
+		2798878E1B6EECB000562AF8 /* RacineRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RacineRouteCoordinates.xml; sourceTree = "<group>"; };
 		279887991B6EEDEF00562AF8 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = Model/SSKeychain.h; sourceTree = "<group>"; };
 		2798879A1B6EEDEF00562AF8 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = Model/SSKeychain.m; sourceTree = "<group>"; };
 		2798879B1B6EEDEF00562AF8 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychainQuery.h; path = Model/SSKeychainQuery.h; sourceTree = "<group>"; };
@@ -204,8 +201,6 @@
 		B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KATLogoBannerV2.png; sourceTree = "<group>"; };
 		B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		B60A72B01B70781E00DBF696 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
-		B60A72B31B707BB400DBF696 /* ExternalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalViewController.h; path = "View Controllers/ExternalViewController.h"; sourceTree = "<group>"; };
-		B60A72B41B707BB400DBF696 /* ExternalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExternalViewController.m; path = "View Controllers/ExternalViewController.m"; sourceTree = "<group>"; };
 		B60A72B51B707BB400DBF696 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpViewController.h; path = "View Controllers/HelpViewController.h"; sourceTree = "<group>"; };
 		B60A72B61B707BB400DBF696 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpViewController.m; path = "View Controllers/HelpViewController.m"; sourceTree = "<group>"; };
 		B60A72B71B707BB400DBF696 /* HowToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HowToViewController.h; path = "View Controllers/HowToViewController.h"; sourceTree = "<group>"; };
@@ -222,17 +217,21 @@
 		B60A72E61B70888000DBF696 /* spanishHowTo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = spanishHowTo.html; path = "Tutorial HTML/spanishHowTo.html"; sourceTree = "<group>"; };
 		B60A72F91B70B6E600DBF696 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B60A72FB1B70B9D500DBF696 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		B61AEF1D1BBB351700D5F34E /* NearMeErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearMeErrorHandler.h; path = Model/NearMeErrorHandler.h; sourceTree = "<group>"; };
+		B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearMeErrorHandler.m; path = Model/NearMeErrorHandler.m; sourceTree = "<group>"; };
 		B639E6351B71827600593A49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B639E6431B71873C00593A49 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Constants/Constants.h; sourceTree = "<group>"; };
 		B639E6441B71873C00593A49 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Constants/Constants.m; sourceTree = "<group>"; };
 		B639E6471B718D0D00593A49 /* Styleable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Styleable.h; sourceTree = "<group>"; };
-		B639E6481B718D0D00593A49 /* Styleable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Styleable.m; sourceTree = "<group>"; };
 		B639E6521B7193FA00593A49 /* KenoshaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KenoshaConstants.h; path = Constants/KenoshaConstants.h; sourceTree = "<group>"; };
 		B639E6531B7193FA00593A49 /* KenoshaConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KenoshaConstants.m; path = Constants/KenoshaConstants.m; sourceTree = "<group>"; };
 		B639E6541B7193FA00593A49 /* RacineConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RacineConstants.h; path = Constants/RacineConstants.h; sourceTree = "<group>"; };
 		B639E6551B7193FA00593A49 /* RacineConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RacineConstants.m; path = Constants/RacineConstants.m; sourceTree = "<group>"; };
 		B639E65B1B71D15C00593A49 /* racineDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = racineDB.sql; sourceTree = "<group>"; };
 		B639E6601B72053700593A49 /* kenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kenoshaDB.sql; sourceTree = "<group>"; };
+		B64B13811BB7B8CF0074B053 /* BFPaperButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperButton.h; sourceTree = "<group>"; };
+		B64B13821BB7B8CF0074B053 /* BFPaperButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPaperButton.m; sourceTree = "<group>"; };
+		B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KenoshaRouteCoordinates.xml; sourceTree = "<group>"; };
 		FDDEB8639BE598163BC08493 /* libPods-Kenosha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kenosha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -282,7 +281,6 @@
 				2798864C1B6EBDA400562AF8 /* AppDelegate.h */,
 				2798864D1B6EBDA400562AF8 /* AppDelegate.m */,
 				B639E6351B71827600593A49 /* Main.storyboard */,
-				B639E6341B71820500593A49 /* Storyboads */,
 				279887181B6EEC5C00562AF8 /* View Controllers */,
 				279887171B6EEC5400562AF8 /* Model */,
 				279887161B6EEC4C00562AF8 /* View+UI */,
@@ -301,7 +299,8 @@
 				B60A72BF1B707D3000DBF696 /* Info.plist */,
 				B60A72B01B70781E00DBF696 /* FontAwesome.otf */,
 				B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */,
-				2798878E1B6EECB000562AF8 /* routeCoordinates.xml */,
+				B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */,
+				2798878E1B6EECB000562AF8 /* RacineRouteCoordinates.xml */,
 				2798864A1B6EBDA400562AF8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -343,14 +342,14 @@
 				279887E81B6F358100562AF8 /* WECodeScannerMatchView.m */,
 				279887E91B6F358100562AF8 /* WECodeScannerView.h */,
 				279887EA1B6F358100562AF8 /* WECodeScannerView.m */,
-				279887611B6EECA000562AF8 /* BFPaperButton.h */,
-				279887621B6EECA000562AF8 /* BFPaperButton.m */,
 				279887651B6EECA000562AF8 /* EAIntroPage.h */,
 				279887661B6EECA000562AF8 /* EAIntroPage.m */,
 				279887671B6EECA000562AF8 /* EAIntroView.h */,
 				279887681B6EECA000562AF8 /* EAIntroView.m */,
 				279887691B6EECA000562AF8 /* EARestrictedScrollView.h */,
 				2798876A1B6EECA000562AF8 /* EARestrictedScrollView.m */,
+				B64B13811BB7B8CF0074B053 /* BFPaperButton.h */,
+				B64B13821BB7B8CF0074B053 /* BFPaperButton.m */,
 				B639E65E1B71E4F500593A49 /* UIColor + Image */,
 				279887761B6EECA000562AF8 /* WYPopoverController.h */,
 				279887771B6EECA000562AF8 /* WYPopoverController.m */,
@@ -369,11 +368,12 @@
 				2798871C1B6EEC7900562AF8 /* DatabaseManager.m */,
 				2798871F1B6EEC7900562AF8 /* UpdateManager.h */,
 				279887201B6EEC7900562AF8 /* UpdateManager.m */,
+				B61AEF1D1BBB351700D5F34E /* NearMeErrorHandler.h */,
+				B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */,
 				B639E6431B71873C00593A49 /* Constants.h */,
 				B639E6441B71873C00593A49 /* Constants.m */,
-				B639E6511B7193D500593A49 /* City Constants */,
+				B639E6511B7193D500593A49 /* City Specific Constants */,
 				B639E6471B718D0D00593A49 /* Styleable.h */,
-				B639E6481B718D0D00593A49 /* Styleable.m */,
 				B639E6391B71830700593A49 /* XML API */,
 			);
 			name = Model;
@@ -384,8 +384,6 @@
 			children = (
 				279887351B6EEC8C00562AF8 /* BusRouteListViewController.h */,
 				279887361B6EEC8C00562AF8 /* BusRouteListViewController.m */,
-				B60A72B31B707BB400DBF696 /* ExternalViewController.h */,
-				B60A72B41B707BB400DBF696 /* ExternalViewController.m */,
 				B60A72B51B707BB400DBF696 /* HelpViewController.h */,
 				B60A72B61B707BB400DBF696 /* HelpViewController.m */,
 				B60A72B71B707BB400DBF696 /* HowToViewController.h */,
@@ -449,13 +447,6 @@
 			name = "Tutorial HTML -_-";
 			sourceTree = "<group>";
 		};
-		B639E6341B71820500593A49 /* Storyboads */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Storyboads;
-			sourceTree = "<group>";
-		};
 		B639E6381B7182D200593A49 /* Font Awesome */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,7 +467,7 @@
 			name = "XML API";
 			sourceTree = "<group>";
 		};
-		B639E6511B7193D500593A49 /* City Constants */ = {
+		B639E6511B7193D500593A49 /* City Specific Constants */ = {
 			isa = PBXGroup;
 			children = (
 				B639E6521B7193FA00593A49 /* KenoshaConstants.h */,
@@ -484,7 +475,7 @@
 				B639E6541B7193FA00593A49 /* RacineConstants.h */,
 				B639E6551B7193FA00593A49 /* RacineConstants.m */,
 			);
-			name = "City Constants";
+			name = "City Specific Constants";
 			sourceTree = "<group>";
 		};
 		B639E65E1B71E4F500593A49 /* UIColor + Image */ = {
@@ -572,6 +563,7 @@
 		2798863D1B6EBDA400562AF8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "App Factory";
 				TargetAttributes = {
@@ -618,7 +610,7 @@
 				B60A72F11B70888000DBF696 /* spanishabout.html in Resources */,
 				B60A72F31B70888000DBF696 /* spanishAccessibility.html in Resources */,
 				B60A72F71B70888000DBF696 /* spanishHowTo.html in Resources */,
-				2798878F1B6EECB000562AF8 /* routeCoordinates.xml in Resources */,
+				2798878F1B6EECB000562AF8 /* RacineRouteCoordinates.xml in Resources */,
 				B60A72EF1B70888000DBF696 /* how_to.html in Resources */,
 				B60A72F51B70888000DBF696 /* spanishContact.html in Resources */,
 				B60A72C01B707D3000DBF696 /* Info.plist in Resources */,
@@ -631,6 +623,7 @@
 			files = (
 				B60A72F81B70888000DBF696 /* spanishHowTo.html in Resources */,
 				B60A72C11B707D3000DBF696 /* Info.plist in Resources */,
+				B6CFCB9A1BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml in Resources */,
 				B60A72EE1B70888000DBF696 /* help.html in Resources */,
 				B60A72A81B70668A00DBF696 /* KenoshaImages.xcassets in Resources */,
 				B60A72EA1B70888000DBF696 /* accessibility.html in Resources */,
@@ -640,7 +633,7 @@
 				B60A72F61B70888000DBF696 /* spanishContact.html in Resources */,
 				279887071B6EE8A800562AF8 /* General.xcassets in Resources */,
 				B60A72F01B70888000DBF696 /* how_to.html in Resources */,
-				279887901B6EECB000562AF8 /* routeCoordinates.xml in Resources */,
+				279887901B6EECB000562AF8 /* RacineRouteCoordinates.xml in Resources */,
 				B60A72E81B70888000DBF696 /* about.html in Resources */,
 				B60A72F21B70888000DBF696 /* spanishabout.html in Resources */,
 				B639E6371B71827600593A49 /* Main.storyboard in Resources */,
@@ -722,12 +715,12 @@
 			files = (
 				279887821B6EECA000562AF8 /* IncomingBusCell.m in Sources */,
 				B639E6451B71873C00593A49 /* Constants.m in Sources */,
-				B639E6491B718D0D00593A49 /* Styleable.m in Sources */,
 				2798879F1B6EEDEF00562AF8 /* SSKeychainQuery.m in Sources */,
+				B61AEF1F1BBB351700D5F34E /* NearMeErrorHandler.m in Sources */,
 				279887291B6EEC7900562AF8 /* DatabaseManager.m in Sources */,
 				279887841B6EECA000562AF8 /* UIColor+BFPaperColors.m in Sources */,
 				2798875D1B6EEC8C00562AF8 /* RouteLineMenuViewController.m in Sources */,
-				B60A72B91B707BB400DBF696 /* ExternalViewController.m in Sources */,
+				B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */,
 				2798874B1B6EEC8C00562AF8 /* BusRouteListViewController.m in Sources */,
 				279887311B6EEC7900562AF8 /* XMLDictionary.m in Sources */,
 				2798877E1B6EECA000562AF8 /* EAIntroView.m in Sources */,
@@ -735,7 +728,6 @@
 				2798872D1B6EEC7900562AF8 /* UpdateManager.m in Sources */,
 				2798877A1B6EECA000562AF8 /* BusListTableCell.m in Sources */,
 				2798864E1B6EBDA400562AF8 /* AppDelegate.m in Sources */,
-				279887781B6EECA000562AF8 /* BFPaperButton.m in Sources */,
 				279887A41B6F0C0700562AF8 /* NSString+FontAwesome.m in Sources */,
 				2798864B1B6EBDA400562AF8 /* main.m in Sources */,
 				279887571B6EEC8C00562AF8 /* NearMeMapViewController.m in Sources */,
@@ -765,15 +757,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61AEF211BBBD11B00D5F34E /* BFPaperButton.m in Sources */,
+				B61AEF201BBBD0FD00D5F34E /* NearMeErrorHandler.m in Sources */,
 				B639E65A1B71A7B800593A49 /* Constants.m in Sources */,
 				279887831B6EECA000562AF8 /* IncomingBusCell.m in Sources */,
 				279887A01B6EEDEF00562AF8 /* SSKeychainQuery.m in Sources */,
 				2798872A1B6EEC7900562AF8 /* DatabaseManager.m in Sources */,
 				279887851B6EECA000562AF8 /* UIColor+BFPaperColors.m in Sources */,
 				2798875E1B6EEC8C00562AF8 /* RouteLineMenuViewController.m in Sources */,
-				B60A72BA1B707BB400DBF696 /* ExternalViewController.m in Sources */,
 				2798874C1B6EEC8C00562AF8 /* BusRouteListViewController.m in Sources */,
-				B639E64A1B718D0D00593A49 /* Styleable.m in Sources */,
 				279887321B6EEC7900562AF8 /* XMLDictionary.m in Sources */,
 				B639E6571B7193FA00593A49 /* KenoshaConstants.m in Sources */,
 				2798877F1B6EECA000562AF8 /* EAIntroView.m in Sources */,
@@ -782,7 +774,6 @@
 				2798877B1B6EECA000562AF8 /* BusListTableCell.m in Sources */,
 				B639E6591B7193FA00593A49 /* RacineConstants.m in Sources */,
 				279886711B6EBF8A00562AF8 /* AppDelegate.m in Sources */,
-				279887791B6EECA000562AF8 /* BFPaperButton.m in Sources */,
 				279887A51B6F0C0700562AF8 /* NSString+FontAwesome.m in Sources */,
 				279886721B6EBF8A00562AF8 /* main.m in Sources */,
 				279887581B6EEC8C00562AF8 /* NearMeMapViewController.m in Sources */,
@@ -895,6 +886,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = RacineAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -906,6 +898,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Racine-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -915,6 +909,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = RacineAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -926,6 +921,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Racine-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -935,6 +931,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = KenoshaAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -946,6 +943,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "TheBussingApp copy";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -955,6 +954,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = KenoshaAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -966,6 +966,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "TheBussingApp copy";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
 			};
 			name = Release;
 		};

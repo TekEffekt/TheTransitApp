@@ -22,6 +22,16 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
 
 @implementation RacineConstants
 
++ (NSArray*)getListOfRouteNumbers
+{
+    return @[@1,@2,@3,@4,@5,@7,@20,@27,@86];
+}
+
++ (NSString*)getRouteCoordinatesFileName
+{
+    return @"RacineRouteCoordinates";
+}
+
 + (NSString*)getTextForIndex:(int)index
 {
     NSArray *descriptions = @[description1, description2, description3, description4, description5, description6, description7, description8, description9, description10, description11];
@@ -71,24 +81,28 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return routeColor;
 }
 
-+ (int)getRouteNumberInOrder:(int)routeNumber
++ (int)getRouteNumberFromArrayIndex:(int)index
 {
-    if(routeNumber == 7)
-    {
-        routeNumber = 6;
-    } else if(routeNumber == 20)
+    int routeNumber;
+    
+    if(index == 5)
     {
         routeNumber = 7;
-    } else if(routeNumber == 27)
+    } else if(index == 6)
     {
-        routeNumber = 8;
-    } else if(routeNumber == 86)
+        routeNumber = 20;
+    } else if(index == 7)
     {
-        routeNumber = 9;
+        routeNumber = 27;
+    } else if(index == 8)
+    {
+        routeNumber = 86;
+    } else
+    {
+        routeNumber = index;
+        routeNumber++;
     }
-    
-    routeNumber--;
-    
+
     return routeNumber;
 }
 
@@ -102,5 +116,14 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return [UIColor colorWithRed:0.086 green:0.365 blue:0.565 alpha:1];
 }
 
++ (NSArray*)getScheduleBeginEndTimes
+{
+    return @[@5, @22];
+}
+
++ (NSArray*)getAvailableDays
+{
+    return @[@"sunday",@"monday",@"tuesday",@"wednesday",@"thursday",@"friday",@"saturday"];
+}
 
 @end

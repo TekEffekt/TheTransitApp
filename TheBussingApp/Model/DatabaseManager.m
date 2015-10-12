@@ -350,8 +350,8 @@ NSDictionary *resultDict = nil;
 //    double myLat = 42.6432133;
 //    double myLon = -87.8479223;
     
-    static double LATITUED_PER_5_MILES =  .033;
-    static double LONGITUDE_PER_5_MILES = .033;
+    static double LATITUED_PER_5_MILES =  .0333;
+    static double LONGITUDE_PER_5_MILES = .0333;
     
     //Working code
     NSDate *now = [[NSDate alloc] init];
@@ -362,7 +362,6 @@ NSDictionary *resultDict = nil;
     [formatter setDateFormat:@"HH:mm:ss"];
     
     NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
-//    currentTimeString = @"14:00:00";
     
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     

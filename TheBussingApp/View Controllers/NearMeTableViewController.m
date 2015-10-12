@@ -76,7 +76,6 @@
     BusListTableCell *tableCell = [self.routesTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     //assign all table cell information
-    
     NSArray *route = self.routes[indexPath.row];
     
     ConnectionManager *conman = [ConnectionManager new];

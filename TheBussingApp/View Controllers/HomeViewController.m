@@ -14,7 +14,6 @@
 #import "HomeViewController.h"
 #import "BusRouteListViewController.h"
 #import "HelpViewController.h"
-#import "ExternalViewController.h"
 #import "NearMeTableViewController.h"
 #import "NearMeMapViewController.h"
 #import "AppDelegate.h"
@@ -227,7 +226,7 @@ _Bool isSpanish;
     if ([[UIApplication sharedApplication] canOpenURL:
          [NSURL URLWithString:@"comgooglemaps://"]]) {
         [[UIApplication sharedApplication] openURL:
-         [NSURL URLWithString:@"comgooglemaps-x-callback://?saddr=My+location&directionsmode=transit&x-success=App://?resume=true&x-source=App"]];
+         [NSURL URLWithString:@"comgooglemaps-x-callback://?saddr=My+location&directionsmode=transit&x-success=BusApp://?resume=true&x-source=BusApp"]];
     } else
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"You need to install the Google Maps app to use this feature!" preferredStyle:UIAlertControllerStyleAlert];
@@ -516,26 +515,7 @@ _Bool isSpanish;
 
 //called when opening a new view controller
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    //check if "How To" button has been pressed
-    if ([[segue identifier] isEqualToString:@"showBannerScreen"])
-    {
-        ExternalViewController *externalViewController =
-        [segue destinationViewController];
-        
-        //set the button value to 1
-        externalViewController.buttonValue = 1;
-    }
-    
-    //check if "About" button has been pressed
-    if ([[segue identifier] isEqualToString:@"showRouteScreen"])
-    {
-        ExternalViewController *externalViewController =
-        [segue destinationViewController];
-        
-        //set the button value to 1
-        externalViewController.buttonValue = 2;
-    }
+{    
     if([[segue identifier] isEqualToString:@"showGpsPage"]){
         NearMeMapViewController *controller = segue.destinationViewController;
         controller.routes = self.nearbyRoutes;

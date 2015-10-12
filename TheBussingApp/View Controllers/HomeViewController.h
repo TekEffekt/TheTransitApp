@@ -17,6 +17,9 @@
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
 #import "RootViewController.h"
+#import "ConnectionManager.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface HomeViewController : RootViewController
 @property (strong, nonatomic) IBOutlet UIButton *btnGPS;

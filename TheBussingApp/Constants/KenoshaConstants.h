@@ -13,8 +13,12 @@
 
 + (NSString*)getTextForIndex:(int)index;
 + (UIColor*)getRouteColorForRouteNumber:(int)number;
-+ (int)getRouteNumberInOrder:(int)routeNumber;
++ (int)getRouteNumberFromArrayIndex:(int)index;
 + (UIColor*)getAppTintColor;
 + (UIColor*)getBackgroundColor;
++ (NSArray*)getScheduleBeginEndTimes;
++ (NSArray*)getAvailableDays;
++ (NSString*)getRouteCoordinatesFileName;
++ (NSArray*)getListOfRouteNumbers;
 
 @end
