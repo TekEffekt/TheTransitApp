@@ -198,8 +198,9 @@
 
 - (IBAction)enableAllPressed:(UIButton *)sender
 {
-    for(UIView *view in self.routeButtonContainers)
+    for(int i = 0; i <[Constants getListOfRouteNumbers].count; i++)
     {
+        UIView *view = self.routeButtonContainers[i];
         BFPaperButton *button = (BFPaperButton*)view.subviews[0];
         if(button.backgroundColor == [UIColor lightGrayColor])
         {
@@ -211,8 +212,9 @@
 
 - (IBAction)disableAll:(UIButton *)sender
 {
-    for(UIView *view in self.routeButtonContainers)
+    for(int i = 0; i <[Constants getListOfRouteNumbers].count; i++)
     {
+        UIView *view = self.routeButtonContainers[i];
         BFPaperButton *button = (BFPaperButton*)view.subviews[0];
         if(button.backgroundColor != [UIColor lightGrayColor])
         {

@@ -172,8 +172,6 @@
 
 - (void)changePolyine
 {
-    
-    
     GMSPolyline *line = (GMSPolyline*)self.polylineArray[self.routeLineMenu.index];
 
     if(self.routeLineMenu.enable)
