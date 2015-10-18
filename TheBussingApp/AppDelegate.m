@@ -40,7 +40,6 @@
 #warning Enable when shipping
     //[[GAI sharedInstance] trackerWithTrackingId:@"UA-64356940-1"];
     
-    
     // The Google Maps API Key
     [GMSServices provideAPIKey:@"AIzaSyC_5GHcShRWjTadni0vDLjU9DvMkwLsdYY"];
     

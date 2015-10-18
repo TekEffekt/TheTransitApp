@@ -9,6 +9,7 @@
 #import "Constants.h"
 #import "RacineConstants.h"
 #import "KenoshaConstants.h"
+#import "WesternKenoshaConstants.h"
 
 @implementation Constants
 
@@ -18,6 +19,8 @@
         return [RacineConstants getListOfRouteNumbers];
     #elif Kenosha
         return [KenoshaConstants getListOfRouteNumbers];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getListOfRouteNumbers];
     #endif
 }
 
@@ -29,6 +32,8 @@
         fileName = [RacineConstants getRouteCoordinatesFileName];
     #elif Kenosha
         fileName = [KenoshaConstants getRouteCoordinatesFileName];
+    #elif WesternKenosha
+        fileName = [WesternKenoshaConstants getRouteCoordinatesFileName];
     #endif
     
     return fileName;
@@ -42,6 +47,8 @@
         description = [RacineConstants getTextForIndex:index];
     #elif Kenosha
         description = [KenoshaConstants getTextForIndex:index];
+    #elif WesternKenosha
+        description = [WesternKenoshaConstants getTextForIndex:index];
     #endif
     
     return description;
@@ -51,11 +58,13 @@
 {
     UIColor *routeColor;
     
-#ifdef Racine
-    routeColor = [RacineConstants getRouteColorForRouteNumber:number];
-#elif Kenosha
-    routeColor = [KenoshaConstants getRouteColorForRouteNumber:number];
-#endif
+    #ifdef Racine
+        routeColor = [RacineConstants getRouteColorForRouteNumber:number];
+    #elif Kenosha
+        routeColor = [KenoshaConstants getRouteColorForRouteNumber:number];
+    #elif WesternKenosha
+        routeColor = [WesternKenoshaConstants getRouteColorForRouteNumber:number];
+    #endif
     
     return routeColor;
 }
@@ -66,6 +75,8 @@
         return [RacineConstants getRouteNumberFromArrayIndex:index];
     #elif Kenosha
         return [KenoshaConstants getRouteNumberFromArrayIndex:index];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getRouteNumberFromArrayIndex:index];
     #endif
 }
 
@@ -75,6 +86,8 @@
         return [RacineConstants getAppTintColor];
     #elif Kenosha
         return [KenoshaConstants getAppTintColor];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getAppTintColor];
     #endif
 }
 
@@ -84,6 +97,8 @@
         return [RacineConstants getBackgroundColor];
     #elif Kenosha
         return [KenoshaConstants getBackgroundColor];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getBackgroundColor];
     #endif
 }
 
@@ -93,25 +108,31 @@
         return @"racineDB";
     #elif Kenosha
         return @"kenoshaDB";
+    #elif WesternKenosha
+        return @"westernKenoshaDB";
     #endif
 }
 
 + (NSArray*)getScheduleBeginEndTimes
 {
     #ifdef Racine
-    return [RacineConstants getScheduleBeginEndTimes];
+        return [RacineConstants getScheduleBeginEndTimes];
     #elif Kenosha
-    return [KenoshaConstants getScheduleBeginEndTimes];
+        return [KenoshaConstants getScheduleBeginEndTimes];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getScheduleBeginEndTimes];
     #endif
 }
 
 + (NSArray*)getAvailableDays
 {
-#ifdef Racine
-    return [RacineConstants getAvailableDays];
-#elif Kenosha
-    return [KenoshaConstants getAvailableDays];
-#endif
+    #ifdef Racine
+        return [RacineConstants getAvailableDays];
+    #elif Kenosha
+        return [KenoshaConstants getAvailableDays];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getAvailableDays];
+    #endif
 }
 
 

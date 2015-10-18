@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface RacineConstants : NSObject
+@interface WesternKenoshaConstants : NSObject
 
 + (NSString*)getTextForIndex:(int)index;
++ (UIColor*)getRouteColorForRouteNumber:(int)number;
 + (int)getRouteNumberFromArrayIndex:(int)index;
 + (UIColor*)getAppTintColor;
 + (UIColor*)getBackgroundColor;
@@ -19,6 +20,5 @@
 + (NSArray*)getAvailableDays;
 + (NSString*)getRouteCoordinatesFileName;
 + (NSArray*)getListOfRouteNumbers;
-+ (UIColor *)getRouteColorForRouteNumber:(int)number;
 
 @end

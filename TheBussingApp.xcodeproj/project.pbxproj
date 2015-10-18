@@ -117,6 +117,61 @@
 		B639E65C1B71D15C00593A49 /* racineDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E65B1B71D15C00593A49 /* racineDB.sql */; };
 		B639E6611B72053700593A49 /* kenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E6601B72053700593A49 /* kenoshaDB.sql */; };
 		B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; settings = {ASSET_TAGS = (); }; };
+		B67F20A01BCC75E9000A0CEB /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
+		B67F20A11BCC75E9000A0CEB /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
+		B67F20A21BCC75E9000A0CEB /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
+		B67F20A31BCC75E9000A0CEB /* IncomingBusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798876C1B6EECA000562AF8 /* IncomingBusCell.m */; };
+		B67F20A41BCC75E9000A0CEB /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798879C1B6EEDEF00562AF8 /* SSKeychainQuery.m */; };
+		B67F20A51BCC75E9000A0CEB /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798871C1B6EEC7900562AF8 /* DatabaseManager.m */; };
+		B67F20A61BCC75E9000A0CEB /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798876E1B6EECA000562AF8 /* UIColor+BFPaperColors.m */; };
+		B67F20A71BCC75E9000A0CEB /* RouteLineMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887481B6EEC8C00562AF8 /* RouteLineMenuViewController.m */; };
+		B67F20A81BCC75E9000A0CEB /* BusRouteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887361B6EEC8C00562AF8 /* BusRouteListViewController.m */; };
+		B67F20A91BCC75E9000A0CEB /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887241B6EEC7900562AF8 /* XMLDictionary.m */; };
+		B67F20AB1BCC75E9000A0CEB /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887681B6EECA000562AF8 /* EAIntroView.m */; };
+		B67F20AC1BCC75E9000A0CEB /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798871A1B6EEC7900562AF8 /* ConnectionManager.m */; };
+		B67F20AD1BCC75E9000A0CEB /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887201B6EEC7900562AF8 /* UpdateManager.m */; };
+		B67F20AE1BCC75E9000A0CEB /* BusListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887641B6EECA000562AF8 /* BusListTableCell.m */; };
+		B67F20AF1BCC75E9000A0CEB /* RacineConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6551B7193FA00593A49 /* RacineConstants.m */; };
+		B67F20B01BCC75E9000A0CEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798864D1B6EBDA400562AF8 /* AppDelegate.m */; };
+		B67F20B11BCC75E9000A0CEB /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887A31B6F0C0700562AF8 /* NSString+FontAwesome.m */; };
+		B67F20B21BCC75E9000A0CEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798864A1B6EBDA400562AF8 /* main.m */; };
+		B67F20B31BCC75E9000A0CEB /* NearMeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887421B6EEC8C00562AF8 /* NearMeMapViewController.m */; };
+		B67F20B41BCC75E9000A0CEB /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887661B6EECA000562AF8 /* EAIntroPage.m */; };
+		B67F20B51BCC75E9000A0CEB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */; };
+		B67F20B61BCC75E9000A0CEB /* WECodeScannerMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887E81B6F358100562AF8 /* WECodeScannerMatchView.m */; };
+		B67F20B71BCC75E9000A0CEB /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887771B6EECA000562AF8 /* WYPopoverController.m */; };
+		B67F20B81BCC75E9000A0CEB /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887261B6EEC7900562AF8 /* XMLReader.m */; };
+		B67F20B91BCC75E9000A0CEB /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798874A1B6EEC8C00562AF8 /* TutorialViewController.m */; };
+		B67F20BA1BCC75E9000A0CEB /* EARestrictedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798876A1B6EECA000562AF8 /* EARestrictedScrollView.m */; };
+		B67F20BB1BCC75E9000A0CEB /* NearMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887441B6EEC8C00562AF8 /* NearMeTableViewController.m */; };
+		B67F20BC1BCC75E9000A0CEB /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B61B707BB400DBF696 /* HelpViewController.m */; };
+		B67F20BD1BCC75E9000A0CEB /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887711B6EECA000562AF8 /* UIImage+Blur.m */; };
+		B67F20BE1BCC75E9000A0CEB /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887731B6EECA000562AF8 /* UIImage+ImageWithColor.m */; };
+		B67F20BF1BCC75E9000A0CEB /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798879A1B6EEDEF00562AF8 /* SSKeychain.m */; };
+		B67F20C01BCC75E9000A0CEB /* UIImage+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887751B6EECA000562AF8 /* UIImage+Screenshot.m */; };
+		B67F20C11BCC75E9000A0CEB /* WECodeScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887EA1B6F358100562AF8 /* WECodeScannerView.m */; };
+		B67F20C21BCC75E9000A0CEB /* HowToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B81B707BB400DBF696 /* HowToViewController.m */; };
+		B67F20C31BCC75E9000A0CEB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887461B6EEC8C00562AF8 /* RootViewController.m */; };
+		B67F20C41BCC75E9000A0CEB /* IncomingBusesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887401B6EEC8C00562AF8 /* IncomingBusesViewController.m */; };
+		B67F20C61BCC75E9000A0CEB /* libPods-Kenosha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEB8639BE598163BC08493 /* libPods-Kenosha.a */; };
+		B67F20C81BCC75E9000A0CEB /* spanishHowTo.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E61B70888000DBF696 /* spanishHowTo.html */; };
+		B67F20C91BCC75E9000A0CEB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B60A72BF1B707D3000DBF696 /* Info.plist */; };
+		B67F20CB1BCC75E9000A0CEB /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E11B70888000DBF696 /* help.html */; };
+		B67F20CD1BCC75E9000A0CEB /* accessibility.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72DF1B70888000DBF696 /* accessibility.html */; };
+		B67F20CE1BCC75E9000A0CEB /* contact.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E01B70888000DBF696 /* contact.html */; };
+		B67F20CF1BCC75E9000A0CEB /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */; };
+		B67F20D01BCC75E9000A0CEB /* spanishAccessibility.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E41B70888000DBF696 /* spanishAccessibility.html */; };
+		B67F20D11BCC75E9000A0CEB /* spanishContact.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E51B70888000DBF696 /* spanishContact.html */; };
+		B67F20D21BCC75E9000A0CEB /* General.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279887051B6EE8A800562AF8 /* General.xcassets */; };
+		B67F20D31BCC75E9000A0CEB /* how_to.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E21B70888000DBF696 /* how_to.html */; };
+		B67F20D51BCC75E9000A0CEB /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72DE1B70888000DBF696 /* about.html */; };
+		B67F20D61BCC75E9000A0CEB /* spanishabout.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E31B70888000DBF696 /* spanishabout.html */; };
+		B67F20D71BCC75E9000A0CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
+		B67F20D81BCC75E9000A0CEB /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72B01B70781E00DBF696 /* FontAwesome.otf */; };
+		B67F20D91BCC75E9000A0CEB /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
+		B67F20E21BCC7744000A0CEB /* westernKenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B67F20E11BCC7744000A0CEB /* westernKenoshaDB.sql */; settings = {ASSET_TAGS = (); }; };
+		B67F20E51BCC8D57000A0CEB /* WesternKenoshaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */; settings = {ASSET_TAGS = (); }; };
+		B67F20E71BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */; settings = {ASSET_TAGS = (); }; };
 		B6CFCB9A1BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -231,6 +286,12 @@
 		B639E6601B72053700593A49 /* kenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kenoshaDB.sql; sourceTree = "<group>"; };
 		B64B13811BB7B8CF0074B053 /* BFPaperButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperButton.h; sourceTree = "<group>"; };
 		B64B13821BB7B8CF0074B053 /* BFPaperButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPaperButton.m; sourceTree = "<group>"; };
+		B67F20DF1BCC75E9000A0CEB /* WesternKenosha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WesternKenosha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67F20E01BCC75E9000A0CEB /* Kenosha copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kenosha copy-Info.plist"; path = "/Users/kylez/Documents/Development/Xcode Projects/TheBussingApp/Kenosha copy-Info.plist"; sourceTree = "<absolute>"; };
+		B67F20E11BCC7744000A0CEB /* westernKenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = westernKenoshaDB.sql; sourceTree = "<group>"; };
+		B67F20E31BCC8D57000A0CEB /* WesternKenoshaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WesternKenoshaConstants.h; path = Constants/WesternKenoshaConstants.h; sourceTree = "<group>"; };
+		B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WesternKenoshaConstants.m; path = Constants/WesternKenoshaConstants.m; sourceTree = "<group>"; };
+		B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WesternKenoshaImages.xcassets; sourceTree = "<group>"; };
 		B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KenoshaRouteCoordinates.xml; sourceTree = "<group>"; };
 		FDDEB8639BE598163BC08493 /* libPods-Kenosha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kenosha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +312,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B67F20C51BCC75E9000A0CEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67F20C61BCC75E9000A0CEB /* libPods-Kenosha.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -263,6 +332,7 @@
 				2798867C1B6EBF8A00562AF8 /* TheBussingApp copy-Info.plist */,
 				EF6A7B7D17D66CC5BE1848B5 /* Pods */,
 				8729E13D0851A0F5C3C62A53 /* Frameworks */,
+				B67F20E01BCC75E9000A0CEB /* Kenosha copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +341,7 @@
 			children = (
 				279886451B6EBDA400562AF8 /* Racine.app */,
 				2798867B1B6EBF8A00562AF8 /* TheBussingApp copy.app */,
+				B67F20DF1BCC75E9000A0CEB /* WesternKenosha.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,6 +367,7 @@
 			children = (
 				B639E65B1B71D15C00593A49 /* racineDB.sql */,
 				B639E6601B72053700593A49 /* kenoshaDB.sql */,
+				B67F20E11BCC7744000A0CEB /* westernKenoshaDB.sql */,
 				B60A72BF1B707D3000DBF696 /* Info.plist */,
 				B60A72B01B70781E00DBF696 /* FontAwesome.otf */,
 				B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */,
@@ -327,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */,
+				B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */,
 				B60A72A91B70674B00DBF696 /* RacineImages.xcassets */,
 				B60A72A71B70668A00DBF696 /* KenoshaImages.xcassets */,
 				279887051B6EE8A800562AF8 /* General.xcassets */,
@@ -470,6 +543,8 @@
 		B639E6511B7193D500593A49 /* City Specific Constants */ = {
 			isa = PBXGroup;
 			children = (
+				B67F20E31BCC8D57000A0CEB /* WesternKenoshaConstants.h */,
+				B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */,
 				B639E6521B7193FA00593A49 /* KenoshaConstants.h */,
 				B639E6531B7193FA00593A49 /* KenoshaConstants.m */,
 				B639E6541B7193FA00593A49 /* RacineConstants.h */,
@@ -557,6 +632,25 @@
 			productReference = 2798867B1B6EBF8A00562AF8 /* TheBussingApp copy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B67F209D1BCC75E9000A0CEB /* WesternKenosha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B67F20DC1BCC75E9000A0CEB /* Build configuration list for PBXNativeTarget "WesternKenosha" */;
+			buildPhases = (
+				B67F209E1BCC75E9000A0CEB /* Check Pods Manifest.lock */,
+				B67F209F1BCC75E9000A0CEB /* Sources */,
+				B67F20C51BCC75E9000A0CEB /* Frameworks */,
+				B67F20C71BCC75E9000A0CEB /* Resources */,
+				B67F20DB1BCC75E9000A0CEB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WesternKenosha;
+			productName = TheBussingApp;
+			productReference = B67F20DF1BCC75E9000A0CEB /* WesternKenosha.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -570,6 +664,9 @@
 					279886441B6EBDA400562AF8 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = H4XP324524;
+					};
+					2798866E1B6EBF8A00562AF8 = {
+						DevelopmentTeam = F8BA5TMX9M;
 					};
 				};
 			};
@@ -588,6 +685,7 @@
 			targets = (
 				279886441B6EBDA400562AF8 /* Racine */,
 				2798866E1B6EBF8A00562AF8 /* Kenosha */,
+				B67F209D1BCC75E9000A0CEB /* WesternKenosha */,
 			);
 		};
 /* End PBXProject section */
@@ -643,6 +741,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B67F20C71BCC75E9000A0CEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67F20C81BCC75E9000A0CEB /* spanishHowTo.html in Resources */,
+				B67F20C91BCC75E9000A0CEB /* Info.plist in Resources */,
+				B67F20CB1BCC75E9000A0CEB /* help.html in Resources */,
+				B67F20CD1BCC75E9000A0CEB /* accessibility.html in Resources */,
+				B67F20CE1BCC75E9000A0CEB /* contact.html in Resources */,
+				B67F20CF1BCC75E9000A0CEB /* fontawesome-webfont.ttf in Resources */,
+				B67F20D01BCC75E9000A0CEB /* spanishAccessibility.html in Resources */,
+				B67F20E21BCC7744000A0CEB /* westernKenoshaDB.sql in Resources */,
+				B67F20D11BCC75E9000A0CEB /* spanishContact.html in Resources */,
+				B67F20D21BCC75E9000A0CEB /* General.xcassets in Resources */,
+				B67F20E71BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets in Resources */,
+				B67F20D31BCC75E9000A0CEB /* how_to.html in Resources */,
+				B67F20D51BCC75E9000A0CEB /* about.html in Resources */,
+				B67F20D61BCC75E9000A0CEB /* spanishabout.html in Resources */,
+				B67F20D71BCC75E9000A0CEB /* Main.storyboard in Resources */,
+				B67F20D81BCC75E9000A0CEB /* FontAwesome.otf in Resources */,
+				B67F20D91BCC75E9000A0CEB /* KATLogoBannerV2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -659,6 +781,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B67F209E1BCC75E9000A0CEB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B67F20DB1BCC75E9000A0CEB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kenosha/Pods-Kenosha-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B879DA5DBB2386DDA553F1AA /* Copy Pods Resources */ = {
@@ -784,6 +936,7 @@
 				279887341B6EEC7900562AF8 /* XMLReader.m in Sources */,
 				279887601B6EEC8C00562AF8 /* TutorialViewController.m in Sources */,
 				279887811B6EECA000562AF8 /* EARestrictedScrollView.m in Sources */,
+				2798875A1B6EEC8C00562AF8 /* NearMeTableViewController.m in Sources */,
 				B60A72BC1B707BB400DBF696 /* HelpViewController.m in Sources */,
 				279887871B6EECA000562AF8 /* UIImage+Blur.m in Sources */,
 				279887891B6EECA000562AF8 /* UIImage+ImageWithColor.m in Sources */,
@@ -792,8 +945,51 @@
 				279887EE1B6F358100562AF8 /* WECodeScannerView.m in Sources */,
 				B60A72BE1B707BB400DBF696 /* HowToViewController.m in Sources */,
 				2798875C1B6EEC8C00562AF8 /* RootViewController.m in Sources */,
-				2798875A1B6EEC8C00562AF8 /* NearMeTableViewController.m in Sources */,
 				279887561B6EEC8C00562AF8 /* IncomingBusesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67F209F1BCC75E9000A0CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67F20A01BCC75E9000A0CEB /* BFPaperButton.m in Sources */,
+				B67F20A11BCC75E9000A0CEB /* NearMeErrorHandler.m in Sources */,
+				B67F20A21BCC75E9000A0CEB /* Constants.m in Sources */,
+				B67F20A31BCC75E9000A0CEB /* IncomingBusCell.m in Sources */,
+				B67F20A41BCC75E9000A0CEB /* SSKeychainQuery.m in Sources */,
+				B67F20A51BCC75E9000A0CEB /* DatabaseManager.m in Sources */,
+				B67F20A61BCC75E9000A0CEB /* UIColor+BFPaperColors.m in Sources */,
+				B67F20A71BCC75E9000A0CEB /* RouteLineMenuViewController.m in Sources */,
+				B67F20A81BCC75E9000A0CEB /* BusRouteListViewController.m in Sources */,
+				B67F20A91BCC75E9000A0CEB /* XMLDictionary.m in Sources */,
+				B67F20AB1BCC75E9000A0CEB /* EAIntroView.m in Sources */,
+				B67F20E51BCC8D57000A0CEB /* WesternKenoshaConstants.m in Sources */,
+				B67F20AC1BCC75E9000A0CEB /* ConnectionManager.m in Sources */,
+				B67F20AD1BCC75E9000A0CEB /* UpdateManager.m in Sources */,
+				B67F20AE1BCC75E9000A0CEB /* BusListTableCell.m in Sources */,
+				B67F20AF1BCC75E9000A0CEB /* RacineConstants.m in Sources */,
+				B67F20B01BCC75E9000A0CEB /* AppDelegate.m in Sources */,
+				B67F20B11BCC75E9000A0CEB /* NSString+FontAwesome.m in Sources */,
+				B67F20B21BCC75E9000A0CEB /* main.m in Sources */,
+				B67F20B31BCC75E9000A0CEB /* NearMeMapViewController.m in Sources */,
+				B67F20B41BCC75E9000A0CEB /* EAIntroPage.m in Sources */,
+				B67F20B51BCC75E9000A0CEB /* HomeViewController.m in Sources */,
+				B67F20B61BCC75E9000A0CEB /* WECodeScannerMatchView.m in Sources */,
+				B67F20B71BCC75E9000A0CEB /* WYPopoverController.m in Sources */,
+				B67F20B81BCC75E9000A0CEB /* XMLReader.m in Sources */,
+				B67F20B91BCC75E9000A0CEB /* TutorialViewController.m in Sources */,
+				B67F20BA1BCC75E9000A0CEB /* EARestrictedScrollView.m in Sources */,
+				B67F20BB1BCC75E9000A0CEB /* NearMeTableViewController.m in Sources */,
+				B67F20BC1BCC75E9000A0CEB /* HelpViewController.m in Sources */,
+				B67F20BD1BCC75E9000A0CEB /* UIImage+Blur.m in Sources */,
+				B67F20BE1BCC75E9000A0CEB /* UIImage+ImageWithColor.m in Sources */,
+				B67F20BF1BCC75E9000A0CEB /* SSKeychain.m in Sources */,
+				B67F20C01BCC75E9000A0CEB /* UIImage+Screenshot.m in Sources */,
+				B67F20C11BCC75E9000A0CEB /* WECodeScannerView.m in Sources */,
+				B67F20C21BCC75E9000A0CEB /* HowToViewController.m in Sources */,
+				B67F20C31BCC75E9000A0CEB /* RootViewController.m in Sources */,
+				B67F20C41BCC75E9000A0CEB /* IncomingBusesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,6 +1166,53 @@
 			};
 			name = Release;
 		};
+		B67F20DD1BCC75E9000A0CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 735C7786EB210C255DC025DC /* Pods-Kenosha.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = WesternKenoshaAppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					WesternKenosha,
+				);
+				INFOPLIST_FILE = "Kenosha copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.westernKenosha.transit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B67F20DE1BCC75E9000A0CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E8B929E4A9B182E076BCD72 /* Pods-Kenosha.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = WesternKenoshaAppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					WesternKenosha,
+				);
+				INFOPLIST_FILE = "Kenosha copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.westernKenosha.transit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -996,6 +1239,15 @@
 			buildConfigurations = (
 				279886791B6EBF8A00562AF8 /* Debug */,
 				2798867A1B6EBF8A00562AF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B67F20DC1BCC75E9000A0CEB /* Build configuration list for PBXNativeTarget "WesternKenosha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67F20DD1BCC75E9000A0CEB /* Debug */,
+				B67F20DE1BCC75E9000A0CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

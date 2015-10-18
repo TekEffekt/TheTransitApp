@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>WesternKenosha.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,26 @@
 			<true/>
 		</dict>
 		<key>2798866E1B6EBF8A00562AF8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B67F20691BCC6BFC000A0CEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B67F20811BCC6BFC000A0CEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B67F208C1BCC6BFC000A0CEB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B67F209D1BCC75E9000A0CEB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

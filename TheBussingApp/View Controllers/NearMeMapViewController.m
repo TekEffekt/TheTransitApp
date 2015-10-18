@@ -64,8 +64,17 @@
     ConnectionManager *conman = [ConnectionManager new];
     [conman update_gps];
     
-    double myLat = [[conman get_latitude] doubleValue];
-    double myLon = [[conman get_longitude] doubleValue];
+//    double myLat = [[conman get_latitude] doubleValue];
+//    double myLon = [[conman get_longitude] doubleValue];
+    
+    // Racine
+//    double myLat = 42.782772;
+//    double myLon = -87.808052;
+    
+    
+    // Parkside
+    double myLat = 42.6432133;
+    double myLon = -87.8479223;
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:myLat longitude:myLon zoom:14];
     
@@ -83,9 +92,7 @@
     if(self.routes.count == 0)
     {
         [self displayErrorMessage];
-    }
-    
-    [self setupRouteBuilder];
+    }    
 }
 
 - (void)viewWillAppear:(BOOL)animated
