@@ -42,6 +42,11 @@
 
 @implementation NearMeMapViewController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)styleViews
 {
     self.view.tintColor = [Constants getAppTintColor];
@@ -50,6 +55,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     self.line = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view.
     
@@ -71,7 +78,6 @@
 //    double myLat = 42.782772;
 //    double myLon = -87.808052;
     
-    
     // Parkside
     double myLat = 42.6432133;
     double myLon = -87.8479223;
@@ -80,7 +86,7 @@
     
     self.map = [GMSMapView mapWithFrame:self.view.frame camera:camera];
     self.map.center = self.view.center;
-    [self.map setMinZoom:11 maxZoom:20];
+    [self.map setMinZoom:0 maxZoom:20];
     
     self.map.myLocationEnabled = YES;
     
@@ -122,6 +128,7 @@
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
     
     [alert addAction:okAction];
+    alert.view.tintColor = [Constants getBackgroundColor];
     
     [self presentViewController:alert animated:YES completion:nil];
 }
@@ -139,7 +146,7 @@
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.map;
         
-        marker.icon = [GMSMarker markerImageWithColor:[Constants getRouteColorForRouteNumber:[route[8] intValue]]];
+        marker.icon = [GMSMarker markerImageWithColor:[Constants getRouteColorForRoute:route[8]]];
     }
 }
 
@@ -156,7 +163,7 @@
     {
         self.routeCoordinatesArray = self.routeCoordinatesDictionary[@"route"];
     }
-    for(int k = 0; k < [Constants getListOfRouteNumbers].count; k++)
+    for(int k = 0; k < [Constants getListOfRouteNames].count; k++)
     {
         NSArray *routeCoords = self.routeCoordinatesArray[k][@"coord"];
         
@@ -168,10 +175,9 @@
         }
         
         GMSPolyline *line = [GMSPolyline polylineWithPath:path];
-        int newRouteNumber = [Constants getRouteNumberFromArrayIndex:k];
-        line.strokeColor = [Constants getRouteColorForRouteNumber:newRouteNumber];
+        NSString *route = [Constants getRoutesFromOrderedIndex:k];
+        line.strokeColor = [Constants getRouteColorForRoute:route];
         line.strokeWidth = 7;
-//        line.map = _map;
         [self.polylineArray addObject:line];
         [self.polylinesShowing addObject:@"No"];
     }
@@ -236,7 +242,7 @@
         });
     }];
     
-    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions To" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         if ([[UIApplication sharedApplication] canOpenURL:
              [NSURL URLWithString:@"comgooglemaps://"]]) {
              [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[NSString stringWithFormat:@"comgooglemaps-x-callback://?daddr=%@,%@&directionsmode=walking&x-success=App://?resume=true&x-source=App", route[1], route[2] ]]];
@@ -262,7 +268,7 @@
         }
     }];
     
-    alert.view.tintColor = [UIColor blueColor];
+    alert.view.tintColor = [Constants getBackgroundColor];
     
     [alert addAction:routeAction];
     [alert addAction:busAction];
@@ -326,29 +332,29 @@
     [self.view addSubview:button2];
 }
 
-- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
-{
-    NSNumber *lat = [NSNumber numberWithDouble:coordinate.latitude];
-    NSNumber *lon = [NSNumber numberWithDouble:coordinate.longitude];
-
-    NSArray *coord = @[lat, lon];
-
-    [self.line addObject:coord];
-
-    GMSMutablePath *path = [[GMSMutablePath alloc] init];
-
-    for (NSArray *point in self.line)
-    {
-        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
-    }
-
-    self.poly.map = nil;
-    self.poly = nil;
-
-    self.poly = [GMSPolyline polylineWithPath:path];
-    self.poly.strokeWidth = 5;
-    self.poly.map = self.map;
-}
+//- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
+//{
+//    NSNumber *lat = [NSNumber numberWithDouble:coordinate.latitude];
+//    NSNumber *lon = [NSNumber numberWithDouble:coordinate.longitude];
+//
+//    NSArray *coord = @[lat, lon];
+//
+//    [self.line addObject:coord];
+//
+//    GMSMutablePath *path = [[GMSMutablePath alloc] init];
+//
+//    for (NSArray *point in self.line)
+//    {
+//        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
+//    }
+//
+//    self.poly.map = nil;
+//    self.poly = nil;
+//
+//    self.poly = [GMSPolyline polylineWithPath:path];
+//    self.poly.strokeWidth = 5;
+//    self.poly.map = self.map;
+//}
 
 - (void)publishLineToXML
 {

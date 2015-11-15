@@ -19,6 +19,10 @@
 
 @implementation TutorialViewController
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)styleViews
 {
     self.view.tintColor = [Constants getAppTintColor];
@@ -41,17 +45,7 @@
     int pageWidth;
     int pageHeight;
     
-    #ifdef Racine
-        pageWidth = 200;
-        pageHeight = 370;
-        
-        if(self.view.frame.size.height < 568)
-        {
-            NSLog(@"%f", self.view.frame.size.height);
-            pageWidth = 150;
-            pageHeight = 283;
-        }
-    #elif Kenosha
+    #ifdef Kenosha
         pageWidth = 288;
         pageHeight = 360;
         
@@ -60,6 +54,16 @@
             NSLog(@"%f", self.view.frame.size.height);
             pageWidth = 220;
             pageHeight = 276;
+        }
+    #else
+        pageWidth = 200;
+        pageHeight = 370;
+        
+        if(self.view.frame.size.height < 568)
+        {
+            NSLog(@"%f", self.view.frame.size.height);
+            pageWidth = 150;
+            pageHeight = 283;
         }
     #endif
     

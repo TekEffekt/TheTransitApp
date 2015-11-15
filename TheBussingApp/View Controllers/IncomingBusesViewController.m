@@ -20,6 +20,10 @@
 
 @implementation IncomingBusesViewController
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)styleViews
 {
     self.tableView.backgroundColor = [Constants getBackgroundColor];
@@ -58,7 +62,7 @@
         
         [alert addAction:okAction];
         
-        alert.view.tintColor = [UIColor blueColor];
+        alert.view.tintColor = [Constants getBackgroundColor];
         
         [self presentViewController:alert animated:YES completion:nil];
     }
@@ -135,8 +139,8 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
         secondsRemaining = 60 + secondsRemaining;
     }
     
-    cell.routeNumber = [bus[6] intValue];
-    cell.routeLabel.text = [NSString stringWithFormat:@"Route #%d", [bus[6] intValue]];
+    cell.route = bus[6];
+    cell.routeLabel.text = [[[NSString stringWithFormat:@"Route %@", bus[6]] lowercaseString] capitalizedString];
     cell.timeRemainingLabel.text = [NSString stringWithFormat:@"Time Remaining: %d:%d:%d", hoursRemaining, minutesRemaining, secondsRemaining];
     cell.arrivalLabel.text = [NSString stringWithFormat:@"Arrival Time: %@", [formatter stringFromDate:date]];
     

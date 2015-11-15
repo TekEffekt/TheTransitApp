@@ -13,15 +13,30 @@
 
 @implementation Constants
 
-+ (NSArray*)getListOfRouteNumbers
++ (NSArray*)getListOfRouteNames
 {
     #ifdef Racine
-        return [RacineConstants getListOfRouteNumbers];
+        return [RacineConstants getListOfRouteNames];
     #elif Kenosha
-        return [KenoshaConstants getListOfRouteNumbers];
+        return [KenoshaConstants getListOfRouteNames];
     #elif WesternKenosha
-        return [WesternKenoshaConstants getListOfRouteNumbers];
+        return [WesternKenoshaConstants getListOfRouteNames];
     #endif
+}
+
++ (NSString*)getShortHandForRoute:(NSString*)route
+{
+    NSString *shortHand = @"";
+    
+    #ifdef Racine
+        shortHand = [RacineConstants getShortHandForRoute:route];
+    #elif Kenosha
+        shortHand = [KenoshaConstants getShortHandForRoute:route];
+    #elif WesternKenosha
+        shortHand = [WesternKenoshaConstants getShortHandForRoute:route];
+    #endif
+    
+    return shortHand;
 }
 
 + (NSString*)getRouteCoordinatesFileName
@@ -54,30 +69,32 @@
     return description;
 }
 
-+ (UIColor *)getRouteColorForRouteNumber:(int)number
++ (UIColor *)getRouteColorForRoute:(NSString*)route
 {
     UIColor *routeColor;
     
     #ifdef Racine
-        routeColor = [RacineConstants getRouteColorForRouteNumber:number];
+        routeColor = [RacineConstants getRouteColorForRoute:route];
     #elif Kenosha
-        routeColor = [KenoshaConstants getRouteColorForRouteNumber:number];
+        routeColor = [KenoshaConstants getRouteColorForRoute:route];
     #elif WesternKenosha
-        routeColor = [WesternKenoshaConstants getRouteColorForRouteNumber:number];
+        routeColor = [WesternKenoshaConstants getRouteColorForRoute:route];
     #endif
     
     return routeColor;
 }
 
-+ (int)getRouteNumberFromArrayIndex:(int)index
++ (NSString*)getRoutesFromOrderedIndex:(int)index
 {
+    NSString *route;
     #ifdef Racine
-        return [RacineConstants getRouteNumberFromArrayIndex:index];
+        route = [RacineConstants getRoutesFromOrderedIndex:index];
     #elif Kenosha
-        return [KenoshaConstants getRouteNumberFromArrayIndex:index];
+        route =  [KenoshaConstants getRoutesFromOrderedIndex:index];
     #elif WesternKenosha
-        return [WesternKenoshaConstants getRouteNumberFromArrayIndex:index];
+        route = [WesternKenoshaConstants getRoutesFromOrderedIndex:index];
     #endif
+    return route;
 }
 
 + (UIColor*)getAppTintColor

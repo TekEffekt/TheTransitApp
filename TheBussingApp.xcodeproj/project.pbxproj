@@ -72,6 +72,7 @@
 		279887EE1B6F358100562AF8 /* WECodeScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887EA1B6F358100562AF8 /* WECodeScannerView.m */; };
 		27E05EAF1B6F44EF00EE9F05 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */; };
 		27E05EB01B6F44EF00EE9F05 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */; };
+		70650BBBFE798AB3FBF6BB30 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4BACC4619D8B70A810DF02 /* libPods.a */; };
 		B60A72A81B70668A00DBF696 /* KenoshaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60A72A71B70668A00DBF696 /* KenoshaImages.xcassets */; };
 		B60A72AA1B70674B00DBF696 /* RacineImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60A72A91B70674B00DBF696 /* RacineImages.xcassets */; };
 		B60A72AC1B70705E00DBF696 /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
@@ -103,9 +104,11 @@
 		B60A72F61B70888000DBF696 /* spanishContact.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E51B70888000DBF696 /* spanishContact.html */; };
 		B60A72F71B70888000DBF696 /* spanishHowTo.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E61B70888000DBF696 /* spanishHowTo.html */; };
 		B60A72F81B70888000DBF696 /* spanishHowTo.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E61B70888000DBF696 /* spanishHowTo.html */; };
-		B61AEF1F1BBB351700D5F34E /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; settings = {ASSET_TAGS = (); }; };
+		B61AEF1F1BBB351700D5F34E /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
 		B61AEF201BBBD0FD00D5F34E /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
 		B61AEF211BBBD11B00D5F34E /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
+		B637B57E1BF6B11700A4FE73 /* westernKenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B637B57D1BF6B11700A4FE73 /* westernKenoshaDB.sql */; };
+		B637B5801BF8204800A4FE73 /* westernKenoshaRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B637B57F1BF8204800A4FE73 /* westernKenoshaRouteCoordinates.xml */; };
 		B639E6361B71827600593A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
 		B639E6371B71827600593A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
 		B639E6451B71873C00593A49 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
@@ -116,7 +119,7 @@
 		B639E65A1B71A7B800593A49 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
 		B639E65C1B71D15C00593A49 /* racineDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E65B1B71D15C00593A49 /* racineDB.sql */; };
 		B639E6611B72053700593A49 /* kenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E6601B72053700593A49 /* kenoshaDB.sql */; };
-		B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; settings = {ASSET_TAGS = (); }; };
+		B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
 		B67F20A01BCC75E9000A0CEB /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
 		B67F20A11BCC75E9000A0CEB /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
 		B67F20A21BCC75E9000A0CEB /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
@@ -169,10 +172,9 @@
 		B67F20D71BCC75E9000A0CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
 		B67F20D81BCC75E9000A0CEB /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72B01B70781E00DBF696 /* FontAwesome.otf */; };
 		B67F20D91BCC75E9000A0CEB /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
-		B67F20E21BCC7744000A0CEB /* westernKenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B67F20E11BCC7744000A0CEB /* westernKenoshaDB.sql */; settings = {ASSET_TAGS = (); }; };
-		B67F20E51BCC8D57000A0CEB /* WesternKenoshaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */; settings = {ASSET_TAGS = (); }; };
-		B67F20E71BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */; settings = {ASSET_TAGS = (); }; };
-		B6CFCB9A1BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */; settings = {ASSET_TAGS = (); }; };
+		B67F20E51BCC8D57000A0CEB /* WesternKenoshaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */; };
+		B67F20E71BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */; };
+		B6CFCB9A1BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +276,8 @@
 		B60A72FB1B70B9D500DBF696 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		B61AEF1D1BBB351700D5F34E /* NearMeErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NearMeErrorHandler.h; path = Model/NearMeErrorHandler.h; sourceTree = "<group>"; };
 		B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NearMeErrorHandler.m; path = Model/NearMeErrorHandler.m; sourceTree = "<group>"; };
+		B637B57D1BF6B11700A4FE73 /* westernKenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = westernKenoshaDB.sql; sourceTree = "<group>"; };
+		B637B57F1BF8204800A4FE73 /* westernKenoshaRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = westernKenoshaRouteCoordinates.xml; sourceTree = "<group>"; };
 		B639E6351B71827600593A49 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B639E6431B71873C00593A49 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Constants/Constants.h; sourceTree = "<group>"; };
 		B639E6441B71873C00593A49 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Constants/Constants.m; sourceTree = "<group>"; };
@@ -286,9 +290,8 @@
 		B639E6601B72053700593A49 /* kenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kenoshaDB.sql; sourceTree = "<group>"; };
 		B64B13811BB7B8CF0074B053 /* BFPaperButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperButton.h; sourceTree = "<group>"; };
 		B64B13821BB7B8CF0074B053 /* BFPaperButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPaperButton.m; sourceTree = "<group>"; };
-		B67F20DF1BCC75E9000A0CEB /* WesternKenosha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WesternKenosha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67F20DF1BCC75E9000A0CEB /* WestKen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestKen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67F20E01BCC75E9000A0CEB /* Kenosha copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kenosha copy-Info.plist"; path = "/Users/kylez/Documents/Development/Xcode Projects/TheBussingApp/Kenosha copy-Info.plist"; sourceTree = "<absolute>"; };
-		B67F20E11BCC7744000A0CEB /* westernKenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = westernKenoshaDB.sql; sourceTree = "<group>"; };
 		B67F20E31BCC8D57000A0CEB /* WesternKenoshaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WesternKenoshaConstants.h; path = Constants/WesternKenoshaConstants.h; sourceTree = "<group>"; };
 		B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WesternKenoshaConstants.m; path = Constants/WesternKenoshaConstants.m; sourceTree = "<group>"; };
 		B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WesternKenoshaImages.xcassets; sourceTree = "<group>"; };
@@ -301,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70650BBBFE798AB3FBF6BB30 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +345,7 @@
 			children = (
 				279886451B6EBDA400562AF8 /* Racine.app */,
 				2798867B1B6EBF8A00562AF8 /* TheBussingApp copy.app */,
-				B67F20DF1BCC75E9000A0CEB /* WesternKenosha.app */,
+				B67F20DF1BCC75E9000A0CEB /* WestKen.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -365,12 +369,13 @@
 		279886481B6EBDA400562AF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B637B57D1BF6B11700A4FE73 /* westernKenoshaDB.sql */,
 				B639E65B1B71D15C00593A49 /* racineDB.sql */,
 				B639E6601B72053700593A49 /* kenoshaDB.sql */,
-				B67F20E11BCC7744000A0CEB /* westernKenoshaDB.sql */,
 				B60A72BF1B707D3000DBF696 /* Info.plist */,
 				B60A72B01B70781E00DBF696 /* FontAwesome.otf */,
 				B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */,
+				B637B57F1BF8204800A4FE73 /* westernKenoshaRouteCoordinates.xml */,
 				B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */,
 				2798878E1B6EECB000562AF8 /* RacineRouteCoordinates.xml */,
 				2798864A1B6EBDA400562AF8 /* main.m */,
@@ -461,8 +466,8 @@
 				B60A72B61B707BB400DBF696 /* HelpViewController.m */,
 				B60A72B71B707BB400DBF696 /* HowToViewController.h */,
 				B60A72B81B707BB400DBF696 /* HowToViewController.m */,
-				27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */,
 				27E05EAD1B6F44EF00EE9F05 /* HomeViewController.h */,
+				27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */,
 				2798873F1B6EEC8C00562AF8 /* IncomingBusesViewController.h */,
 				279887401B6EEC8C00562AF8 /* IncomingBusesViewController.m */,
 				279887411B6EEC8C00562AF8 /* NearMeMapViewController.h */,
@@ -603,6 +608,7 @@
 				279886421B6EBDA400562AF8 /* Frameworks */,
 				279886431B6EBDA400562AF8 /* Resources */,
 				B879DA5DBB2386DDA553F1AA /* Copy Pods Resources */,
+				64880CCAE7D7EF9D5B7F3F5F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -632,9 +638,9 @@
 			productReference = 2798867B1B6EBF8A00562AF8 /* TheBussingApp copy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B67F209D1BCC75E9000A0CEB /* WesternKenosha */ = {
+		B67F209D1BCC75E9000A0CEB /* WestKen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B67F20DC1BCC75E9000A0CEB /* Build configuration list for PBXNativeTarget "WesternKenosha" */;
+			buildConfigurationList = B67F20DC1BCC75E9000A0CEB /* Build configuration list for PBXNativeTarget "WestKen" */;
 			buildPhases = (
 				B67F209E1BCC75E9000A0CEB /* Check Pods Manifest.lock */,
 				B67F209F1BCC75E9000A0CEB /* Sources */,
@@ -646,9 +652,9 @@
 			);
 			dependencies = (
 			);
-			name = WesternKenosha;
+			name = WestKen;
 			productName = TheBussingApp;
-			productReference = B67F20DF1BCC75E9000A0CEB /* WesternKenosha.app */;
+			productReference = B67F20DF1BCC75E9000A0CEB /* WestKen.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -663,7 +669,6 @@
 				TargetAttributes = {
 					279886441B6EBDA400562AF8 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = H4XP324524;
 					};
 					2798866E1B6EBF8A00562AF8 = {
 						DevelopmentTeam = F8BA5TMX9M;
@@ -685,7 +690,7 @@
 			targets = (
 				279886441B6EBDA400562AF8 /* Racine */,
 				2798866E1B6EBF8A00562AF8 /* Kenosha */,
-				B67F209D1BCC75E9000A0CEB /* WesternKenosha */,
+				B67F209D1BCC75E9000A0CEB /* WestKen */,
 			);
 		};
 /* End PBXProject section */
@@ -752,14 +757,15 @@
 				B67F20CE1BCC75E9000A0CEB /* contact.html in Resources */,
 				B67F20CF1BCC75E9000A0CEB /* fontawesome-webfont.ttf in Resources */,
 				B67F20D01BCC75E9000A0CEB /* spanishAccessibility.html in Resources */,
-				B67F20E21BCC7744000A0CEB /* westernKenoshaDB.sql in Resources */,
 				B67F20D11BCC75E9000A0CEB /* spanishContact.html in Resources */,
 				B67F20D21BCC75E9000A0CEB /* General.xcassets in Resources */,
 				B67F20E71BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets in Resources */,
 				B67F20D31BCC75E9000A0CEB /* how_to.html in Resources */,
 				B67F20D51BCC75E9000A0CEB /* about.html in Resources */,
+				B637B5801BF8204800A4FE73 /* westernKenoshaRouteCoordinates.xml in Resources */,
 				B67F20D61BCC75E9000A0CEB /* spanishabout.html in Resources */,
 				B67F20D71BCC75E9000A0CEB /* Main.storyboard in Resources */,
+				B637B57E1BF6B11700A4FE73 /* westernKenoshaDB.sql in Resources */,
 				B67F20D81BCC75E9000A0CEB /* FontAwesome.otf in Resources */,
 				B67F20D91BCC75E9000A0CEB /* KATLogoBannerV2.png in Resources */,
 			);
@@ -781,6 +787,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		64880CCAE7D7EF9D5B7F3F5F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B67F209E1BCC75E9000A0CEB /* Check Pods Manifest.lock */ = {
@@ -1207,6 +1228,7 @@
 				INFOPLIST_FILE = "Kenosha copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = org.westernKenosha.transit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
@@ -1243,7 +1265,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B67F20DC1BCC75E9000A0CEB /* Build configuration list for PBXNativeTarget "WesternKenosha" */ = {
+		B67F20DC1BCC75E9000A0CEB /* Build configuration list for PBXNativeTarget "WestKen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B67F20DD1BCC75E9000A0CEB /* Debug */,

@@ -96,12 +96,12 @@
     
     num.layer.cornerRadius = 10;
     num.layer.shadowColor = [[UIColor blackColor] CGColor];
-    num.layer.shadowOffset = CGSizeMake(2.5f, 3.5f);
-    num.layer.shadowRadius=1.5f;
-    num.layer.shadowOpacity = .7f;
+    num.layer.shadowOffset = CGSizeMake(1.5f, 2.5f);
+    num.layer.shadowRadius=1.0f;
+    num.layer.shadowOpacity = .5f;
     
-    num.backgroundColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
-    self.routeLabel.textColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
+    num.backgroundColor = [Constants getRouteColorForRoute: self.route];
+    self.routeLabel.textColor = [Constants getRouteColorForRoute: self.route];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

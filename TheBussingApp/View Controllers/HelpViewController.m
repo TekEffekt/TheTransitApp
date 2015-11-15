@@ -29,6 +29,10 @@
     contactButton;
 _Bool isSpanish2;
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)styleViews
 {
     self.view.backgroundColor = [Constants getBackgroundColor];

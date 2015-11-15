@@ -34,6 +34,11 @@ NSCalendar *calendar;
 NSDateComponents *currComp;
 
 @implementation BusRouteListViewController
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 //@synthesize qrResult,results;
 //
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

@@ -12,13 +12,14 @@
 @interface RacineConstants : NSObject
 
 + (NSString*)getTextForIndex:(int)index;
-+ (int)getRouteNumberFromArrayIndex:(int)index;
++ (NSString*)getRoutesFromOrderedIndex:(int)index;
 + (UIColor*)getAppTintColor;
 + (UIColor*)getBackgroundColor;
 + (NSArray*)getScheduleBeginEndTimes;
 + (NSArray*)getAvailableDays;
 + (NSString*)getRouteCoordinatesFileName;
-+ (NSArray*)getListOfRouteNumbers;
-+ (UIColor *)getRouteColorForRouteNumber:(int)number;
++ (NSArray*)getListOfRouteNames;
++ (UIColor *)getRouteColorForRoute:(NSString*)route;
++ (NSString*)getShortHandForRoute:(NSString*)route;
 
 @end

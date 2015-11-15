@@ -87,6 +87,8 @@
 //    //This method will show an alert to the user.
 //    [[Pushbots sharedInstance] receivedPush:launchOptions];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 

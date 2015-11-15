@@ -16,10 +16,24 @@
 @property(strong, nonatomic) UIVisualEffectView *backgroundBlur;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *routeButtonContainers;
 @property (weak, nonatomic) IBOutlet UIButton *xButton;
+@property (weak, nonatomic) IBOutlet UIButton *enableButton;
+@property (weak, nonatomic) IBOutlet UIButton *disableButton;
 
 @end
 
 @implementation RouteLineMenuViewController
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)styleViews
+{
+    self.xButton.tintColor = [Constants getAppTintColor];
+    self.view.tintColor = [Constants getAppTintColor];
+    self.enableButton.tintColor = [Constants getAppTintColor];
+    self.disableButton.tintColor = [Constants getAppTintColor];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +50,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self setUpButtonColors];
-    NSLog(@"%@", self.polylinesShowing);
+    [self styleViews];
 }
 
 - (void)routeButtonPressed:(BFPaperButton*)button
@@ -51,7 +65,7 @@
     } else
     {
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        button.backgroundColor = [Constants getRouteColorForRouteNumber:[button.titleLabel.text intValue]];
+        button.backgroundColor = [Constants getRouteColorForRoute: [Constants getRoutesFromOrderedIndex:index]];
         [self changePolylineOnDelegate:YES atIndex: index];
     }
 }
@@ -63,13 +77,14 @@
 
 - (IBAction)enableAllPressed:(UIButton *)sender
 {
-    for(int i = 0; i <[Constants getListOfRouteNumbers].count; i++)
+    for(int i = 0; i <[Constants getListOfRouteNames].count; i++)
     {
         UIView *view = self.routeButtonContainers[i];
         BFPaperButton *button = (BFPaperButton*)view.subviews[0];
         if(button.backgroundColor == [UIColor lightGrayColor])
         {
-            button.backgroundColor = [Constants getRouteColorForRouteNumber:[button.titleLabel.text intValue]];
+            button.backgroundColor = [Constants getRouteColorForRoute: [Constants getRoutesFromOrderedIndex:i]];
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
         [self changePolylineOnDelegate:YES atIndex:(int)[self.routeButtonContainers indexOfObject:view]];
     }
@@ -77,7 +92,7 @@
 
 - (IBAction)disableAll:(UIButton *)sender
 {
-    for(int i = 0; i <[Constants getListOfRouteNumbers].count; i++)
+    for(int i = 0; i <[Constants getListOfRouteNames].count; i++)
     {
         UIView *view = self.routeButtonContainers[i];
         BFPaperButton *button = (BFPaperButton*)view.subviews[0];
@@ -85,6 +100,8 @@
         {
             button.backgroundColor = [UIColor lightGrayColor];
         }
+        
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self changePolylineOnDelegate:NO atIndex:(int)[self.routeButtonContainers indexOfObject:view]];
     }
 }
@@ -99,16 +116,17 @@
 
 - (void)setupButtons
 {
-    for(int i = 0; i < [Constants getListOfRouteNumbers].count; i++)
+    for(int i = 0; i < [Constants getListOfRouteNames].count; i++)
     {
         UIView *container = (UIView*)self.routeButtonContainers[i];
         BFPaperButton *button = [[BFPaperButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60) raised:NO];
-        NSString *routeString = [NSString stringWithFormat:@"%d",[Constants getRouteNumberFromArrayIndex:i]];
+        NSString *routeString = [Constants getRoutesFromOrderedIndex:i];
+        routeString = [Constants getShortHandForRoute:routeString];
         [button setTitle:routeString forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
         button.backgroundColor = [UIColor lightGrayColor];
-        button.tapCircleColor = [Constants getRouteColorForRouteNumber:[button.titleLabel.text intValue]];
+        button.tapCircleColor = [Constants getRouteColorForRoute: [Constants getRoutesFromOrderedIndex:i]];
         [button addTarget:self action:@selector(routeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         button.rippleBeyondBounds = YES;
         button.tapCircleDiameter = MAX(button.frame.size.width, button.frame.size.height) * 1.3;
@@ -121,15 +139,17 @@
 
 - (void)setUpButtonColors
 {
-    for(int i = 0; i < [Constants getListOfRouteNumbers].count; i++)
+    for(int i = 0; i < [Constants getListOfRouteNames].count; i++)
     {
+        NSString *routeForButton = [Constants getRoutesFromOrderedIndex:i];
         UIView *view = self.routeButtonContainers[i];
         BFPaperButton *button = (BFPaperButton*)view.subviews[0];
         NSString *yesNo = self.polylinesShowing[(int)[self.routeButtonContainers indexOfObject:view]];
         
         if([yesNo isEqualToString:@"Yes"])
         {
-            button.backgroundColor = [Constants getRouteColorForRouteNumber:[button.titleLabel.text intValue]];
+            button.backgroundColor = [Constants getRouteColorForRoute:routeForButton];
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         }
     }
 }

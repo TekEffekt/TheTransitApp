@@ -12,13 +12,14 @@
 @interface KenoshaConstants : NSObject
 
 + (NSString*)getTextForIndex:(int)index;
-+ (UIColor*)getRouteColorForRouteNumber:(int)number;
-+ (int)getRouteNumberFromArrayIndex:(int)index;
++ (UIColor*)getRouteColorForRoute:(NSString*)route;
++ (NSString*)getRoutesFromOrderedIndex:(int)index;
 + (UIColor*)getAppTintColor;
 + (UIColor*)getBackgroundColor;
 + (NSArray*)getScheduleBeginEndTimes;
 + (NSArray*)getAvailableDays;
 + (NSString*)getRouteCoordinatesFileName;
-+ (NSArray*)getListOfRouteNumbers;
++ (NSArray*)getListOfRouteNames;
++ (NSString*)getShortHandForRoute:(NSString*)route;
 
 @end

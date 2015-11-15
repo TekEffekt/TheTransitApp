@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Styleable.h"
 
 @protocol RouteLineChanger;
 
-@interface RouteLineMenuViewController : UIViewController
+@interface RouteLineMenuViewController : UIViewController <StylesItself>
 
 @property(assign, nonatomic) id<RouteLineChanger> delegate;
 @property(nonatomic) int index;

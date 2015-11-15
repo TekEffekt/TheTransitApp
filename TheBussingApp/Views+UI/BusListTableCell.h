@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *num;
 @property (strong, nonatomic) IBOutlet UILabel *dir;
 @property (weak, nonatomic) IBOutlet UILabel *routeLabel;
-@property(nonatomic) int routeNumber;
+@property(nonatomic) NSString* route;
 @property (weak, nonatomic) IBOutlet UILabel *milesLabel;
 
 @end

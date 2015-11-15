@@ -25,12 +25,12 @@
 {
     self.routeBanner.layer.cornerRadius = 10;
     self.routeBanner.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.routeBanner.layer.shadowOffset = CGSizeMake(2.5f, 3.5f);
-    self.routeBanner.layer.shadowRadius=1.5f;
-    self.routeBanner.layer.shadowOpacity = .7f;
+    self.routeBanner.layer.shadowOffset = CGSizeMake(1.5f, 2.5f);
+    self.routeBanner.layer.shadowRadius=1.0f;
+    self.routeBanner.layer.shadowOpacity = .5f;
     
-    self.routeBanner.backgroundColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
-    self.routeLabel.textColor = [Constants getRouteColorForRouteNumber: self.routeNumber];
+    self.routeBanner.backgroundColor = [Constants getRouteColorForRoute: self.route];
+    self.routeLabel.textColor = [Constants getRouteColorForRoute: self.route];    
 }
 
 @end

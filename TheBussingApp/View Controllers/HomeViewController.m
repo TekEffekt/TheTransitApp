@@ -44,7 +44,6 @@ _Bool isSpanish;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         if(isSpanish){
@@ -192,7 +191,6 @@ _Bool isSpanish;
     if(status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse)
     {
         [self getNearbyRoutes];
-        NSLog(@"What");
     }
 }
 
@@ -248,17 +246,6 @@ _Bool isSpanish;
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
-
-////go to  website when logo banner is clicked
-//- (IBAction)clickedLogoButton:(id)sender {
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.kenosha.org/departments/transportation/"]];
-//    
-//}
-//
-////when route button is clicked go to Google maps
-//- (IBAction)getDirections:(id)sender {
-//    
-//}
 
 //opens itunes to download Google maps
 -(void)alertView:(UIAlertView *)alert clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -337,27 +324,6 @@ _Bool isSpanish;
     }
 }
 
-
-//- (void) imagePickerController: (UIImagePickerController*) reader
-// didFinishPickingMediaWithInfo: (NSDictionary*) info {
-//    id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
-//    ZBarSymbol *symbol = nil;
-//    for(symbol in results)
-//        break;
-//    
-//    //NSLog(symbol.data);
-//    
-//    [reader dismissViewControllerAnimated: NO
-//                               completion: nil];
-//    
-//    
-//    
-//    [self getNearbyRoutesWithQRData:symbol];
-////    UIViewController *BusListViewController = [[BusRouteListViewController alloc] initWithValue:symbol.data];
-////    [self.navigationController pushViewController:BusListViewController animated:NO];
-//    
-//}
-
 - (void)viewDidAppear:(BOOL)animated
 {
     id tracker = [[GAI sharedInstance] defaultTracker];
@@ -377,7 +343,6 @@ _Bool isSpanish;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
 }
 
 - (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize {
@@ -519,7 +484,6 @@ _Bool isSpanish;
     if([[segue identifier] isEqualToString:@"showGpsPage"]){
         NearMeMapViewController *controller = segue.destinationViewController;
         controller.routes = self.nearbyRoutes;
-        NSLog(@"Performed");
     }
     
     if([segue.identifier isEqualToString:@"OpenIncomingBuses"])
@@ -578,7 +542,6 @@ _Bool isSpanish;
     NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
     
     NSString *stopId = [DatabaseManager validateValue:code];
-    NSLog(@"Stop Id: %@", stopId);
     
     dispatch_queue_t queue = dispatch_queue_create("Get Routes", NULL);
     dispatch_async(queue, ^{

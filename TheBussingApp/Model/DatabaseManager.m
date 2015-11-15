@@ -68,7 +68,7 @@ NSDictionary *resultDict = nil;
             NSString *filepath = [Constants getDBName];
             NSString *fileRoot = [[NSBundle mainBundle]pathForResource:filepath ofType:@"sql"];
             NSString *fileContents = [NSString stringWithContentsOfFile:fileRoot encoding:NSUTF8StringEncoding error:nil];
-            //            NSLog(fileContents);
+//                        NSLog(fileContents);
             [self create__version_db];
             sqlite3_exec(database, [@"BEGIN EXCLUSIVE TRANSACTION" UTF8String], NULL, NULL, &errMsg);
             sqlite3_exec(database, [fileContents UTF8String], NULL, NULL, &errMsg);
@@ -202,6 +202,9 @@ NSDictionary *resultDict = nil;
 {
     const char *dbpath = [databasePath UTF8String];
     
+    time = @"10:00:00";
+    day = @"Tuesday";
+    
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     
     int rows = 0;
@@ -284,7 +287,6 @@ NSDictionary *resultDict = nil;
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"HH:mm:ss"];
         
-        //        querySQL = [NSString stringWithFormat:@"SELECT route, direction, location, time FROM  WHERE direction= '%@' and location = \"%@\" and day = '%@' and time >= %@ and route= \"%@\"order by time asc;",_direction,valStr,_day, _time, _route_number];
         querySQL = [NSString stringWithFormat:@"SELECT   s.stop_name stop_name,  st.stop_sequence stop_sequence,  st.stop_id stop_id,  st.arrival_time arrival_time,  st.departure_time departure_time,  st.trip_id trip_id,  r.route_id route_id,  r.route_color route_color,  r.route_text_color route_text_color, c.service_id service_id FROM  stop_times st   LEFT OUTER JOIN  stops s ON st.stop_id = s.stop_id  LEFT OUTER JOIN   trips t ON st.trip_id = t.trip_id  LEFT OUTER JOIN   routes r ON t.route_id = r.route_id  LEFT OUTER JOIN   calendar c ON t.service_id = c.service_id WHERE  st.stop_id = \"%@\"  AND  c.%@ = '1'  AND  r.is_deleted = 0  AND   t.is_deleted = 0 AND st.arrival_time > \"%@\" AND r.route_id = \"%@\" AND st.stop_sequence= \"%@\" ORDER BY st.arrival_time ", valStr, day, [formatter stringFromDate:[NSDate date]], _route_id, _sequence_id];
         
         const char *query_stmt = [querySQL UTF8String];
@@ -342,7 +344,7 @@ NSDictionary *resultDict = nil;
 //    double myLat = [[conman get_latitude] doubleValue];
 //    double myLon = [[conman get_longitude] doubleValue];
     
-    // Racine
+//     Racine
 //    double myLat = 42.782772;
 //    double myLon = -87.808052;
     
@@ -350,8 +352,8 @@ NSDictionary *resultDict = nil;
     double myLat = 42.6432133;
     double myLon = -87.8479223;
     
-    static double LATITUED_PER_5_MILES =  .0333;
-    static double LONGITUDE_PER_5_MILES = .0333;
+    static double LATITUED_PER_5_MILES =  3.0333;
+    static double LONGITUDE_PER_5_MILES = 3.0333;
     
     //Working code
     NSDate *now = [[NSDate alloc] init];
@@ -363,25 +365,27 @@ NSDictionary *resultDict = nil;
     
     NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
     
+    currentTimeString = @"12:00:00";
+    weekday = @"Monday";
+    
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     
     if (sqlite3_open(dbpath, &database) == SQLITE_OK)
     {
+        
         NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM(SELECT s.stop_name stop_name, s.stop_lat stop_lat, s.stop_lon stop_lon, st.stop_sequence stop_sequence, st.stop_id stop_id, st.arrival_time arrival_time, st.departure_time departure_time,st.trip_id trip_id, r.route_id route_id, r.route_color route_color, r.route_text_color route_text_color, c.service_id service_id FROM  stop_times st LEFT OUTER JOIN stops s ON st.stop_id = s.stop_id LEFT OUTER JOIN trips t ON st.trip_id = t.trip_id LEFT OUTER JOIN routes r ON t.route_id = r.route_id LEFT OUTER JOIN calendar c ON t.service_id = c.service_id WHERE (stop_lat BETWEEN %f AND %f) AND (stop_lon BETWEEN %f AND %f ) AND  r.is_deleted = 0 AND  t.is_deleted = 0 AND c.\"%@\" = '1' AND  st.arrival_time > \"%@\" ORDER BY arrival_time DESC)GROUP BY stop_name ORDER BY arrival_time ASC", (myLat - LATITUED_PER_5_MILES),
                               (myLat + LATITUED_PER_5_MILES), (myLon + LONGITUDE_PER_5_MILES), (myLon - LONGITUDE_PER_5_MILES), weekday, currentTimeString];
-        
-        //        NSString *querySQL = @"SELECT s.stop_name stop_name FROM stop_times st";
         
         int rows = 0;
         
         const char *query_stmt = [querySQL UTF8String];
         NSLog(@"%s",query_stmt);
-        NSLog(@"%d", sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL));
+        NSLog(@"Wtf: %d", sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL));
         NSLog(@"Error Message: %s", sqlite3_errmsg(database));
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
-            NSLog(@"Error Message: %s", sqlite3_errmsg(database));
+            NSLog(@"What??: %s", sqlite3_errmsg(database));
+            NSLog(@"Result: %s, %s, %s, %s",(char *)sqlite3_column_text(statement, 0),(char *)sqlite3_column_text(statement, 1),(char *)sqlite3_column_text(statement, 2),(char *)sqlite3_column_text(statement, 3));
             while (sqlite3_step(statement) == SQLITE_ROW) {
-                //                NSLog(@"Result: %s, %s, %s, %s",(char *)sqlite3_column_text(statement, 0),(char *)sqlite3_column_text(statement, 1),(char *)sqlite3_column_text(statement, 2),(char *)sqlite3_column_text(statement, 3));
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 0)]];
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)]];
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)]];
@@ -397,6 +401,10 @@ NSDictionary *resultDict = nil;
                 NSLog(@"%@", resultArray);
             }
             sqlite3_close(database);
+        }
+        {
+            
+            NSLog(@"Fuck");
         }
     }
     
@@ -426,18 +434,17 @@ NSDictionary *resultDict = nil;
     NSArray *sortedArray = [splitArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         if([obj1[10] intValue] < [obj2[10] intValue])
         {
-            NSLog(@"Ascending");
             return NSOrderedAscending;
         } else if([obj1[10] intValue] > [obj2[10] intValue])
         {
-            //            NSLog(@"Descending");
             return NSOrderedDescending;
         } else
         {
-            //            NSLog(@"Same");
             return NSOrderedSame;
         }
     }];
+    
+    NSLog(@"Sorted Array: %@", sortedArray);
     
     return sortedArray;
 }

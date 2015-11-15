@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeLabel;
 
-@property(nonatomic) int routeNumber;
+@property(nonatomic) NSString* route;
 
 @end

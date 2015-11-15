@@ -16,6 +16,10 @@
 
 @implementation RootViewController
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -36,7 +40,6 @@
     
     if(self.view.frame.size.height < 568)
     {
-        NSLog(@"%f", self.view.frame.size.height);
         pageWidth = 220;
         pageHeight = 276;
     }

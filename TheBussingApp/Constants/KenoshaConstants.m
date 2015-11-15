@@ -22,9 +22,14 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
 
 @implementation KenoshaConstants
 
-+ (NSArray*)getListOfRouteNumbers
++ (NSArray*)getListOfRouteNames
 {
-    return @[@1,@2,@3,@4,@5,@6,@31];
+    return @[@"1",@"2",@"3",@"4",@"5",@"6",@"31"];
+}
+
++ (NSString*)getShortHandForRoute:(NSString*)route
+{
+    return route;
 }
 
 + (NSString*)getRouteCoordinatesFileName
@@ -39,9 +44,11 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return descriptions[index];
 }
 
-+ (UIColor *)getRouteColorForRouteNumber:(int)number
++ (UIColor *)getRouteColorForRoute:(NSString*)route
 {
     UIColor *routeColor;
+    
+    int number = [route intValue];
     
     switch (number) {
         case 1:
@@ -83,19 +90,9 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
 }
 
 
-+ (int)getRouteNumberFromArrayIndex:(int)index
++ (NSString*)getRoutesFromOrderedIndex:(int)index
 {
-    int routeNumber;
-    if(index == 6)
-    {
-        routeNumber = 31;
-    } else
-    {
-        routeNumber = index;
-        routeNumber++;
-    }
-    
-    return routeNumber;
+    return [self getListOfRouteNames][index];
 }
 
 + (UIColor*)getAppTintColor

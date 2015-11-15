@@ -22,9 +22,14 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
 
 @implementation RacineConstants
 
-+ (NSArray*)getListOfRouteNumbers
++ (NSArray*)getListOfRouteNames
 {
-    return @[@1,@2,@3,@4,@5,@7,@20,@27,@86];
+    return @[@"1",@"2",@"3",@"4",@"5",@"7",@"20",@"27",@"86"];
+}
+
++ (NSString*)getShortHandForRoute:(NSString*)route
+{
+    return route;
 }
 
 + (NSString*)getRouteCoordinatesFileName
@@ -39,9 +44,11 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return descriptions[index];
 }
 
-+ (UIColor *)getRouteColorForRouteNumber:(int)number
++ (UIColor *)getRouteColorForRoute:(NSString*)route
 {
     UIColor *routeColor;
+    
+    int number = [route intValue];
     
     switch (number) {
         case 1:
@@ -81,29 +88,9 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return routeColor;
 }
 
-+ (int)getRouteNumberFromArrayIndex:(int)index
++ (NSString*)getRoutesFromOrderedIndex:(int)index
 {
-    int routeNumber;
-    
-    if(index == 5)
-    {
-        routeNumber = 7;
-    } else if(index == 6)
-    {
-        routeNumber = 20;
-    } else if(index == 7)
-    {
-        routeNumber = 27;
-    } else if(index == 8)
-    {
-        routeNumber = 86;
-    } else
-    {
-        routeNumber = index;
-        routeNumber++;
-    }
-
-    return routeNumber;
+    return [self getListOfRouteNames][index];
 }
 
 + (UIColor*)getAppTintColor

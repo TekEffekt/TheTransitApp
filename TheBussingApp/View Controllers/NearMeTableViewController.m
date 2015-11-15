@@ -31,6 +31,10 @@
 
 #pragma mark - VC Lifecycle Methods
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)styleViews
 {
     self.view.tintColor = [Constants getAppTintColor];
@@ -93,8 +97,8 @@
     tableCell.dir.text = [NSString stringWithFormat:@"%@", route[0]];
     tableCell.milesLabel.text = [NSString stringWithFormat:@"Miles Away: %d", milesAway];
     
-    tableCell.routeLabel.text = [NSString stringWithFormat:@"Route #%d", [route[8] intValue]];
-    tableCell.routeNumber = [route[8] intValue];
+    tableCell.routeLabel.text = [[[NSString stringWithFormat:@"Route %@", route[8]] lowercaseString] capitalizedString];
+    tableCell.route = route[8];
     tableCell.userInteractionEnabled = YES;
 
     return tableCell;
@@ -134,7 +138,7 @@
         
     }];
     
-    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    UIAlertAction *routeAction = [UIAlertAction actionWithTitle:@"Directions To" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         if ([[UIApplication sharedApplication] canOpenURL:
              [NSURL URLWithString:@"comgooglemaps://"]]) {
             [[UIApplication sharedApplication] openURL:
