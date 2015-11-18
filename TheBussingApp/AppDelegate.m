@@ -24,6 +24,47 @@
 
 @implementation AppDelegate
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    
+    // react to shortcut item selections
+    NSLog(@"A shortcut item was pressed. It was %@.", shortcutItem.localizedTitle);
+    
+    // have we launched Deep Link Level 1
+    if ([shortcutItem.type isEqualToString:([[NSBundle mainBundle].bundleIdentifier stringByAppendingString: @".NearMe"])])
+    {
+        [self openNearMe];
+    } else if([shortcutItem.type isEqualToString:([[NSBundle mainBundle].bundleIdentifier stringByAppendingString: @".Scan"])])
+    {
+        [self openScan];
+    }
+}
+
+- (void)openNearMe
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UINavigationController *nav = [storyboard instantiateViewControllerWithIdentifier:@"Nav"];
+    
+    UIViewController *nearMe = [storyboard instantiateViewControllerWithIdentifier:@"NearMe"];
+    [nav pushViewController:nearMe animated:NO];
+    
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+}
+
+- (void)openScan
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UINavigationController *nav = [storyboard instantiateViewControllerWithIdentifier:@"Nav"];
+    HomeViewController *home = nav.childViewControllers[0];
+    
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
+    home.startScan = YES;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Optional: automatically send uncaught exceptions to Google Analytics.

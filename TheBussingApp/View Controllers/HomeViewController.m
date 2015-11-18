@@ -28,13 +28,13 @@
 
 @interface HomeViewController() <WECodeScannerViewDelegate, CLLocationManagerDelegate, StylesItself>
 
-@property(strong, nonatomic) NSArray *nearbyRoutes;
 @property(strong, nonatomic) NSArray *incomingBuses;
 @property(strong, nonatomic) NSString *selectedStopName;
 @property (nonatomic, strong) WECodeScannerView *codeScannerView;
 @property(nonatomic, strong)  NSString *qrCode;
 @property(nonatomic) BOOL scanned;
 @property(strong, nonatomic) CLLocationManager *locationManager;
+@property(nonatomic) BOOL loaded;
 
 @end
 
@@ -133,6 +133,22 @@ _Bool isSpanish;
     [self.codeScannerView start];
 }
 
+- (void)startScanner
+{
+    self.navigationController.navigationBarHidden = NO;
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered
+                                                                  target:self
+                                                                  action:@selector(cancelScan)];
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.leftBarButtonItem = backButton;
+    
+    self.codeScannerView = [[WECodeScannerView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height+[UIApplication sharedApplication].statusBarFrame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height - [UIApplication sharedApplication].statusBarFrame.size.height)];
+    self.codeScannerView.delegate = self;
+    self.codeScannerView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [self.view addSubview:self.codeScannerView];
+    [self.codeScannerView start];
+}
+
 - (void)scannerView:(WECodeScannerView *)scannerView didReadCode:(NSString *)code
 {
     if(!self.scanned)
@@ -190,7 +206,7 @@ _Bool isSpanish;
 {
     if(status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse)
     {
-        [self getNearbyRoutes];
+        [self performSegueWithIdentifier:@"showGpsPage" sender:self];
     }
 }
 
@@ -335,8 +351,6 @@ _Bool isSpanish;
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
-
-    [self styleViews];
 }
 
 - (void)viewDidLoad
@@ -472,6 +486,21 @@ _Bool isSpanish;
         [self performSegueWithIdentifier:@"presentTutorial" sender:self];
         [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"First Time"];
     }
+    
+    if(self.startScan)
+    {
+        [self startScanner];
+    }
+}
+
+- (void)viewDidLayoutSubviews
+{
+    if(!self.loaded)
+    {
+        [self styleViews];
+        self.loaded = YES;
+        NSLog(@"Loaded");
+    }
 }
 
 //method needed whenever another view controller is returning to home
@@ -480,12 +509,7 @@ _Bool isSpanish;
 
 //called when opening a new view controller
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{    
-    if([[segue identifier] isEqualToString:@"showGpsPage"]){
-        NearMeMapViewController *controller = segue.destinationViewController;
-        controller.routes = self.nearbyRoutes;
-    }
-    
+{
     if([segue.identifier isEqualToString:@"OpenIncomingBuses"])
     {
         IncomingBusesViewController *controller = segue.destinationViewController;
@@ -511,16 +535,16 @@ _Bool isSpanish;
 
 - (void)getNearbyRoutes
 {
-    dispatch_queue_t queue = dispatch_queue_create("Get Routes Queue", NULL);
-    dispatch_async(queue, ^{
-        DatabaseManager *db;
-        db = [DatabaseManager getSharedInstance];
-        self.nearbyRoutes = [db getNearbyRoutes];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self performSegueWithIdentifier:@"showGpsPage" sender:self];
-        });
-    });
+//    dispatch_queue_t queue = dispatch_queue_create("Get Routes Queue", NULL);
+//    dispatch_async(queue, ^{
+//        DatabaseManager *db;
+//        db = [DatabaseManager getSharedInstance];
+//        self.nearbyRoutes = [db getNearbyRoutes];
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//
+//        });
+//    });
 }
 
 - (void)getNearbyRoutesWithQRData
@@ -586,7 +610,7 @@ _Bool isSpanish;
         [self formatLabelForButton:btnPayment withHeight:btnPayment.frame.size.height andVerticalOffset:0 andText:@"Ayuda" withFontSize:20 withFontColor:[UIColor blueColor] fontAwesome:[NSString awesomeIcon:FaQuestionCircle] withTag:0 buttonClicked:false];
     }
     else{
-        [self 	formatLabelForButton:btnScan withHeight:btnScan.frame.size.height andVerticalOffset:0 andText:@"Scan" withFontSize:20 withFontColor:[UIColor blueColor] fontAwesome:[NSString awesomeIcon:FaCameraRetro] withTag:0 buttonClicked:false];
+        [self formatLabelForButton:btnScan withHeight:btnScan.frame.size.height andVerticalOffset:0 andText:@"Scan" withFontSize:20 withFontColor:[UIColor blueColor] fontAwesome:[NSString awesomeIcon:FaCameraRetro] withTag:0 buttonClicked:false];
         
         [self formatLabelForButton:btnRoute withHeight:btnRoute.frame.size.height andVerticalOffset:0 andText:@"Route" withFontSize:20 withFontColor:[UIColor blueColor] fontAwesome:[NSString awesomeIcon:FaRoad] withTag:0 buttonClicked:false];
         

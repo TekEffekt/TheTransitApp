@@ -29,6 +29,7 @@
 @property (nonatomic) IBOutlet UIButton *btnHelp;
 @property (strong, nonatomic) IBOutlet UIButton *btnPayment;
 @property (strong, nonatomic) IBOutlet UIButton *logoBanner;
+@property(nonatomic) BOOL startScan;
 
 // Touch events to change button images
 -(IBAction)touchScan:(id)sender;
@@ -44,7 +45,7 @@
 -(IBAction)touchPayment:(id)sender;
 -(IBAction)upPayment:(id)sender;
 -(void)formatAdvertisement;
-
+-(void)startScanner;
 
 //methods
 -(UIView *)createZbarOverlay;

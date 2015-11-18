@@ -17,6 +17,7 @@
 #import "RouteLineMenuViewController.h"
 #import "Styleable.h"
 #import "NearMeErrorHandler.h"
+#import "MBProgressHUD.h"
 
 @interface NearMeMapViewController () <GMSMapViewDelegate, RouteLineChanger, StylesItself>
 
@@ -32,6 +33,7 @@
 @property(strong, nonatomic) RouteLineMenuViewController *routeLineMenu;
 @property(strong, nonatomic) NSMutableArray *polylinesShowing;
 @property (weak, nonatomic) IBOutlet UIButton *routeLineButton;
+@property(strong, nonatomic) MBProgressHUD *progress;
 
 @property(strong, nonatomic) NSMutableArray *line;
 @property(strong, nonatomic) GMSPolyline *poly;
@@ -90,15 +92,11 @@
     
     self.map.myLocationEnabled = YES;
     
-    [self displayMarkersOnMap];
-    
     [self.view insertSubview:self.map atIndex:0];
     self.map.delegate = self;
     
-    if(self.routes.count == 0)
-    {
-        [self displayErrorMessage];
-    }    
+    [self presentWaitOverlay];
+    [self getNearbyRoutes];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -117,6 +115,37 @@
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
+- (void)presentWaitOverlay
+{
+    self.progress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.progress.labelText = @"Loading routes";
+}
+
+- (void)getNearbyRoutes
+{
+    dispatch_queue_t queue = dispatch_queue_create("Get Routes Queue", NULL);
+    dispatch_async(queue, ^{
+        DatabaseManager *db;
+        db = [DatabaseManager getSharedInstance];
+        self.routes = [db getNearbyRoutes];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self dataFinishedLoading];
+        });
+    });
+}
+
+- (void)dataFinishedLoading
+{
+    [self.progress hide:true];
+    [self displayMarkersOnMap];
+    
+    if(self.routes.count == 0)
+    {
+        [self displayErrorMessage];
+    }
 }
 
 - (void)displayErrorMessage

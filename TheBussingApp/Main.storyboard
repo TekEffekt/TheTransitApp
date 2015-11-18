@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="p9o-vX-RYa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="p9o-vX-RYa">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8Zz-zX-s5R">
             <objects>
-                <navigationController autoresizesArchivedViewToFullSize="NO" id="p9o-vX-RYa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Nav" autoresizesArchivedViewToFullSize="NO" id="p9o-vX-RYa" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CPr-Bu-k3y">
@@ -172,7 +172,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="EqC-8t-w3A"/>
                 </viewController>
@@ -326,7 +325,7 @@
         <!--Home View Controller-->
         <scene sceneID="VXG-bQ-b0E">
             <objects>
-                <viewController storyboardIdentifier="Main" id="8XF-Lc-5JH" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="8XF-Lc-5JH" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aP5-oM-dKP"/>
                         <viewControllerLayoutGuide type="bottom" id="JY7-fi-uUJ"/>
@@ -335,8 +334,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rua-3N-QSO">
-                                <rect key="frame" x="0.0" y="28" width="320" height="122"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rua-3N-QSO">
+                                <rect key="frame" x="0.0" y="72" width="320" height="122"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rua-3N-QSO" secondAttribute="height" multiplier="160:61" id="5h7-xF-eih"/>
@@ -366,8 +365,8 @@
                                     <constraint firstAttribute="height" constant="4" id="toq-t7-R4C"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-Jw-2WU">
-                                <rect key="frame" x="164" y="165" width="140" height="105"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-Jw-2WU">
+                                <rect key="frame" x="164" y="209" width="140" height="105"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
@@ -387,8 +386,8 @@
                                     <action selector="upInsideGPS:" destination="8XF-Lc-5JH" eventType="touchUpInside" id="c9x-3j-L9S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZt-WV-mug">
-                                <rect key="frame" x="16" y="165" width="140" height="105"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZt-WV-mug">
+                                <rect key="frame" x="16" y="209" width="140" height="105"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
@@ -408,27 +407,8 @@
                                     <action selector="upScan:" destination="8XF-Lc-5JH" eventType="touchDragOutside" id="yql-ML-UN2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cJ-Ll-iL0">
-                                <rect key="frame" x="16" y="281" width="140" height="105"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9cJ-Ll-iL0" secondAttribute="height" multiplier="4:3" id="1mY-cA-Acd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Route">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchRoute:" destination="8XF-Lc-5JH" eventType="touchDown" id="bSy-il-Lci"/>
-                                    <action selector="upRoute:" destination="8XF-Lc-5JH" eventType="touchCancel" id="kQ2-Rs-m7K"/>
-                                    <action selector="upRoute:" destination="8XF-Lc-5JH" eventType="touchDragOutside" id="qqw-oM-wL6"/>
-                                    <action selector="upRoute:" destination="8XF-Lc-5JH" eventType="touchUpInside" id="stC-kN-gmN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9D-nG-VQc">
-                                <rect key="frame" x="164" y="281" width="140" height="105"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9D-nG-VQc">
+                                <rect key="frame" x="164" y="325" width="140" height="105"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
@@ -445,6 +425,25 @@
                                     <action selector="touchHelp2:" destination="8XF-Lc-5JH" eventType="touchDown" id="kOR-1x-drg"/>
                                     <action selector="upHelp2:" destination="8XF-Lc-5JH" eventType="touchUpInside" id="vQP-u3-sWr"/>
                                     <action selector="upHelp:" destination="8XF-Lc-5JH" eventType="touchUpInside" id="CLj-fq-d3B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cJ-Ll-iL0">
+                                <rect key="frame" x="16" y="325" width="140" height="105"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9cJ-Ll-iL0" secondAttribute="height" multiplier="4:3" id="1mY-cA-Acd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Route">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchRoute:" destination="8XF-Lc-5JH" eventType="touchDown" id="bSy-il-Lci"/>
+                                    <action selector="upRoute:" destination="8XF-Lc-5JH" eventType="touchCancel" id="kQ2-Rs-m7K"/>
+                                    <action selector="upRoute:" destination="8XF-Lc-5JH" eventType="touchDragOutside" id="qqw-oM-wL6"/>
+                                    <action selector="upRoute:" destination="8XF-Lc-5JH" eventType="touchUpInside" id="stC-kN-gmN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -493,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T42-K9-MeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456" y="157"/>
+            <point key="canvasLocation" x="456" y="152"/>
         </scene>
         <!--Help-->
         <scene sceneID="o0u-QR-oX5">
@@ -643,7 +642,7 @@
         <!--Stops Nearby-->
         <scene sceneID="mtD-XK-Tfz">
             <objects>
-                <viewController storyboardIdentifier="NearMeMapView" title="Stops Nearby" id="Y8W-i3-ZUC" customClass="NearMeMapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NearMe" title="Stops Nearby" id="Y8W-i3-ZUC" customClass="NearMeMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vUP-5o-Fmv"/>
                         <viewControllerLayoutGuide type="bottom" id="rZV-eI-4zF"/>
@@ -1008,7 +1007,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xYd-7J-Je4"/>
-        <segue reference="Pej-Y1-jCN"/>
+        <segue reference="elW-De-GDD"/>
         <segue reference="w4h-kC-3pd"/>
     </inferredMetricsTieBreakers>
 </document>

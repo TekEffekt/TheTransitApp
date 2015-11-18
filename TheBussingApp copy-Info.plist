@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Kenosha</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
@@ -24,6 +26,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>Kenosha</string>
@@ -39,6 +43,25 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>fontawesome-webfont.ttf</string>
+	</array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Camera</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Scan QR Code</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.kenosha.transit.Scan</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>Compass</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Near Me</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.kenosha.transit.NearMe</string>
+		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
