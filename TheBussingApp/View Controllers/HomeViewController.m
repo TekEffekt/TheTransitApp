@@ -135,6 +135,8 @@ _Bool isSpanish;
 
 - (void)startScanner
 {
+    self.startScan = NO;
+    
     self.navigationController.navigationBarHidden = NO;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered
                                                                   target:self

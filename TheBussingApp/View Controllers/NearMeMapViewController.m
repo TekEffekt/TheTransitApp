@@ -77,12 +77,16 @@
 //    double myLon = [[conman get_longitude] doubleValue];
     
     // Racine
-//    double myLat = 42.782772;
-//    double myLon = -87.808052;
+    double myLat = 42.782772;
+    double myLon = -87.808052;
     
     // Parkside
-    double myLat = 42.6432133;
-    double myLon = -87.8479223;
+//    double myLat = 42.6432133;
+//    double myLon = -87.8479223;
+    
+    // Western Kenosha
+//    double myLat = 42.5623364;
+//    double myLon = -87.9378458;
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:myLat longitude:myLon zoom:14];
     
