@@ -73,12 +73,12 @@
     ConnectionManager *conman = [ConnectionManager new];
     [conman update_gps];
     
-//    double myLat = [[conman get_latitude] doubleValue];
-//    double myLon = [[conman get_longitude] doubleValue];
+    double myLat = [[conman get_latitude] doubleValue];
+    double myLon = [[conman get_longitude] doubleValue];
     
     // Racine
-    double myLat = 42.782772;
-    double myLon = -87.808052;
+//    double myLat = 42.782772;
+//    double myLon = -87.808052;
     
     // Parkside
 //    double myLat = 42.6432133;
@@ -101,6 +101,7 @@
     
     [self presentWaitOverlay];
     [self getNearbyRoutes];
+    [self displayRouteLineButtons];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -191,6 +192,8 @@
         NSString *filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"xml"];
         self.routeCoordinatesDictionary = [NSDictionary dictionaryWithXMLFile:filePath];
     }
+    
+    NSLog(@"Empty?: %@", self.routeCoordinatesDictionary);
 
     if(!self.routeCoordinatesArray)
     {
@@ -365,29 +368,29 @@
     [self.view addSubview:button2];
 }
 
-//- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
-//{
-//    NSNumber *lat = [NSNumber numberWithDouble:coordinate.latitude];
-//    NSNumber *lon = [NSNumber numberWithDouble:coordinate.longitude];
-//
-//    NSArray *coord = @[lat, lon];
-//
-//    [self.line addObject:coord];
-//
-//    GMSMutablePath *path = [[GMSMutablePath alloc] init];
-//
-//    for (NSArray *point in self.line)
-//    {
-//        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
-//    }
-//
-//    self.poly.map = nil;
-//    self.poly = nil;
-//
-//    self.poly = [GMSPolyline polylineWithPath:path];
-//    self.poly.strokeWidth = 5;
-//    self.poly.map = self.map;
-//}
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate
+{
+    NSNumber *lat = [NSNumber numberWithDouble:coordinate.latitude];
+    NSNumber *lon = [NSNumber numberWithDouble:coordinate.longitude];
+
+    NSArray *coord = @[lat, lon];
+
+    [self.line addObject:coord];
+
+    GMSMutablePath *path = [[GMSMutablePath alloc] init];
+
+    for (NSArray *point in self.line)
+    {
+        [path addCoordinate:CLLocationCoordinate2DMake([point[0] doubleValue], [point[1] doubleValue])];
+    }
+
+    self.poly.map = nil;
+    self.poly = nil;
+
+    self.poly = [GMSPolyline polylineWithPath:path];
+    self.poly.strokeWidth = 5;
+    self.poly.map = self.map;
+}
 
 - (void)publishLineToXML
 {

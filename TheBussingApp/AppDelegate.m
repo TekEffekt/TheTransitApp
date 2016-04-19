@@ -20,7 +20,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "GAI.h"
 #import "Constants.h"
-//#import <Pushbots/Pushbots.h>
+#import <Pushbots/Pushbots.h>
 
 @implementation AppDelegate
 
@@ -78,11 +78,10 @@
     
     // Initialize tracker. Replace with your tracking ID.
     
-#warning Enable when shipping
-    //[[GAI sharedInstance] trackerWithTrackingId:@"UA-64356940-1"];
+    [[GAI sharedInstance] trackerWithTrackingId:[Constants getGoogleAnalyticsTrackingId]];
     
     // The Google Maps API Key
-    [GMSServices provideAPIKey:@"AIzaSyC_5GHcShRWjTadni0vDLjU9DvMkwLsdYY"];
+    [GMSServices provideAPIKey:[Constants getGoogleMapsApiKey]];
     
     HomeViewController *home = [HomeViewController alloc];
     home.btnScan.enabled = NO;
@@ -123,10 +122,10 @@
     
     self.window.tintColor = [Constants getAppTintColor];
     
-//    [Pushbots sharedInstanceWithAppId:@"558de155177959c4438b456e"];
-//    //Handle notification when the user click it, while app is closed.
-//    //This method will show an alert to the user.
-//    [[Pushbots sharedInstance] receivedPush:launchOptions];
+    [Pushbots sharedInstanceWithAppId:@"558de155177959c4438b456e"];
+    //Handle notification when the user click it, while app is closed.
+    //This method will show an alert to the user.
+    [[Pushbots sharedInstance] receivedPush:launchOptions];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     

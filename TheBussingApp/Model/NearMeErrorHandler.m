@@ -32,7 +32,7 @@
         }
     } else
     {
-        errorMessage = [NSString stringWithFormat:@"The bus is not available on %@", weekday];
+        errorMessage = [NSString stringWithFormat:@"The bus is not available on %@", [weekday capitalizedString]];
     }
         
     return errorMessage;

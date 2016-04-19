@@ -21,5 +21,7 @@
 + (NSArray*)getListOfRouteNames;
 + (UIColor *)getRouteColorForRoute:(NSString*)route;
 + (NSString*)getShortHandForRoute:(NSString*)route;
++ (NSString*)getGoogleMapsApiKey;
++ (NSString*)getGoogleAnalyticsTrackingId;
 
 @end

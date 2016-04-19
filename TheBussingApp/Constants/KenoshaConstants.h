@@ -21,5 +21,7 @@
 + (NSString*)getRouteCoordinatesFileName;
 + (NSArray*)getListOfRouteNames;
 + (NSString*)getShortHandForRoute:(NSString*)route;
++ (NSString*)getGoogleMapsApiKey;
++ (NSString*)getGoogleAnalyticsTrackingId;
 
 @end

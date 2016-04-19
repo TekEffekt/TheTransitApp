@@ -202,9 +202,6 @@ NSDictionary *resultDict = nil;
 {
     const char *dbpath = [databasePath UTF8String];
     
-    time = @"10:00:00";
-    day = @"Tuesday";
-    
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     
     int rows = 0;
@@ -341,19 +338,19 @@ NSDictionary *resultDict = nil;
     
     [conman update_gps];
     
-//    double myLat = [[conman get_latitude] doubleValue];
-//    double myLon = [[conman get_longitude] doubleValue];
+    double myLat = [[conman get_latitude] doubleValue];
+    double myLon = [[conman get_longitude] doubleValue];
     
 //     Racine
 //    double myLat = 42.782772;
 //    double myLon = -87.808052;
     
     // Parkside
-    double myLat = 42.6432133;
-    double myLon = -87.8479223;
-    
-    static double LATITUED_PER_5_MILES =  3.0333;
-    static double LONGITUDE_PER_5_MILES = 3.0333;
+//    double myLat = 42.6432133;
+//    double myLon = -87.8479223;
+//    
+    static double LATITUED_PER_5_MILES =  .0333;
+    static double LONGITUDE_PER_5_MILES = .0333;
     
     //Working code
     NSDate *now = [[NSDate alloc] init];
@@ -364,9 +361,6 @@ NSDictionary *resultDict = nil;
     [formatter setDateFormat:@"HH:mm:ss"];
     
     NSString *currentTimeString = [formatter stringFromDate:[NSDate date]];
-    
-    currentTimeString = @"12:00:00";
-    weekday = @"Monday";
     
     NSMutableArray *resultArray = [[NSMutableArray alloc] init];
     

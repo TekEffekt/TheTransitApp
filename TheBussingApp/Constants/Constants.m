@@ -10,6 +10,7 @@
 #import "RacineConstants.h"
 #import "KenoshaConstants.h"
 #import "WesternKenoshaConstants.h"
+#import "LacrosseConstants.h"
 
 @implementation Constants
 
@@ -21,6 +22,34 @@
         return [KenoshaConstants getListOfRouteNames];
     #elif WesternKenosha
         return [WesternKenoshaConstants getListOfRouteNames];
+    #elif Lacrosse
+        return [LacrosseConstants getListOfRouteNames];
+    #endif
+}
+
++ (NSString*)getGoogleMapsApiKey
+{
+    #ifdef Racine
+        return [RacineConstants getGoogleMapsApiKey];
+    #elif Kenosha
+        return [KenoshaConstants getGoogleMapsApiKey];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getGoogleMapsApiKey];
+    #elif Lacrosse
+        return [LacrosseConstants getGoogleMapsApiKey];
+#endif
+}
+
++ (NSString*)getGoogleAnalyticsTrackingId
+{
+    #ifdef Racine
+        return [RacineConstants getGoogleAnalyticsTrackingId];
+    #elif Kenosha
+        return [KenoshaConstants getGoogleAnalyticsTrackingId];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getGoogleAnalyticsTrackingId];
+    #elif Lacrosse
+        return [LacrosseConstants getGoogleAnalyticsTrackingId];
     #endif
 }
 
@@ -34,6 +63,8 @@
         shortHand = [KenoshaConstants getShortHandForRoute:route];
     #elif WesternKenosha
         shortHand = [WesternKenoshaConstants getShortHandForRoute:route];
+    #elif Lacrosse
+        shortHand = [LacrosseConstants getShortHandForRoute:route];
     #endif
     
     return shortHand;
@@ -49,6 +80,8 @@
         fileName = [KenoshaConstants getRouteCoordinatesFileName];
     #elif WesternKenosha
         fileName = [WesternKenoshaConstants getRouteCoordinatesFileName];
+    #elif Lacrosse
+        fileName = [LacrosseConstants getRouteCoordinatesFileName];
     #endif
     
     return fileName;
@@ -64,6 +97,8 @@
         description = [KenoshaConstants getTextForIndex:index];
     #elif WesternKenosha
         description = [WesternKenoshaConstants getTextForIndex:index];
+    #elif Lacrosse
+        description = [LacrosseConstants getTextForIndex:index];
     #endif
     
     return description;
@@ -79,6 +114,8 @@
         routeColor = [KenoshaConstants getRouteColorForRoute:route];
     #elif WesternKenosha
         routeColor = [WesternKenoshaConstants getRouteColorForRoute:route];
+    #elif Lacrosse
+        routeColor = [LacrosseConstants getRouteColorForRoute:route];
     #endif
     
     return routeColor;
@@ -93,6 +130,8 @@
         route =  [KenoshaConstants getRoutesFromOrderedIndex:index];
     #elif WesternKenosha
         route = [WesternKenoshaConstants getRoutesFromOrderedIndex:index];
+    #elif Lacrosse
+        route = [LacrosseConstants getRoutesFromOrderedIndex:index];
     #endif
     return route;
 }
@@ -105,6 +144,8 @@
         return [KenoshaConstants getAppTintColor];
     #elif WesternKenosha
         return [WesternKenoshaConstants getAppTintColor];
+    #elif Lacrosse
+        return [LacrosseConstants getAppTintColor];
     #endif
 }
 
@@ -116,6 +157,8 @@
         return [KenoshaConstants getBackgroundColor];
     #elif WesternKenosha
         return [WesternKenoshaConstants getBackgroundColor];
+    #elif Lacrosse
+        return [LacrosseConstants getBackgroundColor];
     #endif
 }
 
@@ -127,6 +170,8 @@
         return @"kenoshaDB";
     #elif WesternKenosha
         return @"westernKenoshaDB";
+    #elif Lacrosse
+        return @"lacrosseDB";
     #endif
 }
 
@@ -138,6 +183,8 @@
         return [KenoshaConstants getScheduleBeginEndTimes];
     #elif WesternKenosha
         return [WesternKenoshaConstants getScheduleBeginEndTimes];
+    #elif Lacrosse
+        return [LacrosseConstants getScheduleBeginEndTimes];
     #endif
 }
 
@@ -149,6 +196,8 @@
         return [KenoshaConstants getAvailableDays];
     #elif WesternKenosha
         return [WesternKenoshaConstants getAvailableDays];
+    #elif Lacrosse
+        return [LacrosseConstants getAvailableDays];
     #endif
 }
 

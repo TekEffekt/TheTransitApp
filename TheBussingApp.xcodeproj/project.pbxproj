@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21DFEC9D690C8EF8B00A7FE5 /* libPods-Kenosha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEB8639BE598163BC08493 /* libPods-Kenosha.a */; };
+		1A114D2946D027C6E2B4284C /* Pods_MTU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86205B6420FFAC6EA3A370C2 /* Pods_MTU.framework */; };
 		2798864B1B6EBDA400562AF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798864A1B6EBDA400562AF8 /* main.m */; };
 		2798864E1B6EBDA400562AF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798864D1B6EBDA400562AF8 /* AppDelegate.m */; };
 		279886711B6EBF8A00562AF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798864D1B6EBDA400562AF8 /* AppDelegate.m */; };
@@ -72,7 +72,7 @@
 		279887EE1B6F358100562AF8 /* WECodeScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887EA1B6F358100562AF8 /* WECodeScannerView.m */; };
 		27E05EAF1B6F44EF00EE9F05 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */; };
 		27E05EB01B6F44EF00EE9F05 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */; };
-		70650BBBFE798AB3FBF6BB30 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4BACC4619D8B70A810DF02 /* libPods.a */; };
+		404554B72A22CA273586A937 /* Pods_Kenosha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B18A68013438E42ED08E29F /* Pods_Kenosha.framework */; };
 		B60A72A81B70668A00DBF696 /* KenoshaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60A72A71B70668A00DBF696 /* KenoshaImages.xcassets */; };
 		B60A72AA1B70674B00DBF696 /* RacineImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60A72A91B70674B00DBF696 /* RacineImages.xcassets */; };
 		B60A72AC1B70705E00DBF696 /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
@@ -120,6 +120,9 @@
 		B639E65C1B71D15C00593A49 /* racineDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E65B1B71D15C00593A49 /* racineDB.sql */; };
 		B639E6611B72053700593A49 /* kenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E6601B72053700593A49 /* kenoshaDB.sql */; };
 		B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
+		B67B1E8D1CC4B21400D88781 /* Lacrosse.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67B1E8C1CC4B21400D88781 /* Lacrosse.xcassets */; };
+		B67B1E8F1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B67B1E8E1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml */; };
+		B67B1E911CC57F2100D88781 /* lacrosseDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B67B1E901CC57F2100D88781 /* lacrosseDB.sql */; };
 		B67F20A01BCC75E9000A0CEB /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
 		B67F20A11BCC75E9000A0CEB /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
 		B67F20A21BCC75E9000A0CEB /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
@@ -156,7 +159,6 @@
 		B67F20C21BCC75E9000A0CEB /* HowToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B81B707BB400DBF696 /* HowToViewController.m */; };
 		B67F20C31BCC75E9000A0CEB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887461B6EEC8C00562AF8 /* RootViewController.m */; };
 		B67F20C41BCC75E9000A0CEB /* IncomingBusesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887401B6EEC8C00562AF8 /* IncomingBusesViewController.m */; };
-		B67F20C61BCC75E9000A0CEB /* libPods-Kenosha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDEB8639BE598163BC08493 /* libPods-Kenosha.a */; };
 		B67F20C81BCC75E9000A0CEB /* spanishHowTo.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E61B70888000DBF696 /* spanishHowTo.html */; };
 		B67F20C91BCC75E9000A0CEB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B60A72BF1B707D3000DBF696 /* Info.plist */; };
 		B67F20CB1BCC75E9000A0CEB /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E11B70888000DBF696 /* help.html */; };
@@ -174,11 +176,74 @@
 		B67F20D91BCC75E9000A0CEB /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
 		B67F20E51BCC8D57000A0CEB /* WesternKenoshaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */; };
 		B67F20E71BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */; };
+		B695E75E1C0F015300DB2201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */; };
+		B695E75F1C0F015300DB2201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */; };
+		B695E7601C0F015300DB2201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */; };
 		B6CFCB9A1BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */; };
+		B6D63E7C1CC49600000A8E9C /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
+		B6D63E7D1CC49600000A8E9C /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
+		B6D63E7E1CC49600000A8E9C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
+		B6D63E7F1CC49600000A8E9C /* IncomingBusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798876C1B6EECA000562AF8 /* IncomingBusCell.m */; };
+		B6D63E801CC49600000A8E9C /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798879C1B6EEDEF00562AF8 /* SSKeychainQuery.m */; };
+		B6D63E811CC49600000A8E9C /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798871C1B6EEC7900562AF8 /* DatabaseManager.m */; };
+		B6D63E821CC49600000A8E9C /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798876E1B6EECA000562AF8 /* UIColor+BFPaperColors.m */; };
+		B6D63E831CC49600000A8E9C /* RouteLineMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887481B6EEC8C00562AF8 /* RouteLineMenuViewController.m */; };
+		B6D63E841CC49600000A8E9C /* BusRouteListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887361B6EEC8C00562AF8 /* BusRouteListViewController.m */; };
+		B6D63E851CC49600000A8E9C /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887241B6EEC7900562AF8 /* XMLDictionary.m */; };
+		B6D63E861CC49600000A8E9C /* KenoshaConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6531B7193FA00593A49 /* KenoshaConstants.m */; };
+		B6D63E871CC49600000A8E9C /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887681B6EECA000562AF8 /* EAIntroView.m */; };
+		B6D63E881CC49600000A8E9C /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798871A1B6EEC7900562AF8 /* ConnectionManager.m */; };
+		B6D63E891CC49600000A8E9C /* UpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887201B6EEC7900562AF8 /* UpdateManager.m */; };
+		B6D63E8A1CC49600000A8E9C /* BusListTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887641B6EECA000562AF8 /* BusListTableCell.m */; };
+		B6D63E8B1CC49600000A8E9C /* RacineConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6551B7193FA00593A49 /* RacineConstants.m */; };
+		B6D63E8C1CC49600000A8E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798864D1B6EBDA400562AF8 /* AppDelegate.m */; };
+		B6D63E8D1CC49600000A8E9C /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887A31B6F0C0700562AF8 /* NSString+FontAwesome.m */; };
+		B6D63E8E1CC49600000A8E9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798864A1B6EBDA400562AF8 /* main.m */; };
+		B6D63E8F1CC49600000A8E9C /* NearMeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887421B6EEC8C00562AF8 /* NearMeMapViewController.m */; };
+		B6D63E901CC49600000A8E9C /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887661B6EECA000562AF8 /* EAIntroPage.m */; };
+		B6D63E911CC49600000A8E9C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */; };
+		B6D63E921CC49600000A8E9C /* WECodeScannerMatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887E81B6F358100562AF8 /* WECodeScannerMatchView.m */; };
+		B6D63E931CC49600000A8E9C /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887771B6EECA000562AF8 /* WYPopoverController.m */; };
+		B6D63E941CC49600000A8E9C /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887261B6EEC7900562AF8 /* XMLReader.m */; };
+		B6D63E951CC49600000A8E9C /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798874A1B6EEC8C00562AF8 /* TutorialViewController.m */; };
+		B6D63E961CC49600000A8E9C /* EARestrictedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798876A1B6EECA000562AF8 /* EARestrictedScrollView.m */; };
+		B6D63E971CC49600000A8E9C /* NearMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887441B6EEC8C00562AF8 /* NearMeTableViewController.m */; };
+		B6D63E981CC49600000A8E9C /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B61B707BB400DBF696 /* HelpViewController.m */; };
+		B6D63E991CC49600000A8E9C /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887711B6EECA000562AF8 /* UIImage+Blur.m */; };
+		B6D63E9A1CC49600000A8E9C /* UIImage+ImageWithColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887731B6EECA000562AF8 /* UIImage+ImageWithColor.m */; };
+		B6D63E9B1CC49600000A8E9C /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2798879A1B6EEDEF00562AF8 /* SSKeychain.m */; };
+		B6D63E9C1CC49600000A8E9C /* UIImage+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887751B6EECA000562AF8 /* UIImage+Screenshot.m */; };
+		B6D63E9D1CC49600000A8E9C /* WECodeScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887EA1B6F358100562AF8 /* WECodeScannerView.m */; };
+		B6D63E9E1CC49600000A8E9C /* HowToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60A72B81B707BB400DBF696 /* HowToViewController.m */; };
+		B6D63E9F1CC49600000A8E9C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887461B6EEC8C00562AF8 /* RootViewController.m */; };
+		B6D63EA01CC49600000A8E9C /* IncomingBusesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279887401B6EEC8C00562AF8 /* IncomingBusesViewController.m */; };
+		B6D63EA21CC49600000A8E9C /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		B6D63EA41CC49600000A8E9C /* spanishHowTo.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E61B70888000DBF696 /* spanishHowTo.html */; };
+		B6D63EA51CC49600000A8E9C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B60A72BF1B707D3000DBF696 /* Info.plist */; };
+		B6D63EA71CC49600000A8E9C /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E11B70888000DBF696 /* help.html */; };
+		B6D63EA91CC49600000A8E9C /* accessibility.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72DF1B70888000DBF696 /* accessibility.html */; };
+		B6D63EAA1CC49600000A8E9C /* contact.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E01B70888000DBF696 /* contact.html */; };
+		B6D63EAB1CC49600000A8E9C /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */; };
+		B6D63EAC1CC49600000A8E9C /* spanishAccessibility.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E41B70888000DBF696 /* spanishAccessibility.html */; };
+		B6D63EAD1CC49600000A8E9C /* spanishContact.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E51B70888000DBF696 /* spanishContact.html */; };
+		B6D63EAE1CC49600000A8E9C /* General.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279887051B6EE8A800562AF8 /* General.xcassets */; };
+		B6D63EAF1CC49600000A8E9C /* how_to.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E21B70888000DBF696 /* how_to.html */; };
+		B6D63EB11CC49600000A8E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */; };
+		B6D63EB21CC49600000A8E9C /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72DE1B70888000DBF696 /* about.html */; };
+		B6D63EB31CC49600000A8E9C /* spanishabout.html in Resources */ = {isa = PBXBuildFile; fileRef = B60A72E31B70888000DBF696 /* spanishabout.html */; };
+		B6D63EB41CC49600000A8E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
+		B6D63EB51CC49600000A8E9C /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72B01B70781E00DBF696 /* FontAwesome.otf */; };
+		B6D63EB61CC49600000A8E9C /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
+		B6D63EB71CC49600000A8E9C /* kenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E6601B72053700593A49 /* kenoshaDB.sql */; };
+		B6D63EC11CC49940000A8E9C /* LacrosseConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D63EC01CC49940000A8E9C /* LacrosseConstants.m */; };
+		D70887BB01A748730760C637 /* Pods_Racine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B3077C8E8A4A0ADFB8441D /* Pods_Racine.framework */; };
+		E2838D76146FBDAD1B70DE70 /* Pods_WestKen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A83642902BB07CE7AC66A /* Pods_WestKen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C4BACC4619D8B70A810DF02 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		02B3077C8E8A4A0ADFB8441D /* Pods_Racine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Racine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A354D3911C739DEE2DD1E8D /* Pods-Kenosha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kenosha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kenosha/Pods-Kenosha.release.xcconfig"; sourceTree = "<group>"; };
+		1B18A68013438E42ED08E29F /* Pods_Kenosha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kenosha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		279886451B6EBDA400562AF8 /* Racine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Racine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2798864A1B6EBDA400562AF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2798864C1B6EBDA400562AF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -248,11 +313,11 @@
 		279887EA1B6F358100562AF8 /* WECodeScannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WECodeScannerView.m; path = "Views+UI/WECodeScannerView.m"; sourceTree = "<group>"; };
 		27E05EAD1B6F44EF00EE9F05 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "View Controllers/HomeViewController.h"; sourceTree = "<group>"; };
 		27E05EAE1B6F44EF00EE9F05 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "View Controllers/HomeViewController.m"; sourceTree = "<group>"; };
-		5E8B929E4A9B182E076BCD72 /* Pods-Kenosha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kenosha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kenosha/Pods-Kenosha.release.xcconfig"; sourceTree = "<group>"; };
-		720801A5473B2C218BE748BF /* libPods-Racine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Racine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		735C7786EB210C255DC025DC /* Pods-Kenosha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kenosha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kenosha/Pods-Kenosha.debug.xcconfig"; sourceTree = "<group>"; };
-		A5C58F16E47FF4F66A271677 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B136CBA390F269CC57F42B94 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2E47CADD3177102F3E54C796 /* Pods-MTU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTU/Pods-MTU.debug.xcconfig"; sourceTree = "<group>"; };
+		2F157D278B8734777C4FFD47 /* Pods-WestKen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestKen.release.xcconfig"; path = "Pods/Target Support Files/Pods-WestKen/Pods-WestKen.release.xcconfig"; sourceTree = "<group>"; };
+		431A83642902BB07CE7AC66A /* Pods_WestKen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WestKen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7678530944954878880CC589 /* Pods-MTU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTU.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTU/Pods-MTU.release.xcconfig"; sourceTree = "<group>"; };
+		86205B6420FFAC6EA3A370C2 /* Pods_MTU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60A72A71B70668A00DBF696 /* KenoshaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = KenoshaImages.xcassets; sourceTree = "<group>"; };
 		B60A72A91B70674B00DBF696 /* RacineImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RacineImages.xcassets; sourceTree = "<group>"; };
 		B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KATLogoBannerV2.png; sourceTree = "<group>"; };
@@ -290,13 +355,24 @@
 		B639E6601B72053700593A49 /* kenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kenoshaDB.sql; sourceTree = "<group>"; };
 		B64B13811BB7B8CF0074B053 /* BFPaperButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperButton.h; sourceTree = "<group>"; };
 		B64B13821BB7B8CF0074B053 /* BFPaperButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPaperButton.m; sourceTree = "<group>"; };
+		B67B1E8C1CC4B21400D88781 /* Lacrosse.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Lacrosse.xcassets; sourceTree = "<group>"; };
+		B67B1E8E1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LacrosseRouteCoordinates.xml; sourceTree = "<group>"; };
+		B67B1E901CC57F2100D88781 /* lacrosseDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lacrosseDB.sql; sourceTree = "<group>"; };
 		B67F20DF1BCC75E9000A0CEB /* WestKen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestKen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67F20E01BCC75E9000A0CEB /* Kenosha copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kenosha copy-Info.plist"; path = "/Users/kylez/Documents/Development/Xcode Projects/TheBussingApp/Kenosha copy-Info.plist"; sourceTree = "<absolute>"; };
 		B67F20E31BCC8D57000A0CEB /* WesternKenoshaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WesternKenoshaConstants.h; path = Constants/WesternKenoshaConstants.h; sourceTree = "<group>"; };
 		B67F20E41BCC8D57000A0CEB /* WesternKenoshaConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WesternKenoshaConstants.m; path = Constants/WesternKenoshaConstants.m; sourceTree = "<group>"; };
 		B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WesternKenoshaImages.xcassets; sourceTree = "<group>"; };
+		B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KenoshaRouteCoordinates.xml; sourceTree = "<group>"; };
-		FDDEB8639BE598163BC08493 /* libPods-Kenosha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kenosha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6D63EBD1CC49600000A8E9C /* MTU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6D63EBE1CC49601000A8E9C /* Kenosha copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kenosha copy2-Info.plist"; path = "/Users/kylez/Documents/Development/Xcode Projects/TheBussingApp/Kenosha copy2-Info.plist"; sourceTree = "<absolute>"; };
+		B6D63EBF1CC49940000A8E9C /* LacrosseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LacrosseConstants.h; path = Constants/LacrosseConstants.h; sourceTree = "<group>"; };
+		B6D63EC01CC49940000A8E9C /* LacrosseConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LacrosseConstants.m; path = Constants/LacrosseConstants.m; sourceTree = "<group>"; };
+		BE77345D07C4B2435C24354A /* Pods-Racine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Racine/Pods-Racine.debug.xcconfig"; sourceTree = "<group>"; };
+		E0F0A8CB22B8EB8C71A97DB4 /* Pods-Racine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racine.release.xcconfig"; path = "Pods/Target Support Files/Pods-Racine/Pods-Racine.release.xcconfig"; sourceTree = "<group>"; };
+		F06A1EA4D0254F3AED22CAFA /* Pods-WestKen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestKen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WestKen/Pods-WestKen.debug.xcconfig"; sourceTree = "<group>"; };
+		F16303D591C2C5FD10B7A1D3 /* Pods-Kenosha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kenosha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kenosha/Pods-Kenosha.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,7 +380,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70650BBBFE798AB3FBF6BB30 /* libPods.a in Frameworks */,
+				D70887BB01A748730760C637 /* Pods_Racine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +388,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21DFEC9D690C8EF8B00A7FE5 /* libPods-Kenosha.a in Frameworks */,
+				404554B72A22CA273586A937 /* Pods_Kenosha.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +396,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67F20C61BCC75E9000A0CEB /* libPods-Kenosha.a in Frameworks */,
+				E2838D76146FBDAD1B70DE70 /* Pods_WestKen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D63EA11CC49600000A8E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D63EA21CC49600000A8E9C /* (null) in Frameworks */,
+				1A114D2946D027C6E2B4284C /* Pods_MTU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,9 +419,10 @@
 				279886611B6EBDA500562AF8 /* TheBussingAppTests */,
 				279886461B6EBDA400562AF8 /* Products */,
 				2798867C1B6EBF8A00562AF8 /* TheBussingApp copy-Info.plist */,
-				EF6A7B7D17D66CC5BE1848B5 /* Pods */,
 				8729E13D0851A0F5C3C62A53 /* Frameworks */,
 				B67F20E01BCC75E9000A0CEB /* Kenosha copy-Info.plist */,
+				3A1718DCA9090A242C23E854 /* Pods */,
+				B6D63EBE1CC49601000A8E9C /* Kenosha copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,6 +432,7 @@
 				279886451B6EBDA400562AF8 /* Racine.app */,
 				2798867B1B6EBF8A00562AF8 /* TheBussingApp copy.app */,
 				B67F20DF1BCC75E9000A0CEB /* WestKen.app */,
+				B6D63EBD1CC49600000A8E9C /* MTU.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -369,12 +456,14 @@
 		279886481B6EBDA400562AF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B67B1E901CC57F2100D88781 /* lacrosseDB.sql */,
 				B637B57D1BF6B11700A4FE73 /* westernKenoshaDB.sql */,
 				B639E65B1B71D15C00593A49 /* racineDB.sql */,
 				B639E6601B72053700593A49 /* kenoshaDB.sql */,
 				B60A72BF1B707D3000DBF696 /* Info.plist */,
 				B60A72B01B70781E00DBF696 /* FontAwesome.otf */,
 				B60A72AD1B7076D500DBF696 /* fontawesome-webfont.ttf */,
+				B67B1E8E1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml */,
 				B637B57F1BF8204800A4FE73 /* westernKenoshaRouteCoordinates.xml */,
 				B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */,
 				2798878E1B6EECB000562AF8 /* RacineRouteCoordinates.xml */,
@@ -404,8 +493,10 @@
 			isa = PBXGroup;
 			children = (
 				B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */,
+				B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */,
 				B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */,
 				B60A72A91B70674B00DBF696 /* RacineImages.xcassets */,
+				B67B1E8C1CC4B21400D88781 /* Lacrosse.xcassets */,
 				B60A72A71B70668A00DBF696 /* KenoshaImages.xcassets */,
 				279887051B6EE8A800562AF8 /* General.xcassets */,
 			);
@@ -495,6 +586,21 @@
 			name = SSH;
 			sourceTree = "<group>";
 		};
+		3A1718DCA9090A242C23E854 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F16303D591C2C5FD10B7A1D3 /* Pods-Kenosha.debug.xcconfig */,
+				1A354D3911C739DEE2DD1E8D /* Pods-Kenosha.release.xcconfig */,
+				BE77345D07C4B2435C24354A /* Pods-Racine.debug.xcconfig */,
+				E0F0A8CB22B8EB8C71A97DB4 /* Pods-Racine.release.xcconfig */,
+				F06A1EA4D0254F3AED22CAFA /* Pods-WestKen.debug.xcconfig */,
+				2F157D278B8734777C4FFD47 /* Pods-WestKen.release.xcconfig */,
+				2E47CADD3177102F3E54C796 /* Pods-MTU.debug.xcconfig */,
+				7678530944954878880CC589 /* Pods-MTU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8729E13D0851A0F5C3C62A53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,9 +608,10 @@
 				B60A72F91B70B6E600DBF696 /* AVFoundation.framework */,
 				279887A91B6F23A300562AF8 /* UIKit.framework */,
 				279887A61B6F238800562AF8 /* Foundation.framework */,
-				1C4BACC4619D8B70A810DF02 /* libPods.a */,
-				FDDEB8639BE598163BC08493 /* libPods-Kenosha.a */,
-				720801A5473B2C218BE748BF /* libPods-Racine.a */,
+				1B18A68013438E42ED08E29F /* Pods_Kenosha.framework */,
+				86205B6420FFAC6EA3A370C2 /* Pods_MTU.framework */,
+				02B3077C8E8A4A0ADFB8441D /* Pods_Racine.framework */,
+				431A83642902BB07CE7AC66A /* Pods_WestKen.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -554,6 +661,8 @@
 				B639E6531B7193FA00593A49 /* KenoshaConstants.m */,
 				B639E6541B7193FA00593A49 /* RacineConstants.h */,
 				B639E6551B7193FA00593A49 /* RacineConstants.m */,
+				B6D63EBF1CC49940000A8E9C /* LacrosseConstants.h */,
+				B6D63EC01CC49940000A8E9C /* LacrosseConstants.m */,
 			);
 			name = "City Specific Constants";
 			sourceTree = "<group>";
@@ -585,17 +694,6 @@
 			name = "Table Cells";
 			sourceTree = "<group>";
 		};
-		EF6A7B7D17D66CC5BE1848B5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A5C58F16E47FF4F66A271677 /* Pods.debug.xcconfig */,
-				B136CBA390F269CC57F42B94 /* Pods.release.xcconfig */,
-				735C7786EB210C255DC025DC /* Pods-Kenosha.debug.xcconfig */,
-				5E8B929E4A9B182E076BCD72 /* Pods-Kenosha.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -603,12 +701,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279886681B6EBDA500562AF8 /* Build configuration list for PBXNativeTarget "Racine" */;
 			buildPhases = (
-				3ED119E083C03953E7CEF7FB /* Check Pods Manifest.lock */,
+				9164A61F2FF0942D50B9C1B6 /* Check Pods Manifest.lock */,
 				279886411B6EBDA400562AF8 /* Sources */,
 				279886421B6EBDA400562AF8 /* Frameworks */,
 				279886431B6EBDA400562AF8 /* Resources */,
-				B879DA5DBB2386DDA553F1AA /* Copy Pods Resources */,
-				64880CCAE7D7EF9D5B7F3F5F /* Embed Pods Frameworks */,
+				59FA3764A0943FC1BD563522 /* Embed Pods Frameworks */,
+				BC24ED176519F0E43B4A5097 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -623,11 +721,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 279886781B6EBF8A00562AF8 /* Build configuration list for PBXNativeTarget "Kenosha" */;
 			buildPhases = (
-				BEAFCB02D4559A3E2DBFB92A /* Check Pods Manifest.lock */,
+				AFB5D009E7ED6F5B32D23AC3 /* Check Pods Manifest.lock */,
 				2798866F1B6EBF8A00562AF8 /* Sources */,
 				279886731B6EBF8A00562AF8 /* Frameworks */,
 				279886741B6EBF8A00562AF8 /* Resources */,
-				C68406FA73BADBF5E05B5273 /* Copy Pods Resources */,
+				0A961139877CF4F7C02494C3 /* Embed Pods Frameworks */,
+				C29B1625B596111E66C00A39 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -642,11 +741,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B67F20DC1BCC75E9000A0CEB /* Build configuration list for PBXNativeTarget "WestKen" */;
 			buildPhases = (
-				B67F209E1BCC75E9000A0CEB /* Check Pods Manifest.lock */,
+				BC6E1B8B1F97C1BBC60F42FB /* Check Pods Manifest.lock */,
 				B67F209F1BCC75E9000A0CEB /* Sources */,
 				B67F20C51BCC75E9000A0CEB /* Frameworks */,
 				B67F20C71BCC75E9000A0CEB /* Resources */,
-				B67F20DB1BCC75E9000A0CEB /* Copy Pods Resources */,
+				1CDBC2BAE057A6713AE87137 /* Embed Pods Frameworks */,
+				5E4C0F731F1B4EE0A2233E42 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -655,6 +755,26 @@
 			name = WestKen;
 			productName = TheBussingApp;
 			productReference = B67F20DF1BCC75E9000A0CEB /* WestKen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6D63E791CC49600000A8E9C /* MTU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6D63EBA1CC49600000A8E9C /* Build configuration list for PBXNativeTarget "MTU" */;
+			buildPhases = (
+				B6D63E7A1CC49600000A8E9C /* Check Pods Manifest.lock */,
+				B6D63E7B1CC49600000A8E9C /* Sources */,
+				B6D63EA11CC49600000A8E9C /* Frameworks */,
+				B6D63EA31CC49600000A8E9C /* Resources */,
+				B6D63EB81CC49600000A8E9C /* Embed Pods Frameworks */,
+				B6D63EB91CC49600000A8E9C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTU;
+			productName = TheBussingApp;
+			productReference = B6D63EBD1CC49600000A8E9C /* MTU.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -669,9 +789,13 @@
 				TargetAttributes = {
 					279886441B6EBDA400562AF8 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2T9JP2ZYVK;
 					};
 					2798866E1B6EBF8A00562AF8 = {
 						DevelopmentTeam = F8BA5TMX9M;
+					};
+					B6D63E791CC49600000A8E9C = {
+						DevelopmentTeam = 2T9JP2ZYVK;
 					};
 				};
 			};
@@ -691,6 +815,7 @@
 				279886441B6EBDA400562AF8 /* Racine */,
 				2798866E1B6EBF8A00562AF8 /* Kenosha */,
 				B67F209D1BCC75E9000A0CEB /* WestKen */,
+				B6D63E791CC49600000A8E9C /* MTU */,
 			);
 		};
 /* End PBXProject section */
@@ -709,6 +834,7 @@
 				B639E6361B71827600593A49 /* Main.storyboard in Resources */,
 				B60A72AE1B7076D500DBF696 /* fontawesome-webfont.ttf in Resources */,
 				B639E65C1B71D15C00593A49 /* racineDB.sql in Resources */,
+				B695E75E1C0F015300DB2201 /* LaunchScreen.storyboard in Resources */,
 				279887061B6EE8A800562AF8 /* General.xcassets in Resources */,
 				B60A72F11B70888000DBF696 /* spanishabout.html in Resources */,
 				B60A72F31B70888000DBF696 /* spanishAccessibility.html in Resources */,
@@ -737,6 +863,7 @@
 				279887071B6EE8A800562AF8 /* General.xcassets in Resources */,
 				B60A72F01B70888000DBF696 /* how_to.html in Resources */,
 				279887901B6EECB000562AF8 /* RacineRouteCoordinates.xml in Resources */,
+				B695E75F1C0F015300DB2201 /* LaunchScreen.storyboard in Resources */,
 				B60A72E81B70888000DBF696 /* about.html in Resources */,
 				B60A72F21B70888000DBF696 /* spanishabout.html in Resources */,
 				B639E6371B71827600593A49 /* Main.storyboard in Resources */,
@@ -756,6 +883,7 @@
 				B67F20CD1BCC75E9000A0CEB /* accessibility.html in Resources */,
 				B67F20CE1BCC75E9000A0CEB /* contact.html in Resources */,
 				B67F20CF1BCC75E9000A0CEB /* fontawesome-webfont.ttf in Resources */,
+				B695E7601C0F015300DB2201 /* LaunchScreen.storyboard in Resources */,
 				B67F20D01BCC75E9000A0CEB /* spanishAccessibility.html in Resources */,
 				B67F20D11BCC75E9000A0CEB /* spanishContact.html in Resources */,
 				B67F20D21BCC75E9000A0CEB /* General.xcassets in Resources */,
@@ -771,25 +899,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6D63EA31CC49600000A8E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67B1E911CC57F2100D88781 /* lacrosseDB.sql in Resources */,
+				B6D63EA41CC49600000A8E9C /* spanishHowTo.html in Resources */,
+				B6D63EA51CC49600000A8E9C /* Info.plist in Resources */,
+				B6D63EA71CC49600000A8E9C /* help.html in Resources */,
+				B6D63EA91CC49600000A8E9C /* accessibility.html in Resources */,
+				B67B1E8F1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml in Resources */,
+				B6D63EAA1CC49600000A8E9C /* contact.html in Resources */,
+				B6D63EAB1CC49600000A8E9C /* fontawesome-webfont.ttf in Resources */,
+				B6D63EAC1CC49600000A8E9C /* spanishAccessibility.html in Resources */,
+				B6D63EAD1CC49600000A8E9C /* spanishContact.html in Resources */,
+				B6D63EAE1CC49600000A8E9C /* General.xcassets in Resources */,
+				B6D63EAF1CC49600000A8E9C /* how_to.html in Resources */,
+				B67B1E8D1CC4B21400D88781 /* Lacrosse.xcassets in Resources */,
+				B6D63EB11CC49600000A8E9C /* LaunchScreen.storyboard in Resources */,
+				B6D63EB21CC49600000A8E9C /* about.html in Resources */,
+				B6D63EB31CC49600000A8E9C /* spanishabout.html in Resources */,
+				B6D63EB41CC49600000A8E9C /* Main.storyboard in Resources */,
+				B6D63EB51CC49600000A8E9C /* FontAwesome.otf in Resources */,
+				B6D63EB61CC49600000A8E9C /* KATLogoBannerV2.png in Resources */,
+				B6D63EB71CC49600000A8E9C /* kenoshaDB.sql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3ED119E083C03953E7CEF7FB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		64880CCAE7D7EF9D5B7F3F5F /* Embed Pods Frameworks */ = {
+		0A961139877CF4F7C02494C3 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -801,10 +941,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kenosha/Pods-Kenosha-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B67F209E1BCC75E9000A0CEB /* Check Pods Manifest.lock */ = {
+		1CDBC2BAE057A6713AE87137 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestKen/Pods-WestKen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59FA3764A0943FC1BD563522 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Racine/Pods-Racine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E4C0F731F1B4EE0A2233E42 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestKen/Pods-WestKen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9164A61F2FF0942D50B9C1B6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -819,37 +1004,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B67F20DB1BCC75E9000A0CEB /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kenosha/Pods-Kenosha-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B879DA5DBB2386DDA553F1AA /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BEAFCB02D4559A3E2DBFB92A /* Check Pods Manifest.lock */ = {
+		AFB5D009E7ED6F5B32D23AC3 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -864,7 +1019,82 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C68406FA73BADBF5E05B5273 /* Copy Pods Resources */ = {
+		B6D63E7A1CC49600000A8E9C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6D63EB81CC49600000A8E9C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTU/Pods-MTU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6D63EB91CC49600000A8E9C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTU/Pods-MTU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC24ED176519F0E43B4A5097 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Racine/Pods-Racine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC6E1B8B1F97C1BBC60F42FB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C29B1625B596111E66C00A39 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1014,6 +1244,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6D63E7B1CC49600000A8E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D63E7C1CC49600000A8E9C /* BFPaperButton.m in Sources */,
+				B6D63E7D1CC49600000A8E9C /* NearMeErrorHandler.m in Sources */,
+				B6D63E7E1CC49600000A8E9C /* Constants.m in Sources */,
+				B6D63E7F1CC49600000A8E9C /* IncomingBusCell.m in Sources */,
+				B6D63E801CC49600000A8E9C /* SSKeychainQuery.m in Sources */,
+				B6D63E811CC49600000A8E9C /* DatabaseManager.m in Sources */,
+				B6D63E821CC49600000A8E9C /* UIColor+BFPaperColors.m in Sources */,
+				B6D63E831CC49600000A8E9C /* RouteLineMenuViewController.m in Sources */,
+				B6D63E841CC49600000A8E9C /* BusRouteListViewController.m in Sources */,
+				B6D63E851CC49600000A8E9C /* XMLDictionary.m in Sources */,
+				B6D63E861CC49600000A8E9C /* KenoshaConstants.m in Sources */,
+				B6D63E871CC49600000A8E9C /* EAIntroView.m in Sources */,
+				B6D63E881CC49600000A8E9C /* ConnectionManager.m in Sources */,
+				B6D63E891CC49600000A8E9C /* UpdateManager.m in Sources */,
+				B6D63E8A1CC49600000A8E9C /* BusListTableCell.m in Sources */,
+				B6D63EC11CC49940000A8E9C /* LacrosseConstants.m in Sources */,
+				B6D63E8B1CC49600000A8E9C /* RacineConstants.m in Sources */,
+				B6D63E8C1CC49600000A8E9C /* AppDelegate.m in Sources */,
+				B6D63E8D1CC49600000A8E9C /* NSString+FontAwesome.m in Sources */,
+				B6D63E8E1CC49600000A8E9C /* main.m in Sources */,
+				B6D63E8F1CC49600000A8E9C /* NearMeMapViewController.m in Sources */,
+				B6D63E901CC49600000A8E9C /* EAIntroPage.m in Sources */,
+				B6D63E911CC49600000A8E9C /* HomeViewController.m in Sources */,
+				B6D63E921CC49600000A8E9C /* WECodeScannerMatchView.m in Sources */,
+				B6D63E931CC49600000A8E9C /* WYPopoverController.m in Sources */,
+				B6D63E941CC49600000A8E9C /* XMLReader.m in Sources */,
+				B6D63E951CC49600000A8E9C /* TutorialViewController.m in Sources */,
+				B6D63E961CC49600000A8E9C /* EARestrictedScrollView.m in Sources */,
+				B6D63E971CC49600000A8E9C /* NearMeTableViewController.m in Sources */,
+				B6D63E981CC49600000A8E9C /* HelpViewController.m in Sources */,
+				B6D63E991CC49600000A8E9C /* UIImage+Blur.m in Sources */,
+				B6D63E9A1CC49600000A8E9C /* UIImage+ImageWithColor.m in Sources */,
+				B6D63E9B1CC49600000A8E9C /* SSKeychain.m in Sources */,
+				B6D63E9C1CC49600000A8E9C /* UIImage+Screenshot.m in Sources */,
+				B6D63E9D1CC49600000A8E9C /* WECodeScannerView.m in Sources */,
+				B6D63E9E1CC49600000A8E9C /* HowToViewController.m in Sources */,
+				B6D63E9F1CC49600000A8E9C /* RootViewController.m in Sources */,
+				B6D63EA01CC49600000A8E9C /* IncomingBusesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -1099,7 +1374,7 @@
 		};
 		279886691B6EBDA500562AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5C58F16E47FF4F66A271677 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BE77345D07C4B2435C24354A /* Pods-Racine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = RacineAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1112,8 +1387,9 @@
 					Racine,
 				);
 				INFOPLIST_FILE = TheBussingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.racine.transit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Racine-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1122,7 +1398,7 @@
 		};
 		2798866A1B6EBDA500562AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B136CBA390F269CC57F42B94 /* Pods.release.xcconfig */;
+			baseConfigurationReference = E0F0A8CB22B8EB8C71A97DB4 /* Pods-Racine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = RacineAppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1135,8 +1411,9 @@
 					Racine,
 				);
 				INFOPLIST_FILE = TheBussingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.racine.transit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Racine-Bridging-Header.h";
 			};
@@ -1144,10 +1421,10 @@
 		};
 		279886791B6EBF8A00562AF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 735C7786EB210C255DC025DC /* Pods-Kenosha.debug.xcconfig */;
+			baseConfigurationReference = F16303D591C2C5FD10B7A1D3 /* Pods-Kenosha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = KenoshaAppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1157,7 +1434,7 @@
 					Kenosha,
 				);
 				INFOPLIST_FILE = "TheBussingApp copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "TheBussingApp copy";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
@@ -1167,10 +1444,10 @@
 		};
 		2798867A1B6EBF8A00562AF8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E8B929E4A9B182E076BCD72 /* Pods-Kenosha.release.xcconfig */;
+			baseConfigurationReference = 1A354D3911C739DEE2DD1E8D /* Pods-Kenosha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = KenoshaAppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1180,7 +1457,7 @@
 					Kenosha,
 				);
 				INFOPLIST_FILE = "TheBussingApp copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "TheBussingApp copy";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
@@ -1189,10 +1466,10 @@
 		};
 		B67F20DD1BCC75E9000A0CEB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 735C7786EB210C255DC025DC /* Pods-Kenosha.debug.xcconfig */;
+			baseConfigurationReference = F06A1EA4D0254F3AED22CAFA /* Pods-WestKen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = WesternKenoshaAppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1202,7 +1479,7 @@
 					WesternKenosha,
 				);
 				INFOPLIST_FILE = "Kenosha copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.westernKenosha.transit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1213,10 +1490,10 @@
 		};
 		B67F20DE1BCC75E9000A0CEB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E8B929E4A9B182E076BCD72 /* Pods-Kenosha.release.xcconfig */;
+			baseConfigurationReference = 2F157D278B8734777C4FFD47 /* Pods-WestKen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = WesternKenoshaAppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -1226,10 +1503,57 @@
 					WesternKenosha,
 				);
 				INFOPLIST_FILE = "Kenosha copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = org.westernKenosha.transit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		B6D63EBB1CC49600000A8E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E47CADD3177102F3E54C796 /* Pods-MTU.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					Lacrosse,
+				);
+				INFOPLIST_FILE = "Kenosha copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lacrosse.transit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B6D63EBC1CC49600000A8E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7678530944954878880CC589 /* Pods-MTU.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					Lacrosse,
+				);
+				INFOPLIST_FILE = "Kenosha copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.lacrosse.transit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
 			};
@@ -1270,6 +1594,15 @@
 			buildConfigurations = (
 				B67F20DD1BCC75E9000A0CEB /* Debug */,
 				B67F20DE1BCC75E9000A0CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6D63EBA1CC49600000A8E9C /* Build configuration list for PBXNativeTarget "MTU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6D63EBB1CC49600000A8E9C /* Debug */,
+				B6D63EBC1CC49600000A8E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

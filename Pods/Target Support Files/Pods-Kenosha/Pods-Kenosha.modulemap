@@ -1,0 +1,6 @@
+framework module Pods_Kenosha {
+  umbrella header "Pods-Kenosha-umbrella.h"
+
+  export *
+  module * { export * }
+}

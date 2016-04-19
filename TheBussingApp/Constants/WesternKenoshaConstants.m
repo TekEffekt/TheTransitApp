@@ -27,6 +27,16 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return @[@"Antioch",@"Geneva",@"Kenosha",@"Paddock"];
 }
 
++ (NSString*)getGoogleMapsApiKey
+{
+    return @"AIzaSyDRXqlP_tjwyWDPF1tFQZvxO8ih3FuqymU";
+}
+
++ (NSString*)getGoogleAnalyticsTrackingId
+{
+    return @"UA-71025041-1";
+}
+
 + (NSString*)getShortHandForRoute:(NSString*)route
 {
     if([route isEqualToString:@"Antioch"])
