@@ -140,7 +140,9 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     }
     
     cell.route = bus[6];
-    cell.routeLabel.text = [[[NSString stringWithFormat:@"Route %@", bus[6]] lowercaseString] capitalizedString];
+    NSString *routeString = [[[bus[6] lowercaseString] capitalizedString] stringByReplacingOccurrencesOfString:@"Route" withString:@""];
+    routeString = [NSString stringWithFormat:@"Route %@", [routeString capitalizedString]];
+    cell.routeLabel.text = routeString;
     cell.timeRemainingLabel.text = [NSString stringWithFormat:@"Time Remaining: %d:%d:%d", hoursRemaining, minutesRemaining, secondsRemaining];
     cell.arrivalLabel.text = [NSString stringWithFormat:@"Arrival Time: %@", [formatter stringFromDate:date]];
     

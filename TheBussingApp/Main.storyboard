@@ -93,7 +93,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route #1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3i-Xs-hWD">
-                                                    <rect key="frame" x="215" y="40" width="97" height="40"/>
+                                                    <rect key="frame" x="215" y="40" width="89" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="9Nn-2s-de8"/>
                                                     </constraints>
@@ -115,7 +115,7 @@
                                                 <constraint firstItem="I3i-Xs-hWD" firstAttribute="leading" secondItem="LQa-VC-0iv" secondAttribute="trailing" id="mdH-nS-6O6"/>
                                                 <constraint firstItem="p9r-Kk-xGl" firstAttribute="leading" secondItem="Abo-s1-vsu" secondAttribute="trailing" constant="13" id="tn9-nE-ZAr"/>
                                                 <constraint firstItem="M2t-xe-DSo" firstAttribute="leading" secondItem="ZjB-1F-66g" secondAttribute="leadingMargin" id="uaL-SS-Kdi"/>
-                                                <constraint firstItem="I3i-Xs-hWD" firstAttribute="trailing" secondItem="ZjB-1F-66g" secondAttribute="trailingMargin" id="x0s-Yc-6kE"/>
+                                                <constraint firstItem="I3i-Xs-hWD" firstAttribute="trailing" secondItem="ZjB-1F-66g" secondAttribute="trailingMargin" constant="-8" id="x0s-Yc-6kE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -583,12 +583,18 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10q-nC-ix7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10q-nC-ix7">
+                                <rect key="frame" x="6" y="0.0" width="308" height="416"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="10q-nC-ix7" firstAttribute="leading" secondItem="Nz2-em-jYD" secondAttribute="leadingMargin" constant="-10" id="HWp-Nu-u01"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="10q-nC-ix7" secondAttribute="bottom" id="Not-0O-YwW"/>
+                            <constraint firstItem="10q-nC-ix7" firstAttribute="top" secondItem="gR5-fg-NH8" secondAttribute="bottom" id="fL3-VX-REP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="10q-nC-ix7" secondAttribute="trailing" constant="-10" id="n8n-H0-Oed"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4QO-QE-RXA"/>
                     <connections>
@@ -947,7 +953,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xYd-7J-Je4"/>
-        <segue reference="elW-De-GDD"/>
         <segue reference="w4h-kC-3pd"/>
+        <segue reference="c8Z-KX-E4b"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -2524,4 +2524,15 @@
     </coord>
 </route>
 
+<route>
+    <coord>
+        <lat>43.82922956838738</lat>
+        <lon>-91.30386672914028</lon>
+    </coord>
+    <coord>
+        <lat>43.82922956838738</lat>
+        <lon>-91.30386672914028</lon>
+    </coord>
+</route>
+
 </routeCoordinates>

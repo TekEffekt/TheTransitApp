@@ -12,6 +12,7 @@
 //
 
 #import "HowToViewController.h"
+#import "Constants.h"
 _Bool isSpanish4;
 
 @interface HowToViewController()
@@ -75,7 +76,7 @@ _Bool isSpanish4;
             stringVariable = @"spanishabout";
         }
         else{
-            stringVariable = @"about";
+            stringVariable = [Constants getAboutHtmlFilename];
         }
     }
     if(_buttonValue == 2){
@@ -102,7 +103,7 @@ _Bool isSpanish4;
             stringVariable = @"spanishContact";
         }
         else{
-            stringVariable = @"contact";
+            stringVariable = [Constants getContactHtmlFilename];
         }
     }
     

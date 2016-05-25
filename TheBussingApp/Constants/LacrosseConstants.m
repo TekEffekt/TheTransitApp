@@ -8,7 +8,7 @@
 
 #import "LacrosseConstants.h"
 
-static NSString * const description1 = @"Welcome to the Lacrosse Transit App, the ultimate guide for the Belle Urban system! Read through this tutorial to learn how to find all the bus stops near you, when buses will be arriving at those stops, and more!";
+static NSString * const description1 = @"Welcome to the Lacrosse Transit App, the ultimate guide for the Municipal Transit system! Read through this tutorial to learn how to find all the bus stops near you, when buses will be arriving at those stops, and more!";
 static NSString * const description2 = @"This button will take you to the Stops Near Me screen, where you can see bus stops that are closest to you.";
 static NSString * const description3 = @"This is the Stops Near me screen, where you can see each stop on the map as a red marker. Touch a marker to either get walking directions to that stop or see the buses that will be coming to that stop.";
 static NSString *const description4 = @"This button will allow you to see all of the routes on the map as colored lines. You can toggle specific ones on and off.";
@@ -24,7 +24,7 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
 
 + (NSArray*)getListOfRouteNames
 {
-    return @[@"1",@"2",@"4",@"5",@"6",@"7",@"8",@"9", @"10"];
+    return @[@"1",@"2",@"4",@"5",@"6",@"7",@"8",@"9", @"10", @"GO"];
 }
 
 + (NSString*)getGoogleMapsApiKey
@@ -58,7 +58,15 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
 {
     UIColor *routeColor;
     
-    int number = [route intValue];
+    route = [route stringByReplacingOccurrencesOfString:@"Color" withString:@""];
+    route = [route stringByReplacingOccurrencesOfString:@"Route" withString:@""];
+    
+    int number;
+    if( [route isEqualToString:@"GO"]) {
+        number = 11;
+    } else {
+        number = [route intValue];
+    }
     
     switch (number) {
         case 1:
@@ -87,6 +95,9 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
             break;
         case 10:
             routeColor = [UIColor colorWithRed:0.929 green:0.11 blue:0.141 alpha:1.0]; /*#ed1c24*/;
+            break;
+        case 11:
+            routeColor =  [UIColor colorWithRed:0.4 green:0.52 blue:0.96 alpha:1.0];
             break;
         default:
             //default background is black
@@ -120,6 +131,14 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
 + (NSArray*)getAvailableDays
 {
     return @[@"sunday",@"monday",@"tuesday",@"wednesday",@"thursday",@"friday",@"saturday"];
+}
+
++ (NSString*)getAboutHtmlFilename {
+    return @"Lacrosse About";
+}
+
++ (NSString*)getContactHtmlFilename {
+    return @"Lacrosse Contact";
 }
 
 @end

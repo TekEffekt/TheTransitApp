@@ -113,6 +113,12 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return @[@"monday",@"tuesday",@"wednesday",@"thursday",@"friday"];
 }
 
++ (NSString*)getAboutHtmlFilename {
+    return @"Western Kenosha About";
+}
 
++ (NSString*)getContactHtmlFilename {
+    return @"Western Kenosha Contact";
+}
 
 @end

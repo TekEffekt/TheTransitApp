@@ -66,6 +66,7 @@ NSDictionary *resultDict = nil;
         if (sqlite3_open(dbpath, &database) == SQLITE_OK) {
             //@TODO call create database
             NSString *filepath = [Constants getDBName];
+            NSLog(@"Filepath: %@", filepath);
             NSString *fileRoot = [[NSBundle mainBundle]pathForResource:filepath ofType:@"sql"];
             NSString *fileContents = [NSString stringWithContentsOfFile:fileRoot encoding:NSUTF8StringEncoding error:nil];
 //                        NSLog(fileContents);
@@ -170,7 +171,6 @@ NSDictionary *resultDict = nil;
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
             NSLog(@"Error Message: %s", sqlite3_errmsg(database));
             while (sqlite3_step(statement) == SQLITE_ROW) {
-                //                NSLog(@"Result: %s, %s, %s, %s",(char *)sqlite3_column_text(statement, 0),(char *)sqlite3_column_text(statement, 1),(char *)sqlite3_column_text(statement, 2),(char *)sqlite3_column_text(statement, 3));
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 0)]];
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)]];
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)]];
@@ -292,7 +292,6 @@ NSDictionary *resultDict = nil;
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
             NSLog(@"Error Message: %s", sqlite3_errmsg(database));
             while (sqlite3_step(statement) == SQLITE_ROW) {
-                //                NSLog(@"Result: %s, %s, %s, %s",(char *)sqlite3_column_text(statement, 0),(char *)sqlite3_column_text(statement, 1),(char *)sqlite3_column_text(statement, 2),(char *)sqlite3_column_text(statement, 3));
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 0)]];
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)]];
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)]];
@@ -348,9 +347,13 @@ NSDictionary *resultDict = nil;
     // Parkside
 //    double myLat = 42.6432133;
 //    double myLon = -87.8479223;
-//    
-    static double LATITUED_PER_5_MILES =  .0333;
-    static double LONGITUDE_PER_5_MILES = .0333;
+    
+    // Lacrosse
+    myLat = 43.802799;
+    myLon = -91.2500527;
+
+    static double LATITUED_PER_5_MILES =  3.033;
+    static double LONGITUDE_PER_5_MILES = 3.033;
     
     //Working code
     NSDate *now = [[NSDate alloc] init];
@@ -366,7 +369,6 @@ NSDictionary *resultDict = nil;
     
     if (sqlite3_open(dbpath, &database) == SQLITE_OK)
     {
-        
         NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM(SELECT s.stop_name stop_name, s.stop_lat stop_lat, s.stop_lon stop_lon, st.stop_sequence stop_sequence, st.stop_id stop_id, st.arrival_time arrival_time, st.departure_time departure_time,st.trip_id trip_id, r.route_id route_id, r.route_color route_color, r.route_text_color route_text_color, c.service_id service_id FROM  stop_times st LEFT OUTER JOIN stops s ON st.stop_id = s.stop_id LEFT OUTER JOIN trips t ON st.trip_id = t.trip_id LEFT OUTER JOIN routes r ON t.route_id = r.route_id LEFT OUTER JOIN calendar c ON t.service_id = c.service_id WHERE (stop_lat BETWEEN %f AND %f) AND (stop_lon BETWEEN %f AND %f ) AND  r.is_deleted = 0 AND  t.is_deleted = 0 AND c.\"%@\" = '1' AND  st.arrival_time > \"%@\" ORDER BY arrival_time DESC)GROUP BY stop_name ORDER BY arrival_time ASC", (myLat - LATITUED_PER_5_MILES),
                               (myLat + LATITUED_PER_5_MILES), (myLon + LONGITUDE_PER_5_MILES), (myLon - LONGITUDE_PER_5_MILES), weekday, currentTimeString];
         
@@ -374,10 +376,10 @@ NSDictionary *resultDict = nil;
         
         const char *query_stmt = [querySQL UTF8String];
         NSLog(@"%s",query_stmt);
+        NSLog(@"Query SQL %@", querySQL);
         NSLog(@"Wtf: %d", sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL));
         NSLog(@"Error Message: %s", sqlite3_errmsg(database));
         if (sqlite3_prepare_v2(database, query_stmt, -1, &statement, NULL) == SQLITE_OK) {
-            NSLog(@"What??: %s", sqlite3_errmsg(database));
             NSLog(@"Result: %s, %s, %s, %s",(char *)sqlite3_column_text(statement, 0),(char *)sqlite3_column_text(statement, 1),(char *)sqlite3_column_text(statement, 2),(char *)sqlite3_column_text(statement, 3));
             while (sqlite3_step(statement) == SQLITE_ROW) {
                 [resultArray addObject:[NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 0)]];

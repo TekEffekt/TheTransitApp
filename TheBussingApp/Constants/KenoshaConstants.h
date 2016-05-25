@@ -23,5 +23,7 @@
 + (NSString*)getShortHandForRoute:(NSString*)route;
 + (NSString*)getGoogleMapsApiKey;
 + (NSString*)getGoogleAnalyticsTrackingId;
++ (NSString*)getAboutHtmlFilename;
++ (NSString*)getContactHtmlFilename;
 
 @end

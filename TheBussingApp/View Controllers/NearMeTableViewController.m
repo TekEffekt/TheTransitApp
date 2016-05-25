@@ -97,7 +97,9 @@
     tableCell.dir.text = [NSString stringWithFormat:@"%@", route[0]];
     tableCell.milesLabel.text = [NSString stringWithFormat:@"Miles Away: %d", milesAway];
     
-    tableCell.routeLabel.text = [[[NSString stringWithFormat:@"Route %@", route[8]] lowercaseString] capitalizedString];
+    NSString *routeString = [[[route[8] lowercaseString] capitalizedString] stringByReplacingOccurrencesOfString:@"Route" withString:@""];
+    routeString = [NSString stringWithFormat:@"Route %@", [routeString capitalizedString]];
+    tableCell.routeLabel.text = routeString;
     tableCell.route = route[8];
     tableCell.userInteractionEnabled = YES;
 

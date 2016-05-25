@@ -180,6 +180,8 @@
 		B695E75F1C0F015300DB2201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */; };
 		B695E7601C0F015300DB2201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */; };
 		B6CFCB9A1BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */; };
+		B6D3E76D1CCABBE300046DD8 /* Lacrosse About.html in Resources */ = {isa = PBXBuildFile; fileRef = B6D3E76C1CCABBE300046DD8 /* Lacrosse About.html */; };
+		B6D3E76F1CCAC19D00046DD8 /* Lacrosse Contact.html in Resources */ = {isa = PBXBuildFile; fileRef = B6D3E76E1CCAC19D00046DD8 /* Lacrosse Contact.html */; };
 		B6D63E7C1CC49600000A8E9C /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
 		B6D63E7D1CC49600000A8E9C /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
 		B6D63E7E1CC49600000A8E9C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
@@ -234,7 +236,6 @@
 		B6D63EB41CC49600000A8E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B639E6351B71827600593A49 /* Main.storyboard */; };
 		B6D63EB51CC49600000A8E9C /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72B01B70781E00DBF696 /* FontAwesome.otf */; };
 		B6D63EB61CC49600000A8E9C /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
-		B6D63EB71CC49600000A8E9C /* kenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E6601B72053700593A49 /* kenoshaDB.sql */; };
 		B6D63EC11CC49940000A8E9C /* LacrosseConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D63EC01CC49940000A8E9C /* LacrosseConstants.m */; };
 		D70887BB01A748730760C637 /* Pods_Racine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B3077C8E8A4A0ADFB8441D /* Pods_Racine.framework */; };
 		E2838D76146FBDAD1B70DE70 /* Pods_WestKen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A83642902BB07CE7AC66A /* Pods_WestKen.framework */; };
@@ -365,6 +366,8 @@
 		B67F20E61BCC8DAA000A0CEB /* WesternKenoshaImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WesternKenoshaImages.xcassets; sourceTree = "<group>"; };
 		B695E75D1C0F015300DB2201 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6CFCB991BCB0C4900B75C31 /* KenoshaRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KenoshaRouteCoordinates.xml; sourceTree = "<group>"; };
+		B6D3E76C1CCABBE300046DD8 /* Lacrosse About.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "Lacrosse About.html"; path = "Tutorial HTML/Lacrosse About.html"; sourceTree = "<group>"; };
+		B6D3E76E1CCAC19D00046DD8 /* Lacrosse Contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "Lacrosse Contact.html"; path = "Tutorial HTML/Lacrosse Contact.html"; sourceTree = "<group>"; };
 		B6D63EBD1CC49600000A8E9C /* MTU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D63EBE1CC49601000A8E9C /* Kenosha copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kenosha copy2-Info.plist"; path = "/Users/kylez/Documents/Development/Xcode Projects/TheBussingApp/Kenosha copy2-Info.plist"; sourceTree = "<absolute>"; };
 		B6D63EBF1CC49940000A8E9C /* LacrosseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LacrosseConstants.h; path = Constants/LacrosseConstants.h; sourceTree = "<group>"; };
@@ -619,6 +622,8 @@
 		B60A72DD1B70883700DBF696 /* Tutorial HTML -_- */ = {
 			isa = PBXGroup;
 			children = (
+				B6D3E76C1CCABBE300046DD8 /* Lacrosse About.html */,
+				B6D3E76E1CCAC19D00046DD8 /* Lacrosse Contact.html */,
 				B60A72DE1B70888000DBF696 /* about.html */,
 				B60A72DF1B70888000DBF696 /* accessibility.html */,
 				B60A72E01B70888000DBF696 /* contact.html */,
@@ -792,7 +797,7 @@
 						DevelopmentTeam = 2T9JP2ZYVK;
 					};
 					2798866E1B6EBF8A00562AF8 = {
-						DevelopmentTeam = F8BA5TMX9M;
+						DevelopmentTeam = 2T9JP2ZYVK;
 					};
 					B6D63E791CC49600000A8E9C = {
 						DevelopmentTeam = 2T9JP2ZYVK;
@@ -904,9 +909,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67B1E911CC57F2100D88781 /* lacrosseDB.sql in Resources */,
+				B6D3E76D1CCABBE300046DD8 /* Lacrosse About.html in Resources */,
 				B6D63EA41CC49600000A8E9C /* spanishHowTo.html in Resources */,
 				B6D63EA51CC49600000A8E9C /* Info.plist in Resources */,
 				B6D63EA71CC49600000A8E9C /* help.html in Resources */,
+				B6D3E76F1CCAC19D00046DD8 /* Lacrosse Contact.html in Resources */,
 				B6D63EA91CC49600000A8E9C /* accessibility.html in Resources */,
 				B67B1E8F1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml in Resources */,
 				B6D63EAA1CC49600000A8E9C /* contact.html in Resources */,
@@ -922,7 +929,6 @@
 				B6D63EB41CC49600000A8E9C /* Main.storyboard in Resources */,
 				B6D63EB51CC49600000A8E9C /* FontAwesome.otf in Resources */,
 				B6D63EB61CC49600000A8E9C /* KATLogoBannerV2.png in Resources */,
-				B6D63EB71CC49600000A8E9C /* kenoshaDB.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1427,6 +1433,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1437,6 +1444,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "TheBussingApp copy";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1450,6 +1458,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1460,6 +1469,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "TheBussingApp copy";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheBussingApp/Kenosha-Bridging-Header.h";
 			};
 			name = Release;

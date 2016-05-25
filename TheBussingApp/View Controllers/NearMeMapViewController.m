@@ -88,7 +88,11 @@
 //    double myLat = 42.5623364;
 //    double myLon = -87.9378458;
     
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:myLat longitude:myLon zoom:14];
+    // Lacrosse
+//    myLat = 43.802799;
+//    myLon = -91.2500527;
+    
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:myLat longitude:myLon zoom:15];
     
     self.map = [GMSMapView mapWithFrame:self.view.frame camera:camera];
     self.map.center = self.view.center;
@@ -101,7 +105,7 @@
     
     [self presentWaitOverlay];
     [self getNearbyRoutes];
-    [self displayRouteLineButtons];
+    //[self displayRouteLineButtons];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -150,6 +154,7 @@
     if(self.routes.count == 0)
     {
         [self displayErrorMessage];
+        NSLog(@"ROUTE ARRAY EMPTY");
     }
 }
 
@@ -179,6 +184,8 @@
         marker.snippet = route[0];
         marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = self.map;
+        
+        NSLog(@"Color %@", route[8]);
         
         marker.icon = [GMSMarker markerImageWithColor:[Constants getRouteColorForRoute:route[8]]];
     }
@@ -406,7 +413,7 @@
 
     xml = [xml stringByAppendingString:@"\n</route>"];
 
-    NSLog(@"%@", xml);
+    //NSLog(@"%@", xml);
 }
 
 - (void)deleteCoord

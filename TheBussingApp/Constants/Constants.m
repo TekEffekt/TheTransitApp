@@ -201,5 +201,28 @@
     #endif
 }
 
++ (NSString*)getAboutHtmlFilename {
+    #ifdef Racine
+        return [RacineConstants getAboutHtmlFilename];
+    #elif Kenosha
+        return [KenoshaConstants getAboutHtmlFilename];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getAboutHtmlFilename];
+    #elif Lacrosse
+        return [LacrosseConstants getAboutHtmlFilename];
+    #endif
+}
+
++ (NSString*)getContactHtmlFilename {
+    #ifdef Racine
+        return [RacineConstants getContactHtmlFilename];
+    #elif Kenosha
+        return [KenoshaConstants getContactHtmlFilename];
+    #elif WesternKenosha
+        return [WesternKenoshaConstants getContactHtmlFilename];
+    #elif Lacrosse
+        return [LacrosseConstants getContactHtmlFilename];
+    #endif
+}
 
 @end

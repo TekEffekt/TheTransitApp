@@ -125,4 +125,12 @@ static NSString * const description11 = @"Lastly, if you tap the help button, yo
     return @[@"monday",@"tuesday",@"wednesday",@"thursday",@"friday",@"saturday"];
 }
 
++ (NSString*)getAboutHtmlFilename {
+    return @"Kenosha About";
+}
+
++ (NSString*)getContactHtmlFilename {
+    return @"Kensoha Contact";
+}
+
 @end
