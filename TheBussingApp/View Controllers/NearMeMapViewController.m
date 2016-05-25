@@ -111,6 +111,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self putRouteLinesOnMap];
+    //[self displayRouteLineButtons];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -413,7 +414,7 @@
 
     xml = [xml stringByAppendingString:@"\n</route>"];
 
-    //NSLog(@"%@", xml);
+    NSLog(@"%@", xml);
 }
 
 - (void)deleteCoord

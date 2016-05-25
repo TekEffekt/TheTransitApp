@@ -349,11 +349,11 @@ NSDictionary *resultDict = nil;
 //    double myLon = -87.8479223;
     
     // Lacrosse
-    myLat = 43.802799;
-    myLon = -91.2500527;
+//    myLat = 43.802799;
+//    myLon = -91.2500527;
 
-    static double LATITUED_PER_5_MILES =  3.033;
-    static double LONGITUDE_PER_5_MILES = 3.033;
+    static double LATITUED_PER_5_MILES =  .033;
+    static double LONGITUDE_PER_5_MILES = .033;
     
     //Working code
     NSDate *now = [[NSDate alloc] init];
