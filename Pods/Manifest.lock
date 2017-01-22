@@ -13,16 +13,10 @@ PODS:
   - GoogleSymbolUtilities (1.0.0)
   - GoogleUtilities (1.1.0):
     - GoogleSymbolUtilities (~> 1.0.0)
-  - MBProgressHUD (0.9.1)
-  - Pushbots (1.2.3)
-  - UIColor_Hex_Swift (1.9)
 
 DEPENDENCIES:
   - Google/Analytics (~> 1.0.0)
   - GoogleMaps
-  - MBProgressHUD (~> 0.9.1)
-  - Pushbots (~> 1.2.3)
-  - UIColor_Hex_Swift (~> 1.8)
 
 SPEC CHECKSUMS:
   Google: 875f5a8ade86dd02e36586e4a54814843938c7f6
@@ -31,10 +25,5 @@ SPEC CHECKSUMS:
   GoogleNetworkingUtilities: 292992ab31b7b4ba32809a0e8b40e324cdfb2c0c
   GoogleSymbolUtilities: a7b0feed1fe667c8d5e647177938d0ecd62d6948
   GoogleUtilities: 8ed9134debe11719097881711464752900668f10
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  Pushbots: b58e3aeafb4304257ed26e802e0057310787d9a2
-  UIColor_Hex_Swift: 2ee747c0fed8b72b2135ef474b80a6921e489daa
 
-PODFILE CHECKSUM: b69d9e3ce94d98e32683cacec789d8cd4ad55a6e
-
-COCOAPODS: 1.0.0.beta.2
+COCOAPODS: 0.39.0

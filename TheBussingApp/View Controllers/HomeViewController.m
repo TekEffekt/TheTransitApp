@@ -178,18 +178,18 @@ _Bool isSpanish;
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
-    if([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedAlways)
+    if([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse)
     {
-        if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)] && [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
+        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] && [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
         {
-            if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+            if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
             {
-                [self.locationManager requestAlwaysAuthorization];
+                [self.locationManager requestWhenInUseAuthorization];
             } else
             {
                 [self.locationManager startUpdatingLocation];
             }
-        } else if([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse)
+        } else if([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedAlways)
         {
             UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Need permission!" message:@"In order to use the Near Me feature, go into your settings and allow this app to use your location." preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
@@ -240,28 +240,33 @@ _Bool isSpanish;
 - (void)launchGoogleMaps
 {
     if ([[UIApplication sharedApplication] canOpenURL:
-         [NSURL URLWithString:@"comgooglemaps://"]]) {
+         [NSURL URLWithString:@"http://maps.apple.com/"]]) {
+        ConnectionManager *conman = [ConnectionManager new];
+        [conman update_gps];
+        
+        double myLat = [[conman get_latitude] doubleValue];
+        double myLon = [[conman get_longitude] doubleValue];
         [[UIApplication sharedApplication] openURL:
-         [NSURL URLWithString:@"comgooglemaps-x-callback://?saddr=My+location&directionsmode=transit&x-success=BusApp://?resume=true&x-source=BusApp"]];
+         [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?saddr=%f,%f&dirflg=r", myLat, myLon]]];
     } else
     {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"You need to install the Google Maps app to use this feature!" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            [alert dismissViewControllerAnimated:YES completion:nil];
-        }];
-        
-        UIAlertAction *openStoreAction = [UIAlertAction actionWithTitle:@"Open Store" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            NSString *iTunesLink = @"https://itunes.apple.com/us/app/google-maps/id585027354?mt=8";
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
-        }];
-        
-        [alert addAction:okAction];
-        [alert addAction:openStoreAction];
-        
-        alert.view.tintColor = [UIColor blueColor];
-        
-        [self presentViewController:alert animated:YES completion:nil];
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:@"You need to install the Google Maps app to use this feature!" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            [alert dismissViewControllerAnimated:YES completion:nil];
+//        }];
+//        
+//        UIAlertAction *openStoreAction = [UIAlertAction actionWithTitle:@"Open Store" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            NSString *iTunesLink = @"https://itunes.apple.com/us/app/google-maps/id585027354?mt=8";
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+//        }];
+//        
+//        [alert addAction:okAction];
+//        [alert addAction:openStoreAction];
+//        
+//        alert.view.tintColor = [UIColor blueColor];
+//        
+//        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 

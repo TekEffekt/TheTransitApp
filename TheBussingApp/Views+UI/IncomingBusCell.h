@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *arrivalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeRemainingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *routeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *departureLabel;
 
 @property(nonatomic) NSString* route;
 

@@ -120,9 +120,10 @@
 		B639E65C1B71D15C00593A49 /* racineDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E65B1B71D15C00593A49 /* racineDB.sql */; };
 		B639E6611B72053700593A49 /* kenoshaDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B639E6601B72053700593A49 /* kenoshaDB.sql */; };
 		B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
+		B64EA78A1E34605100FB9AE7 /* Racine About.html in Resources */ = {isa = PBXBuildFile; fileRef = B64EA7881E34605000FB9AE7 /* Racine About.html */; };
+		B64EA78B1E34605100FB9AE7 /* Racine Contact.html in Resources */ = {isa = PBXBuildFile; fileRef = B64EA7891E34605000FB9AE7 /* Racine Contact.html */; };
 		B67B1E8D1CC4B21400D88781 /* Lacrosse.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67B1E8C1CC4B21400D88781 /* Lacrosse.xcassets */; };
 		B67B1E8F1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml in Resources */ = {isa = PBXBuildFile; fileRef = B67B1E8E1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml */; };
-		B67B1E911CC57F2100D88781 /* lacrosseDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B67B1E901CC57F2100D88781 /* lacrosseDB.sql */; };
 		B67F20A01BCC75E9000A0CEB /* BFPaperButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B64B13821BB7B8CF0074B053 /* BFPaperButton.m */; };
 		B67F20A11BCC75E9000A0CEB /* NearMeErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B61AEF1E1BBB351700D5F34E /* NearMeErrorHandler.m */; };
 		B67F20A21BCC75E9000A0CEB /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B639E6441B71873C00593A49 /* Constants.m */; };
@@ -237,6 +238,11 @@
 		B6D63EB51CC49600000A8E9C /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = B60A72B01B70781E00DBF696 /* FontAwesome.otf */; };
 		B6D63EB61CC49600000A8E9C /* KATLogoBannerV2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60A72AB1B70705E00DBF696 /* KATLogoBannerV2.png */; };
 		B6D63EC11CC49940000A8E9C /* LacrosseConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D63EC01CC49940000A8E9C /* LacrosseConstants.m */; };
+		B6E1E4431D63704100CF3847 /* lacrosseDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = B6E1E4421D63704100CF3847 /* lacrosseDB.sql */; };
+		B6E1E4461D63A36C00CF3847 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E1E4451D63A36C00CF3847 /* MBProgressHUD.m */; };
+		B6E1E4471D63A36C00CF3847 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E1E4451D63A36C00CF3847 /* MBProgressHUD.m */; };
+		B6E1E4481D63A36C00CF3847 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E1E4451D63A36C00CF3847 /* MBProgressHUD.m */; };
+		B6E1E4491D63A36C00CF3847 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E1E4451D63A36C00CF3847 /* MBProgressHUD.m */; };
 		D70887BB01A748730760C637 /* Pods_Racine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B3077C8E8A4A0ADFB8441D /* Pods_Racine.framework */; };
 		E2838D76146FBDAD1B70DE70 /* Pods_WestKen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A83642902BB07CE7AC66A /* Pods_WestKen.framework */; };
 /* End PBXBuildFile section */
@@ -356,9 +362,10 @@
 		B639E6601B72053700593A49 /* kenoshaDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kenoshaDB.sql; sourceTree = "<group>"; };
 		B64B13811BB7B8CF0074B053 /* BFPaperButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFPaperButton.h; sourceTree = "<group>"; };
 		B64B13821BB7B8CF0074B053 /* BFPaperButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFPaperButton.m; sourceTree = "<group>"; };
+		B64EA7881E34605000FB9AE7 /* Racine About.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "Racine About.html"; path = "Tutorial HTML/Racine About.html"; sourceTree = "<group>"; };
+		B64EA7891E34605000FB9AE7 /* Racine Contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "Racine Contact.html"; path = "Tutorial HTML/Racine Contact.html"; sourceTree = "<group>"; };
 		B67B1E8C1CC4B21400D88781 /* Lacrosse.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Lacrosse.xcassets; sourceTree = "<group>"; };
 		B67B1E8E1CC57E3A00D88781 /* LacrosseRouteCoordinates.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LacrosseRouteCoordinates.xml; sourceTree = "<group>"; };
-		B67B1E901CC57F2100D88781 /* lacrosseDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lacrosseDB.sql; sourceTree = "<group>"; };
 		B67F20DF1BCC75E9000A0CEB /* WestKen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestKen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67F20E01BCC75E9000A0CEB /* Kenosha copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kenosha copy-Info.plist"; path = "/Users/kylez/Documents/Development/Xcode Projects/TheBussingApp/Kenosha copy-Info.plist"; sourceTree = "<absolute>"; };
 		B67F20E31BCC8D57000A0CEB /* WesternKenoshaConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WesternKenoshaConstants.h; path = Constants/WesternKenoshaConstants.h; sourceTree = "<group>"; };
@@ -372,6 +379,9 @@
 		B6D63EBE1CC49601000A8E9C /* Kenosha copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Kenosha copy2-Info.plist"; path = "/Users/kylez/Documents/Development/Xcode Projects/TheBussingApp/Kenosha copy2-Info.plist"; sourceTree = "<absolute>"; };
 		B6D63EBF1CC49940000A8E9C /* LacrosseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LacrosseConstants.h; path = Constants/LacrosseConstants.h; sourceTree = "<group>"; };
 		B6D63EC01CC49940000A8E9C /* LacrosseConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LacrosseConstants.m; path = Constants/LacrosseConstants.m; sourceTree = "<group>"; };
+		B6E1E4421D63704100CF3847 /* lacrosseDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lacrosseDB.sql; sourceTree = "<group>"; };
+		B6E1E4441D63A36C00CF3847 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B6E1E4451D63A36C00CF3847 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		BE77345D07C4B2435C24354A /* Pods-Racine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Racine/Pods-Racine.debug.xcconfig"; sourceTree = "<group>"; };
 		E0F0A8CB22B8EB8C71A97DB4 /* Pods-Racine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Racine.release.xcconfig"; path = "Pods/Target Support Files/Pods-Racine/Pods-Racine.release.xcconfig"; sourceTree = "<group>"; };
 		F06A1EA4D0254F3AED22CAFA /* Pods-WestKen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestKen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WestKen/Pods-WestKen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -459,7 +469,7 @@
 		279886481B6EBDA400562AF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B67B1E901CC57F2100D88781 /* lacrosseDB.sql */,
+				B6E1E4421D63704100CF3847 /* lacrosseDB.sql */,
 				B637B57D1BF6B11700A4FE73 /* westernKenoshaDB.sql */,
 				B639E65B1B71D15C00593A49 /* racineDB.sql */,
 				B639E6601B72053700593A49 /* kenoshaDB.sql */,
@@ -509,6 +519,8 @@
 		279887161B6EEC4C00562AF8 /* View+UI */ = {
 			isa = PBXGroup;
 			children = (
+				B6E1E4441D63A36C00CF3847 /* MBProgressHUD.h */,
+				B6E1E4451D63A36C00CF3847 /* MBProgressHUD.m */,
 				B639E65F1B71E51100593A49 /* Table Cells */,
 				279887E71B6F358100562AF8 /* WECodeScannerMatchView.h */,
 				279887E81B6F358100562AF8 /* WECodeScannerMatchView.m */,
@@ -622,6 +634,8 @@
 		B60A72DD1B70883700DBF696 /* Tutorial HTML -_- */ = {
 			isa = PBXGroup;
 			children = (
+				B64EA7881E34605000FB9AE7 /* Racine About.html */,
+				B64EA7891E34605000FB9AE7 /* Racine Contact.html */,
 				B6D3E76C1CCABBE300046DD8 /* Lacrosse About.html */,
 				B6D3E76E1CCAC19D00046DD8 /* Lacrosse Contact.html */,
 				B60A72DE1B70888000DBF696 /* about.html */,
@@ -835,8 +849,10 @@
 				B60A72E71B70888000DBF696 /* about.html in Resources */,
 				B60A72AA1B70674B00DBF696 /* RacineImages.xcassets in Resources */,
 				B60A72B11B70781E00DBF696 /* FontAwesome.otf in Resources */,
+				B64EA78A1E34605100FB9AE7 /* Racine About.html in Resources */,
 				B60A72EB1B70888000DBF696 /* contact.html in Resources */,
 				B639E6361B71827600593A49 /* Main.storyboard in Resources */,
+				B64EA78B1E34605100FB9AE7 /* Racine Contact.html in Resources */,
 				B60A72AE1B7076D500DBF696 /* fontawesome-webfont.ttf in Resources */,
 				B639E65C1B71D15C00593A49 /* racineDB.sql in Resources */,
 				B695E75E1C0F015300DB2201 /* LaunchScreen.storyboard in Resources */,
@@ -908,7 +924,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67B1E911CC57F2100D88781 /* lacrosseDB.sql in Resources */,
 				B6D3E76D1CCABBE300046DD8 /* Lacrosse About.html in Resources */,
 				B6D63EA41CC49600000A8E9C /* spanishHowTo.html in Resources */,
 				B6D63EA51CC49600000A8E9C /* Info.plist in Resources */,
@@ -922,6 +937,7 @@
 				B6D63EAD1CC49600000A8E9C /* spanishContact.html in Resources */,
 				B6D63EAE1CC49600000A8E9C /* General.xcassets in Resources */,
 				B6D63EAF1CC49600000A8E9C /* how_to.html in Resources */,
+				B6E1E4431D63704100CF3847 /* lacrosseDB.sql in Resources */,
 				B67B1E8D1CC4B21400D88781 /* Lacrosse.xcassets in Resources */,
 				B6D63EB11CC49600000A8E9C /* LaunchScreen.storyboard in Resources */,
 				B6D63EB21CC49600000A8E9C /* about.html in Resources */,
@@ -1129,6 +1145,7 @@
 				279887291B6EEC7900562AF8 /* DatabaseManager.m in Sources */,
 				279887841B6EECA000562AF8 /* UIColor+BFPaperColors.m in Sources */,
 				2798875D1B6EEC8C00562AF8 /* RouteLineMenuViewController.m in Sources */,
+				B6E1E4461D63A36C00CF3847 /* MBProgressHUD.m in Sources */,
 				B64B13831BB7B8CF0074B053 /* BFPaperButton.m in Sources */,
 				2798874B1B6EEC8C00562AF8 /* BusRouteListViewController.m in Sources */,
 				279887311B6EEC7900562AF8 /* XMLDictionary.m in Sources */,
@@ -1173,6 +1190,7 @@
 				279887A01B6EEDEF00562AF8 /* SSKeychainQuery.m in Sources */,
 				2798872A1B6EEC7900562AF8 /* DatabaseManager.m in Sources */,
 				279887851B6EECA000562AF8 /* UIColor+BFPaperColors.m in Sources */,
+				B6E1E4471D63A36C00CF3847 /* MBProgressHUD.m in Sources */,
 				2798875E1B6EEC8C00562AF8 /* RouteLineMenuViewController.m in Sources */,
 				2798874C1B6EEC8C00562AF8 /* BusRouteListViewController.m in Sources */,
 				279887321B6EEC7900562AF8 /* XMLDictionary.m in Sources */,
@@ -1217,6 +1235,7 @@
 				B67F20A41BCC75E9000A0CEB /* SSKeychainQuery.m in Sources */,
 				B67F20A51BCC75E9000A0CEB /* DatabaseManager.m in Sources */,
 				B67F20A61BCC75E9000A0CEB /* UIColor+BFPaperColors.m in Sources */,
+				B6E1E4481D63A36C00CF3847 /* MBProgressHUD.m in Sources */,
 				B67F20A71BCC75E9000A0CEB /* RouteLineMenuViewController.m in Sources */,
 				B67F20A81BCC75E9000A0CEB /* BusRouteListViewController.m in Sources */,
 				B67F20A91BCC75E9000A0CEB /* XMLDictionary.m in Sources */,
@@ -1276,6 +1295,7 @@
 				B6D63E8E1CC49600000A8E9C /* main.m in Sources */,
 				B6D63E8F1CC49600000A8E9C /* NearMeMapViewController.m in Sources */,
 				B6D63E901CC49600000A8E9C /* EAIntroPage.m in Sources */,
+				B6E1E4491D63A36C00CF3847 /* MBProgressHUD.m in Sources */,
 				B6D63E911CC49600000A8E9C /* HomeViewController.m in Sources */,
 				B6D63E921CC49600000A8E9C /* WECodeScannerMatchView.m in Sources */,
 				B6D63E931CC49600000A8E9C /* WYPopoverController.m in Sources */,

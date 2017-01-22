@@ -20,7 +20,6 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "GAI.h"
 #import "Constants.h"
-#import <Pushbots/Pushbots.h>
 
 @implementation AppDelegate
 
@@ -121,11 +120,6 @@
     }
     
     self.window.tintColor = [Constants getAppTintColor];
-    
-    [Pushbots sharedInstanceWithAppId:@"558de155177959c4438b456e"];
-    //Handle notification when the user click it, while app is closed.
-    //This method will show an alert to the user.
-    [[Pushbots sharedInstance] receivedPush:launchOptions];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     

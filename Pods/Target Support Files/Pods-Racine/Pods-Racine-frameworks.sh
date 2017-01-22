@@ -82,12 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-Racine/MBProgressHUD.framework"
-  install_framework "Pods-Racine/UIColor_Hex_Swift.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-Racine/MBProgressHUD.framework"
-  install_framework "Pods-Racine/UIColor_Hex_Swift.framework"
-fi

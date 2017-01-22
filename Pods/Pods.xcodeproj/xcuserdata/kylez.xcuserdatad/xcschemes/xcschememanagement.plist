@@ -4,27 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Kenosha-MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Kenosha-UIColor_Hex_Swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Kenosha.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MTU-MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-MTU-UIColor_Hex_Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,27 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Racine-MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Racine-UIColor_Hex_Swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Racine.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WestKen-MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WestKen-UIColor_Hex_Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,62 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>164CA274387DED21D1EC0A070F634A92</key>
+		<key>10D3188799ADD12741EC415A4F8A5320</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E22BC8DEA028ACA2A6154C269899C5E</key>
+		<key>40A40B74B1921A6F6E7101694CB7E4EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E84E49D9D2879B4079196D5FF3252F7</key>
+		<key>438522B74713EEC70A39046D96CCFAB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53C34AF907FCCC60800E5E9FC0F2B330</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5589661B9C1E89BF6ECA1A116B87E4FA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6BB6A8CD031747129C98D324DEA8CB29</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6FA8461162B34E12A77388252C731B27</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AF053A74942121F5428588896830AC15</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B06D2F11702DF511AC5610D1EF2084C6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C9F26A3140B28AD033D22A2E12997374</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CDE45E7F21C0C70BCFE0F3B5D5A93A2E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DF8D3FD8C866CA919D5CB5F6B70C6C3F</key>
+		<key>F9E06D8FE10E7A80A82B20D67BA8CE30</key>
 		<dict>
 			<key>primary</key>
 			<true/>

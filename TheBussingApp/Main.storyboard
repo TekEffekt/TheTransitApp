@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="p9o-vX-RYa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="p9o-vX-RYa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -200,31 +200,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARZ-bL-vZF">
-                                                    <rect key="frame" x="91" y="2" width="221" height="40"/>
+                                                    <rect key="frame" x="91" y="2" width="221" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="221" id="Od8-bx-ai6"/>
-                                                        <constraint firstAttribute="height" constant="40" id="wGD-Iu-R0K"/>
+                                                        <constraint firstAttribute="height" constant="35" id="wGD-Iu-R0K"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route #1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="995-3G-ezv">
-                                                    <rect key="frame" x="224" y="37" width="88" height="40"/>
+                                                    <rect key="frame" x="231" y="37" width="81" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="ngo-3G-Ngn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Time: 12:30 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-VY-4AH">
-                                                    <rect key="frame" x="91" y="37" width="133" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="133" id="aRq-4n-0Dg"/>
-                                                        <constraint firstAttribute="height" constant="40" id="nna-fQ-jg0"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -249,8 +239,29 @@
                                                         <constraint firstItem="fkU-sd-cp8" firstAttribute="leading" secondItem="woA-Vf-uWI" secondAttribute="leading" id="yjB-89-Xhg"/>
                                                     </constraints>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Time: 12:30 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-VY-4AH">
+                                                    <rect key="frame" x="91" y="34" width="140" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="aRq-4n-0Dg"/>
+                                                        <constraint firstAttribute="height" constant="20" id="nna-fQ-jg0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Time: 12:30 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaF-lO-TwM">
+                                                    <rect key="frame" x="91" y="53" width="140" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="8FA-lk-QV6"/>
+                                                        <constraint firstAttribute="width" constant="140" id="Wo3-sT-9eN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DaF-lO-TwM" secondAttribute="bottom" constant="-1.5" id="1J5-w2-FAn"/>
                                                 <constraint firstItem="995-3G-ezv" firstAttribute="leading" secondItem="Lsb-VY-4AH" secondAttribute="trailing" id="7xA-EB-Y7i"/>
                                                 <constraint firstItem="ARZ-bL-vZF" firstAttribute="top" secondItem="0Ps-TP-xkH" secondAttribute="bottom" id="8OD-RQ-VtZ"/>
                                                 <constraint firstItem="woA-Vf-uWI" firstAttribute="leading" secondItem="EGl-3Q-3Hf" secondAttribute="leadingMargin" id="DjQ-yv-Np3"/>
@@ -261,14 +272,16 @@
                                                 <constraint firstItem="ARZ-bL-vZF" firstAttribute="top" secondItem="0Ps-TP-xkH" secondAttribute="bottom" id="cen-Ys-EJ7"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="995-3G-ezv" secondAttribute="bottom" constant="-5.5" id="hgm-NG-tNr"/>
                                                 <constraint firstItem="woA-Vf-uWI" firstAttribute="top" secondItem="0Ps-TP-xkH" secondAttribute="bottom" constant="4" id="ihS-uC-36d"/>
+                                                <constraint firstItem="Lsb-VY-4AH" firstAttribute="top" secondItem="ARZ-bL-vZF" secondAttribute="bottom" constant="-3" id="lLc-NC-vlz"/>
                                                 <constraint firstAttribute="bottom" secondItem="0Ps-TP-xkH" secondAttribute="bottom" constant="77.5" id="pA7-AH-Bxf"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Lsb-VY-4AH" secondAttribute="bottom" constant="-5" id="soB-7p-Sja"/>
+                                                <constraint firstItem="DaF-lO-TwM" firstAttribute="leading" secondItem="woA-Vf-uWI" secondAttribute="trailing" constant="13" id="qxm-uO-Ier"/>
                                                 <constraint firstItem="0Ps-TP-xkH" firstAttribute="leading" secondItem="EGl-3Q-3Hf" secondAttribute="leading" id="uUn-qz-ffm"/>
                                                 <constraint firstAttribute="trailing" secondItem="0Ps-TP-xkH" secondAttribute="trailing" id="w7R-3z-aeb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="arrivalLabel" destination="Lsb-VY-4AH" id="w1M-jN-BSu"/>
+                                            <outlet property="departureLabel" destination="DaF-lO-TwM" id="lOg-Vr-q9J"/>
                                             <outlet property="routeBanner" destination="woA-Vf-uWI" id="ufx-7m-FSW"/>
                                             <outlet property="routeLabel" destination="995-3G-ezv" id="fQS-d3-xH9"/>
                                             <outlet property="timeRemainingLabel" destination="ARZ-bL-vZF" id="rdj-Xt-mdW"/>

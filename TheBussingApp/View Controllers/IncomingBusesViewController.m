@@ -102,6 +102,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     [formatter2 setDateFormat:@"HH:mm:ss"];
     
     NSDate *date = [formatter2 dateFromString:bus[3]];
+    NSDate *departureDate = [formatter2 dateFromString:bus[4]];
     
     int arrivalHour = [[bus[3] substringToIndex:2] integerValue];
     int arrivalMin = [[bus[3] substringWithRange:NSMakeRange(3, 2)] integerValue];
@@ -145,6 +146,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     cell.routeLabel.text = routeString;
     cell.timeRemainingLabel.text = [NSString stringWithFormat:@"Time Remaining: %d:%d:%d", hoursRemaining, minutesRemaining, secondsRemaining];
     cell.arrivalLabel.text = [NSString stringWithFormat:@"Arrival Time: %@", [formatter stringFromDate:date]];
+    cell.departureLabel.text = [NSString stringWithFormat:@"Departure Time: %@", [formatter stringFromDate: departureDate]];
     
     return cell;
 }
